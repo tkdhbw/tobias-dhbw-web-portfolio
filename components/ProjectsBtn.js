@@ -11,7 +11,7 @@ const ProjectsBtn = () => {
   return (
     <div className='mx-auto xl:mx-0 z-10'>
       <Link
-        href={'/work'}
+        href={'/Vertiefungsthema'}
         className='relative w-[185px] h-[185px] flex justify-center items-center bg-cover bg-center bg-no-repeat group rounded-full'
       >
         <div className='flex items-center justify-center text-lg font-bold animate-pulse duration-75 group-hover:translate-x-2 transition-all'>
