@@ -310,7 +310,7 @@ $("#meinElement")
 `}
                 </code></pre>
 
-                <p class="text-lg leading-relaxed">In diesem Beispiel wird das ausgewählte Element zuerst rot eingefärbt, dann mit dem Text &quot;Hallo Welt&quot; gefüllt und schließlich die CSS-Klasse "besonders" hinzugefügt.</p>
+                <p class="text-lg leading-relaxed">In diesem Beispiel wird das ausgewählte Element zuerst rot eingefärbt, dann mit dem Text &quot;Hallo Welt&quot; gefüllt und schließlich die CSS-Klasse &quot;besonders&quot; hinzugefügt.</p>
 
                 <h2 class="text-2xl font-semibold mt-4">Filter</h2>
                 <p class="text-lg leading-relaxed">jQuery bietet verschiedene Filtermethoden, mit denen Sie eine Menge von ausgewählten Elementen weiter filtern können, um bestimmte Elemente auszuwählen. </p>

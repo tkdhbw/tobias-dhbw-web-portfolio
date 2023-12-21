@@ -16,7 +16,7 @@ const ProjectsBtn = () => {
       >
         <div className='flex items-center justify-center text-lg font-bold animate-pulse duration-75 group-hover:translate-x-2 transition-all'>
           <span className='text-lg font-bold mr-2'>
-            Let's explore
+            Let&apos;s explore
           </span>
           <HiArrowRight className='text-4xl group-hover:translate-x-2 transition-all duration-300' />
         </div>
