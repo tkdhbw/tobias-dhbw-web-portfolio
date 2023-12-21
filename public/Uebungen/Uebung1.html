@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abgabe 1</title>
+</head>
+<body>
+
+    <h1>Abgabe 1 - Übung</h1>
+    <p><em>Aufgabe: </em>Schreiben Sie ein Programm, das mit Hilfe geschachtelter Schleifen 
+        ein *-Dreieck in HTML ausgibt. Die Benutzerin soll vorher die Anzahl der Zeilen eingeben 
+        können. Machen Sie die Ausgabe zusätzlich auf der Console.
+    </p>
+
+    <button onclick=getInput()>Enter a number</button>
+
+    <br>
+    <div id="output_space" style="padding: 10%;"></div>
+
+    <script>
+        function getInput() {
+            var userInput = prompt("Bitte geben Sie eine Zahl ein.", "0");
+
+            var output_space = document.getElementById("output_space");
+
+            // Check if input is a number
+            if (isNaN(userInput)) {
+                alert("Bitte geben Sie eine Zahl ein.");
+            } else {
+                // Create a variable for the output
+                var output = "";
+
+                // Create a loop for the rows
+                for (var i = 0; i < userInput; i++) {
+                    // Create a loop for the columns
+                    for (var j = 0; j <= i; j++) {
+                        // Add a star to the output
+                        output += "*";
+                    }
+                    // Add a line break to the output
+                    output += "<br>";
+                }
+
+                // Print the output to the document
+                output_space.innerHTML = output;
+            }
+
+        
+        }
+
+    </script>
+    
+</body>
+</html>

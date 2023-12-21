@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const closeButton = document.querySelector('.close');
+            closeButton.addEventListener('mouseover', () => {
+                console.log('Mauszeiger ist über dem Schließen-Button');
+            });
+        });
+        function openWindow(url) {
+            var url = document.getElementById("url").value;
+            if (url == null || url == "") {
+                url = "https://www.dhbw.de/startseite.html";
+            } else {
+                url = "https://" + url + "/";
+            }
+            var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            var windowFeatures = "directories=no,menubar=no,location=no,resizable=no,scrollbars=yes,status=yes,width=" + width + ",height=" + height;
+            window.open(url, "_blank", windowFeatures);
+        }
+
+        function testOpen() {
+            const windowObject = window.open('https://www.bing.com', 'Bing', 'width=500,height=500');
+            setTimeout(() => {
+            windowObject.moveBy(100, 100);
+            console.log('Fenster wurde verschoben');
+            }, 50000);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="move"></div>
+    <h1>Aufgabe 1</h1>
+    <p>Schreiben Sie ein JavaScript / jQuery Programm welches sich genau über das aktuelle BrowserFenster ein neues (gleich großes) Fenster mit der DHBW-Website erzeugt. <br>
+
+        Das DHBW Fenster soll nicht in der Größe änderbar sein und auch keine Adressleiste haben.</p>
+
+        <button onclick="openWindow()">Neues Fenster Aufgabe</button>
+
+        <!-- Enter URL-->
+        <h3>Enter Custom URL</h3>
+        <input type="text" id="url" name="url" value="" placeholder="Enter a URL">
+
+        <button onclick="testOpen()">Test</button>
+
+</body>
+</html>

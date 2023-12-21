@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boards 'R' Us</title>
+  <link rel="stylesheet" type="text/css" href="boards.css" />
+  <script type="text/javascript" src="text-utils.js"></script>
+
+  <script type="text/javascript">
+    var anfrage = null;
+
+    function erzeugeAnfrage() {
+      try {
+        anfrage = new XMLHttpRequest();
+      } catch (versuchMicrosoft) {
+        try {
+          anfrage = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (versuchAnderesMicrosoft) {
+          try {
+            anfrage = new ActiveXObject("Microsoft.XMLHTTP");
+          } catch (fehler) {
+            anfrage = null;
+          }
+        }
+      }
+      if (anfrage == null) {
+        alert("Dein Browser unterstützt kein AJAX!");
+      }
+    }
+
+    function getVerkaufteBoards() {
+      erzeugeAnfrage();
+      var url = "aktuelleBoardVerkaeufe-ajax.php";
+      anfrage.open("GET", url, true);
+      anfrage.onreadystatechange = updateSeite;
+      anfrage.send(null);
+      updateSeite();
+    }
+
+    function updateSeite() {
+      if (anfrage.readyState == 4) {
+        var neueSumme = anfrage.responseText;
+        var verkaufteBoards = document.getElementById("verkaufte-boards");
+        var gewinnEL = document.getElementById("gewinn");
+        replaceText(verkaufteBoards, neueSumme);
+
+        var preisEL = document.getElementById("preis");
+        var preis = getText(preisEL);
+        var kostenEl = document.getElementById("kosten");
+        var kosten = getText(kostenEl);
+        var gewinnProBoard = preis - kosten;
+        var gewinn = gewinnProBoard * neueSumme;
+
+        gewinn = Math.round(gewinn * 100) / 100;
+        console.log(gewinn);
+        console.log(gewinnEL);
+        replaceText(gewinnEL, gewinn);  
+      }
+
+    }
+  </script>
+ </head>
+
+ <body>
+  <h1>Boards 'R' Us :: Verkaufsbericht</h1>
+  <div id="boards">
+   <table>
+    <tr><th>Verkaufte Snowboards</th>
+     <td><span id="verkaufte-boards">1012</span> &euro;</td></tr>
+    <tr><th>Verkaufspreis</th>
+     <td>$<span id="preis">249.95</span> &euro;</td></tr>
+    <tr><th>Meine Kosten</th>
+     <td>$<span id="kosten">84.22</span> &euro;</td></tr>
+   </table>
+   <h2>Kohle f&uuml;r die Pisten: 
+    <span id="gewinn">167718.76</span> &euro;</h2>
+   <form method="GET">
+    <input value="Ich will Geld sehen" type="button" onclick="getVerkaufteBoards();"/>
+   </form>
+  </div>
+ </body>
+</html>

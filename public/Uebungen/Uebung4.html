@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Währungsumrechner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label, input, select, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function umrechnen() {
+            var betrag = parseFloat(document.getElementById('betrag').value.replace(',', '.'));
+            var vonWahrung = document.getElementById('vonWahrung').value;
+            var zuWahrung = document.getElementById('zuWahrung').value;
+
+            var umgerechneterBetrag;
+
+            if (vonWahrung === 'EUR' && zuWahrung === 'CNY') {
+                umgerechneterBetrag = betrag * 7.8;
+            } else if (vonWahrung === 'CNY' && zuWahrung === 'EUR') {
+                umgerechneterBetrag = betrag / 7.8;
+            } else if (vonWahrung === 'EUR' && zuWahrung === 'USD') {
+                umgerechneterBetrag = betrag * 1.09;
+            } else if (vonWahrung === 'USD' && zuWahrung === 'EUR') {
+                umgerechneterBetrag = betrag / 1.09;
+            } else if (vonWahrung === 'CNY' && zuWahrung === 'USD') {
+                umgerechneterBetrag = betrag * 0.14;
+            } else if (vonWahrung === 'USD' && zuWahrung === 'CNY') {
+                umgerechneterBetrag = betrag / 0.14;
+            } else {
+                umgerechneterBetrag = betrag;
+            }
+
+            document.getElementById('ergebnis').value = umgerechneterBetrag.toFixed(2).replace('.', ',');
+        }
+    </script>
+</head>
+<body>
+    <h1>Abgabe 2 - Übung</h1>
+    <p><em>Aufgabe:</em> Schreiben Sie einen Währungsumrechner, der zwischen 2 Währungen umrechnet, z.B. $ und €.
+
+        Die Eingabe geschieht über ein Formular mit Texteingabe und Boxen/Buttons, die Ausgabe in ein Formular-Textfeld.
+        
+        Ein- und Ausgabewerte sollen mit „,“ geschrieben werden (Funktion replace verwenden).
+        
+        Bei onclick auf den Umrechnen-Button soll eine Funktion aufgerufen werden, die sich die Werte aus dem Eingabe Formular holt und das Ergebnis in das Ausgabe-Formular schreibt.
+    </p>
+    <br>
+    <form>
+        <label for="betrag">Betrag:</label>
+        <input type="text" id="betrag" />
+
+        <label for="vonWahrung">Von Währung:</label>
+        <select id="vonWahrung">
+            <option value="EUR">Euro</option>
+            <option value="CNY">RMB</option>
+            <option value="USD">US-Dollar</option>
+        </select>
+
+        <label for="zuWahrung">Zu Währung:</label>
+        <select id="zuWahrung">
+            <option value="EUR">Euro</option>
+            <option value="CNY">RMB</option>
+            <option value="USD">US-Dollar</option>
+        </select>
+
+        <button type="button" onclick="umrechnen()">Umrechnen</button>
+
+        <label for="ergebnis">Ergebnis:</label>
+        <input type="text" id="ergebnis" readonly />
+    </form>
+</body>
+</html>

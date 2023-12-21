@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abgabe 1</title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+    
+            label, input, select, button {
+                display: block;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Abgabe 1 - Übung</h1>
+        <p><em>Aufgabe:</em> Um das N-te Zeichen eines Strings abzurufen, können Sie "string"[N] schreiben. Der Rückgabewert ist wiederum ein String, der nur ein einziges
+            Zeichen enthält (z. B. "b"). Da das erste Zeichen die Position 0 hat, befindet sich
+            das letzte an der Position string.length - 1. Ein Strisng aus zwei Zeichen    
+            hat also die Länge 2, und seine Zeichen nehmen die Positionen 0 und 1 ein.
+            Schreiben Sie die Funktion countBs, die als einziges Argument einen String entgegennimmt und die Anzahl der großen B in diesem String zurückgibt.
+            Schreiben Sie anschließend die Funktion countChar, die sich ebenso verhält wie countBs, aber als zweites Argument das Zeichen entgegennimmt, das gezählt
+            werden soll (statt immer nur B). Schreiben Sie countBs so um, dass sie diese
+            neue Funktion nutzt.
+        </p>
+
+        <div style="display:flex; padding: 1%;">
+            <button onclick="countBsUsingPrompt()" style="padding: 1%; margin: 5%;">Bs Zählen</button>
+            <button onclick="promptAndCountChar()" style="padding: 1%; margin: 5%; margin-left: 10%">Eigenes Zeichen Zählen</button>
+        </div>
+
+        <div id="textEingabe"></div>
+        <br>
+        <div id="result"></div>
+
+        <script>
+
+            const countChar = (string, charToCount) => {
+                return string.split('').filter(char => char === charToCount).length;
+            };
+
+            const countBs = string => countChar(string, 'B');
+
+            const countBsUsingPrompt = () => {
+                const userInput = prompt("Bitte geben Sie einen String ein:");
+                if (userInput !== null) {
+                    const numberOfBs = countBs(userInput);
+                    document.getElementById('result').textContent = `Die Anzahl der 'B's: ${numberOfBs}`;
+                    document.getElementById('textEingabe').textContent = userInput === null ? 'Sie haben abgebrochen' : `Ihre Eingabe: ${userInput}`;
+                }
+            };
+
+            const promptAndCountChar = () => {
+                const string = prompt("Bitte geben Sie einen String ein:");
+                const char = prompt("Bitte geben Sie ein Zeichen ein:");
+                if (string !== null && char !== null) {
+                    const count = countChar(string, char);
+                    document.getElementById('result').textContent = `Die Anzahl der '${char}'s: ${count}`;
+                    document.getElementById('textEingabe').textContent = string === null ? 'Sie haben abgebrochen' : `Ihre Eingabe: ${string} und Ihr Zeichen: ${char}`;
+
+                }
+            };
+
+        </script>
+    
+    </body>
+</html>

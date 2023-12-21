@@ -1,0 +1,29 @@
+18:57:32 20.12.2023
+Proxy: 103.161.146.77:0, Country: Indonesia, Type: HTTP, Anonymity: NOA, Uptime: 13%(3)-, Check Date: (3) 18-dec-2023
+Proxy: 92.247.2.26:32405, Country: Bulgaria, Type: HTTP, Anonymity: HIA, Uptime: 5%(141)-, Check Date: (141) 18-dec-2023
+Proxy: 185.211.193.174:0, Country: Czechia, Type: HTTP, Anonymity: NOA, Uptime: 24%(25)-, Check Date: (25) 18-dec-2023
+Proxy: 122.3.176.110:0, Country: Philippines, Type: HTTP, Anonymity: NOA, Uptime: 18%(10)-, Check Date: (10) 18-dec-2023
+Proxy: 51.255.208.33:0, Country: France, Type: HTTP, Anonymity: HIA, Uptime: 10%(156)-, Check Date: (156) 18-dec-2023
+Proxy: 195.181.172.220:0, Country: The, Type: HTTP, Anonymity: ANM, Uptime: 40%(4)+, Check Date: (4) 18-dec-2023
+Proxy: 168.138.152.34:58482, Country: Brazil, Type: HTTP, Anonymity: NOA, Uptime: 19%(6)-, Check Date: (6) 18-dec-2023
+Proxy: 103.163.13.144:0, Country: Indonesia, Type: HTTP, Anonymity: ANM, Uptime: 17%(2)-, Check Date: (2) 18-dec-2023
+Proxy: 103.8.164.16:0, Country: India, Type: HTTP, Anonymity: NOA, Uptime: 9%(16)-, Check Date: (16) 18-dec-2023
+Proxy: 62.171.129.209:30414, Country: Germany, Type: HTTPS, Anonymity: S, Uptime: 100%(3)+, Check Date: (3) 18-dec-2023
+Proxy: 103.30.182.116:25310, Country: Indonesia, Type: HTTP, Anonymity: HIA, Uptime: 6%(5)-, Check Date: (5) 18-dec-2023
+Proxy: 190.56.241.170:33070, Country: Guatemala, Type: HTTP, Anonymity: NOA, Uptime: 9%(7)-, Check Date: (7) 18-dec-2023
+Proxy: 204.157.251.169:33070, Country: Dominican, Type: HTTPS, Anonymity: S, Uptime: 12%(8)-, Check Date: (8) 18-dec-2023
+Proxy: 184.185.105.105:63332, Country: United, Type: HTTP, Anonymity: NOA, Uptime: 17%(272)-, Check Date: (272) 18-dec-2023
+Proxy: 107.178.9.186:0, Country: United, Type: HTTP, Anonymity: NOA, Uptime: 14%(775)-, Check Date: (775) 18-dec-2023
+Proxy: 162.248.224.103:25310, Country: United, Type: HTTP, Anonymity: ANM, Uptime: 100% (64)-, Check Date: 100% (64)- 18-dec-2023
+Proxy: 45.5.116.242:0, Country: Guatemala, Type: HTTPS, Anonymity: S, Uptime: 41%(67)-, Check Date: (67) 18-dec-2023
+Proxy: 196.1.95.124:25310, Country: Senegal, Type: HTTP, Anonymity: HIA, Uptime: 24%(269)+, Check Date: (269) 18-dec-2023
+Proxy: 146.190.104.220:58482, Country: Singapore, Type: HTTP, Anonymity: NOA, Uptime: 24%(6)-, Check Date: (6) 18-dec-2023
+Proxy: 36.94.47.59:25310, Country: Indonesia, Type: HTTP, Anonymity: NOA, Uptime: 11%(36)-, Check Date: (36) 18-dec-2023
+Proxy: 104.43.214.41:35313, Country: United, Type: HTTP, Anonymity: ANM, Uptime: 100%(2)+, Check Date: (2) 18-dec-2023
+Proxy: 116.203.65.28:58482, Country: Germany, Type: HTTP, Anonymity: NOA, Uptime: 37%(7)-, Check Date: (7) 18-dec-2023
+Proxy: 205.233.79.130:33070, Country: Dominican, Type: HTTP, Anonymity: NOA, Uptime: 80%(4)-, Check Date: (4) 18-dec-2023
+Proxy: 203.79.29.198:0, Country: Indonesia, Type: HTTPS, Anonymity: S, Uptime: new-, Check Date: new- 18-dec-2023
+Proxy: 195.151.230.3:0, Country: Russia, Type: HTTP, Anonymity: NOA, Uptime: 25%(2)-, Check Date: (2) 18-dec-2023
+Proxy: 103.76.104.30:0, Country: South, Type: HTTP, Anonymity: NOA, Uptime: 44%(4)-, Check Date: (4) 18-dec-2023
+Proxy: 190.171.170.83:33070, Country: Chile, Type: HTTPS, Anonymity: S, Uptime: 100%(3)-, Check Date: (3) 18-dec-2023
+Proxy: 34.88.54.123:58482, Country: Finland, Type: HTTP, Anonymity: NOA, Uptime: 26%(9)-, Check Date: (9) 18-dec-2023

@@ -6,5 +6,5 @@ export const config = {
 }
 
 export default async function handler(req) {
-  return new Response(JSON.stringify({ name: 'John Doe' }))
+  return new Response(JSON.stringify({ name: 'Tobias Karsch' }))
 }

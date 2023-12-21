@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abgabe 3 - Kontakte</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: #000;
+        }
+
+        label, input, select, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #contactForm {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contacts {
+            margin-top: 20px;
+        }
+
+        .contactCard {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #0070c9;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005499;
+        }
+
+        #fehler {
+            color: red;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        div.container {
+            display: flex;
+            align-items: center;
+        }
+
+        div button {
+            margin: 20px;
+        }
+
+        h2#numOfContactsText, h2#numOfContacts {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Abgabe 3 - Kontakte</h1>
+    <p><em>Aufgabe:</em> 
+        Objektkonstruktoren
+        Schreiben Sie einen Konstruktor für die Kontakte-Objekte, welche private Eigenschaften und öffentliche Methoden haben sollen: <br>
+        Eigenschaften („privat“): <br>
+        laufendeNummer (abhängig von Anzahl der erzeugten Objekte), Vorname, Nachname, Tel.nummer mobil, email, … . <br>
+        Methoden („öffentlich“) der Objekte sind z.B. mindestens: <br>
+        getNummer liefert Tel.nummer des Objekts, setName(neuerNachname) setzt Nachname des Objekts, getName liefert Nachname des Objektes, checkUser vergleicht eingegebene Nachnamen mit dem, der im Objekt gespeichert ist + eventuell weitere... <br>
+        Definieren Sie eine statische Variable gesamtZahl (Anzahl der erzeugten Kontakte-Objekte). <br>
+        Schreiben Sie JavaScript-Code, <br>
+        - der einige Kontakte-Objekte erzeugt, und dabei die Daten über Eingaben vom Benutzer definiert werden, <br>
+        - die Daten der erstellten Objekte anzeigt / ausgibt <br>
+        - die Methoden nutzt / testet <br>
+        - testen Sie den Zugriff auf private Eigenschaften (ob wirklich nicht möglich) <br>
+    </p>
+
+    <div id="fehler"></div>
+
+    <div class="container">
+        <h2 id="numOfContactsText">Bisher wurden keine Kontakte erstellt</h2>
+        <h2 id="numOfContacts" style="display: none;">0</h2>
+        
+        <button id="checkUser">Check User</button>
+    
+        <button id="createContactButton">Kontakt erstellen</button>
+
+    </div>
+
+    <div id="contactForm">
+        <button id="closeContactForm">Formular schließen</button>
+        <label for="vorname">Vorname:</label>
+        <input type="text" id="vorname">
+        <label for="nachname">Nachname:</label>
+        <input type="text" id="nachname">
+        <label for="tel">Telefonnummer:</label>
+        <input type="text" id="tel">
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <button id="submitContact">Submit</button>
+    </div>
+    
+    <div id="contacts"></div>
+    <script>
+        const contacts = [];
+
+        document.getElementById('closeContactForm').addEventListener('click', () => {
+            document.getElementById('contactForm').style.display = 'none';
+        });
+
+        class Kontakt {
+            static gesamtZahl = 0;
+            #laufendeNummer;
+            #vorname;
+            #nachname;
+            #tel;
+            #email;
+
+            constructor(vorname, nachname, tel, email) {
+                this.#laufendeNummer = ++Kontakt.gesamtZahl;
+                this.#vorname = vorname;
+                this.#nachname = nachname;
+                this.#tel = tel;
+                this.#email = email;
+            }
+
+            get laufendeNummer() {
+                return this.#laufendeNummer;
+            }
+
+            get vorname() {
+                return this.#vorname;
+            }
+
+            get nachname() {
+                return this.#nachname;
+            }
+
+            get tel() {
+                return this.#tel;
+            }
+
+            get email() {
+                return this.#email;
+            }
+
+            setName(neuerNachname) {
+                this.#nachname = neuerNachname;
+            }
+
+            checkUser(eingegebenerNachname) {
+                return this.#nachname === eingegebenerNachname;
+            }
+
+            anzeigen() {
+                return `
+                    <h2>Kontakt ${this.laufendeNummer}</h2>
+                    <p>Name: ${this.vorname} ${this.nachname}</p>
+                    <p>Telefonnummer: ${this.tel}</p>
+                    <p>E-Mail: ${this.email}</p>
+                `;
+            }       
+        }
+
+        function resetForm() {
+            document.getElementById('vorname').value = '';
+            document.getElementById('nachname').value = '';
+            document.getElementById('tel').value = '';
+            document.getElementById('email').value = '';        
+        }
+
+        function displayFehler(error) {
+            document.getElementById('fehler').textContent = error;
+        }
+
+        document.getElementById('createContactButton').addEventListener('click', () => {
+            document.getElementById('contactForm').style.display = 'block';
+        });
+
+        document.getElementById('submitContact').addEventListener('click', () => {
+            const vornameInput = document.getElementById('vorname');
+            const nachnameInput = document.getElementById('nachname');
+            const telInput = document.getElementById('tel');
+            const emailInput = document.getElementById('email');
+
+            if (vornameInput.value === '' || nachnameInput.value === '' || telInput.value === '' || emailInput.value === '') {
+                displayFehler('Bitte füllen Sie alle Felder aus!');
+                return;
+            }
+
+            if (emailInput.value.indexOf('@') === -1) {
+                displayFehler('Bitte geben Sie eine gültige E-Mail ein!');
+                return;
+            }
+
+            if (isNaN(telInput.value)) {
+                displayFehler('Bitte geben Sie eine gültige Telefonnummer ein!');
+                return;
+            }
+
+            const kontakt = new Kontakt(vornameInput.value, nachnameInput.value, telInput.value, emailInput.value);
+            contacts.push(kontakt);
+
+            //console.log("Teste Zugriff auf Private variable 'consol.log(this.nachname)");
+            //console.log(kontakt.#nachname);
+
+            const card = document.createElement('div');
+            card.classList.add('contactCard');
+            card.innerHTML = kontakt.anzeigen();
+
+            const changeNameButton = document.createElement('button');
+            changeNameButton.textContent = 'Nachname ändern';
+            changeNameButton.addEventListener('click', () => {
+                const neuerNachname = prompt('Bitte geben Sie den neuen Nachnamen ein');
+                kontakt.setName(neuerNachname);
+                card.innerHTML = kontakt.anzeigen();
+                card.appendChild(changeNameButton);
+            });
+
+            card.appendChild(changeNameButton);
+
+            document.getElementById('contacts').appendChild(card);
+
+            document.getElementById('numOfContacts').textContent = `Anzahl der Kontakte: ${Kontakt.gesamtZahl}`;
+            document.getElementById('numOfContacts').style.display = 'block';
+            document.getElementById('numOfContactsText').style.display = 'none';
+
+            document.getElementById('fehler').textContent = '';
+            document.getElementById('contactForm').style.display = 'none';
+            resetForm();
+
+        });
+
+        document.getElementById('numOfContacts').textContent = `Anzahl der Kontakte: ${Kontakt.gesamtZahl}`;
+        if (Kontakt.gesamtZahl > 0) {
+            document.getElementById('numOfContactsText').style.display = 'none';
+        }
+
+        document.getElementById('checkUser').addEventListener('click', () => {
+            const eingegebenerNachname = prompt('Bitte geben Sie den Nachnamen ein, um zu überprüfen:');
+            
+            if (eingegebenerNachname !== null) {
+                const foundContacts = contacts.filter(contact => contact.checkUser(eingegebenerNachname));
+        
+                if (foundContacts.length > 0) {
+                    alert(`Der Benutzer mit dem Nachnamen "${eingegebenerNachname}" wurde gefunden!`);
+                } else {
+                    alert(`Es wurde kein Benutzer mit dem Nachnamen "${eingegebenerNachname}" gefunden.`);
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
