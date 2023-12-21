@@ -89,10 +89,10 @@ document.getElementById('meinButton').addEventListener('click', function() {
                 </code></pre>
 
                 <ul class="list-disc pl-6 space-y-2 text-lg">
-                    <li><span className='text-accent'>Elementauswahl: </span>document.getElementById('meinButton') wählt das HTML-Element mit der ID meinButton aus</li>
-                    <li><span className='text-accent'>Event-Listener hinzufügen: </span>.addEventListener('click', function() {`{...}`}) fügt einen Event-Listener hinzu, der auf Klick-Events reagiert.</li>
+                    <li><span className='text-accent'>Elementauswahl: </span>document.getElementById(&apos;meinButton&apos;) wählt das HTML-Element mit der ID meinButton aus</li>
+                    <li><span className='text-accent'>Event-Listener hinzufügen: </span>.addEventListener(&apos;click&apos;, function() {`{...}`}) fügt einen Event-Listener hinzu, der auf Klick-Events reagiert.</li>
                     <li><span className='text-accent'>Anonyme Funktion: </span>Die Funktion, die als zweiter Parameter übergeben wird, wird ausgeführt, sobald das Klick-Event auftritt.</li>
-                    <li><span className='text-accent'>Aktion: </span>In der Funktion wird console.log('Button wurde geklickt!') aufgerufen. Dies zeigt eine Nachricht in der Konsole des Browsers an, sobald der Button geklickt wird.</li>
+                    <li><span className='text-accent'>Aktion: </span>In der Funktion wird console.log(&apos;Button wurde geklickt!&apos;) aufgerufen. Dies zeigt eine Nachricht in der Konsole des Browsers an, sobald der Button geklickt wird.</li>
                 </ul>
 
 

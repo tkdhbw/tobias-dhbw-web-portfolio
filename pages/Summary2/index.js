@@ -443,7 +443,7 @@ function multiply(x, y) {
                 </code></pre>
 
                 <h2 className="text-2xl font-semibold mt-4">Funktionen als Werte</h2>
-                <p className="text-lg leading-relaxed">In JavaScript sind Funktionen sogenannte "First-Class-Citizens", was bedeutet, dass sie wie jede andere Variable behandelt werden können. Sie können Funktionen als Argumente an andere Funktionen übergeben, sie als Rückgabewerte von Funktionen verwenden und sie in Variablen speichern.</p>
+                <p className="text-lg leading-relaxed">In JavaScript sind Funktionen sogenannte &quot;First-Class-Citizens&quot;, was bedeutet, dass sie wie jede andere Variable behandelt werden können. Sie können Funktionen als Argumente an andere Funktionen übergeben, sie als Rückgabewerte von Funktionen verwenden und sie in Variablen speichern.</p>
                 <pre><code className="language-javascript">
                     {`
 function operate(a, b, operation) {
@@ -455,7 +455,7 @@ const result = operate(5, 3, add); // Verwendung der 'add'-Funktion als Argument
                 </code></pre>
 
                 <h3 className="text-xl font-semibold mt-4">Anonyme Funktionen</h3>
-                <p className="text-lg leading-relaxed">Funktionen ohne Namen werden als "anonyme Funktionen" bezeichnet. Sie können direkt als Argumente an andere Funktionen übergeben werden.</p>
+                <p className="text-lg leading-relaxed">Funktionen ohne Namen werden als &quot;anonyme Funktionen&quot; bezeichnet. Sie können direkt als Argumente an andere Funktionen übergeben werden.</p>
                 <pre><code className="language-javascript">
                 {`
 const sum = function(x, y) {
@@ -469,7 +469,7 @@ const result = sum(4, 2); // Aufruf der anonymen Funktion
                 <br /><p className="text-lg leading-relaxed">Funktionen sind ein grundlegendes Konzept in JavaScript und spielen eine wesentliche Rolle bei der Strukturierung und Organisation von Code. Sie ermöglichen die Wiederverwendbarkeit von Code und die Durchführung von Aufgaben in JavaScript-Anwendungen.</p>
 
                 <h1 className="text-3xl font-bold pt-10">Pfeilfunktionen</h1>
-                <p className="text-lg leading-relaxed">Pfeilfunktionen, auch als "Arrow Functions" bezeichnet, sind eine spezielle Art von Funktionen in JavaScript, die mit ES6 (ECMAScript 2015) eingeführt wurden. Sie bieten eine kürzere Syntax zum Definieren von Funktionen im Vergleich zu herkömmlichen Funktionsausdrücken oder Funktionsdeklarationen. Pfeilfunktionen sind besonders nützlich für einfache Funktionen, die eine klare und kurze Definition erlauben.</p>
+                <p className="text-lg leading-relaxed">Pfeilfunktionen, auch als &quot;Arrow Functions&quot; bezeichnet, sind eine spezielle Art von Funktionen in JavaScript, die mit ES6 (ECMAScript 2015) eingeführt wurden. Sie bieten eine kürzere Syntax zum Definieren von Funktionen im Vergleich zu herkömmlichen Funktionsausdrücken oder Funktionsdeklarationen. Pfeilfunktionen sind besonders nützlich für einfache Funktionen, die eine klare und kurze Definition erlauben.</p>
 
                 <h2 className="text-2xl font-semibold mt-4">Hier sind einige wichtige Merkmale und Eigenschaften von Pfeilfunktionen:</h2>
                 <h3 className="text-xl font-semibold mt-4">Kompakte Syntax</h3>

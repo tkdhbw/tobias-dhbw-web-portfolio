@@ -56,10 +56,10 @@ xhr.send();
 
                 <ul class="list-disc pl-6 space-y-2 text-lg">
                     <li><span className='text-accent'>XMLHttpRequest(): </span>Erstellt ein neues Ajax-Objekt.</li>
-                    <li><span className='text-accent'>.open("GET", "meineDatei.txt", true):</span>Konfiguriert die Anfrage. Hier wird die Datei meineDatei.txt asynchron mit der Methode GET abgerufen.</li>
+                    <li><span className='text-accent'>.open(&quot;GET&quot;, &quot;meineDatei.txt&quot;, true):</span>Konfiguriert die Anfrage. Hier wird die Datei meineDatei.txt asynchron mit der Methode GET abgerufen.</li>
                     <li><span className='text-accent'>.onreadystatechange: </span>Eine Event-Handler-Funktion, die aufgerufen wird, wenn der Status der Anfrage sich ändert.</li>
                     <li><span className='text-accent'>xhr.readyState: </span>Gibt den Status der Anfrage an. 4 bedeutet, dass die Anfrage abgeschlossen und die Antwort verfügbar ist.</li>
-                    <li><span className='text-accent'>xhr.status:  </span>Der HTTP-Statuscode, 200 steht für "OK".</li>
+                    <li><span className='text-accent'>xhr.status:  </span>Der HTTP-Statuscode, 200 steht für &quot;OK&quot;.</li>
                     <li><span className='text-accent'>xhr.responseText: </span>Der Text, der vom Server zurückgegeben wird.</li>
                     <li><span className='text-accent'>.send(): </span>Sendet die Anfrage.</li>
                 </ul>

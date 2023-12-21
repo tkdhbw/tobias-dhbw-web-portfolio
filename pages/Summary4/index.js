@@ -181,7 +181,7 @@ for (const key in person) {
                 `}
                 </code></pre>
 
-                <p class="text-lg leading-relaxed">Strings: Zeichenketten werden in doppelten Anführungszeichen " " dargestellt.</p>
+                <p class="text-lg leading-relaxed">Strings: Zeichenketten werden in doppelten Anführungszeichen &quot; &quot; dargestellt.</p>
                 <pre><code className="language-javascript">
                 {`
 "Hello, World!"
@@ -204,7 +204,7 @@ false
                 `}
                 </code></pre>
 
-                <p class="text-lg leading-relaxed">Null: null repräsentiert den Wert "keine Daten".</p>
+                <p class="text-lg leading-relaxed">Null: null repräsentiert den Wert &quot;keine Daten&quot;.</p>
                 <pre><code className="language-javascript">
                 {`
 null
@@ -341,19 +341,19 @@ class Person {
             </code></pre>
 
             <h2 class="text-2xl font-semibold mt-4">this</h2>
-            <p class="text-lg leading-relaxed">Das Schlüsselwort "this" in JavaScript bezieht sich auf das aktuelle Objekt, auf das in einer Methode oder einem Konstruktor zugegriffen wird. Das Verständnis von "this" ist wichtig, da es den Kontext bestimmt, in dem eine Methode ausgeführt wird.</p>
+            <p class="text-lg leading-relaxed">Das Schlüsselwort &quot;this&quot; in JavaScript bezieht sich auf das aktuelle Objekt, auf das in einer Methode oder einem Konstruktor zugegriffen wird. Das Verständnis von &quot;this&quot; ist wichtig, da es den Kontext bestimmt, in dem eine Methode ausgeführt wird.</p>
 
             <h3 class="text-xl font-semibold mt-4">Globaler Kontext</h3>
-            <p class="text-lg leading-relaxed">In einem globalen Kontext bezieht sich "this" auf das globale Objekt, das im Browser normalerweise "window" ist.</p>
+            <p class="text-lg leading-relaxed">In einem globalen Kontext bezieht sich &quot;this&quot; auf das globale Objekt, das im Browser normalerweise &quot;window&quot; ist.</p>
 
             <h3 class="text-xl font-semibold mt-4">Funktionskontext</h3>
-            <p class="text-lg leading-relaxed">In einer regulären Funktion bezieht sich "this" auf das aufrufende Objekt. In Arrow-Funktionen wird "this" von der umgebenden Funktion ererbt.</p>
+            <p class="text-lg leading-relaxed">In einer regulären Funktion bezieht sich &quot;this&quot; auf das aufrufende Objekt. In Arrow-Funktionen wird &quot;this&quot; von der umgebenden Funktion ererbt.</p>
 
             <h3 class="text-xl font-semibold mt-4">Konstruktor</h3>
-            <p class="text-lg leading-relaxed">In einem Konstruktor bezieht sich "this" auf die Instanz des Objekts, das gerade erstellt wird.</p>
+            <p class="text-lg leading-relaxed">In einem Konstruktor bezieht sich &quot;this&quot; auf die Instanz des Objekts, das gerade erstellt wird.</p>
 
-            <h2 class="text-2xl font-semibold mt-4">"bind"-Methode in JavaScript</h2>
-            <p class="text-lg leading-relaxed">Die "bind"-Methode ermöglicht es, die "this"-Bindung für eine Funktion explizit festzulegen. Dies ist nützlich, wenn Sie sicherstellen möchten, dass "this" in einer Funktion auf ein bestimmtes Objekt zeigt.</p>
+            <h2 class="text-2xl font-semibold mt-4">&quot;bind&quot;-Methode in JavaScript</h2>
+            <p class="text-lg leading-relaxed">Die &quot;bind&quot;-Methode ermöglicht es, die &quot;this&quot;-Bindung für eine Funktion explizit festzulegen. Dies ist nützlich, wenn Sie sicherstellen möchten, dass &quot;this&quot; in einer Funktion auf ein bestimmtes Objekt zeigt.</p>
             <pre><code className="language-javascript">
             {`
 class Counter {
@@ -379,7 +379,7 @@ boundIncrement(); // Funktioniert, da "this" gebunden wurde
             </code></pre>
 
             <h2 class="text-2xl font-semibold mt-4">Private Klassendaten (Private Fields)</h2>
-            <p class="text-lg leading-relaxed">JavaScript bietet eine Möglichkeit, private Eigenschaften und Methoden in Klassen zu definieren, indem "#" vor dem Eigenschaftsnamen oder Methodennamen platziert wird. Dies ist eine modernere Möglichkeit, die Privatsphäre in Klassen zu gewährleisten.</p>
+            <p class="text-lg leading-relaxed">JavaScript bietet eine Möglichkeit, private Eigenschaften und Methoden in Klassen zu definieren, indem &quot;#&quot; vor dem Eigenschaftsnamen oder Methodennamen platziert wird. Dies ist eine modernere Möglichkeit, die Privatsphäre in Klassen zu gewährleisten.</p>
             <pre><code className="language-javascript">
             {`
 class Person {
@@ -402,7 +402,7 @@ console.log(person.#name); // Fehler, da #name privat ist
             </code></pre>
 
             <h2 class="text-2xl font-semibold mt-4">Object Destructuring (Objekt-Destrukturierung)</h2>
-            <p class="text-lg leading-relaxed">Object Destructuring ist eine Technik in JavaScript, um Werte aus einem Objekt in separate Variablen zu extrahieren. Dies ist hilfreich, um auf die Eigenschaften eines Objekts zuzugreifen, ohne auf jedes einzelne mit "objekt.eigenschaft" zuzugreifen.</p>
+            <p class="text-lg leading-relaxed">Object Destructuring ist eine Technik in JavaScript, um Werte aus einem Objekt in separate Variablen zu extrahieren. Dies ist hilfreich, um auf die Eigenschaften eines Objekts zuzugreifen, ohne auf jedes einzelne mit &quot;objekt.eigenschaft&quot; zuzugreifen.</p>
             <pre><code className="language-javascript">
             {`
 const person = {
@@ -419,7 +419,7 @@ console.log(age);  // 30
             </code></pre>
 
             <h2 class="text-2xl font-semibold mt-4">Spread Operator</h2>
-            <p class="text-lg leading-relaxed">Der Spread-Operator (...) in JavaScript ist ein nützliches Feature, das in verschiedenen Kontexten verwendet werden kann, um Werte aus Arrays, Objekten oder anderen iterierbaren Datenstrukturen auszubreiten (zu "verbreiten") oder zusammenzuführen.</p>
+            <p class="text-lg leading-relaxed">Der Spread-Operator (...) in JavaScript ist ein nützliches Feature, das in verschiedenen Kontexten verwendet werden kann, um Werte aus Arrays, Objekten oder anderen iterierbaren Datenstrukturen auszubreiten (zu &quot;verbreiten&quot;) oder zusammenzuführen.</p>
             <h3 class="text-xl font-semibold mt-4">Verbreitung von Arrays</h3>
             <p class="text-lg leading-relaxed">Der Spread-Operator kann verwendet werden, um die Elemente eines Arrays in ein neues Array zu kopieren oder in eine Funktion zu übergeben.</p>
             <pre><code className="language-javascript">

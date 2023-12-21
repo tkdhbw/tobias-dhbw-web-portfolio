@@ -19,6 +19,15 @@ import {
   SiVisualstudiocode,
 } from 'react-icons/si';
 
+const iconTypes = {
+  FaHtml5: FaHtml5,
+  FaCss3: FaCss3,
+  FaJs: FaJs,
+  FaReact: FaReact,
+  FaPython: FaPython,
+  SiVisualstudiocode: SiVisualstudiocode,
+};
+
 //  about data
 export const aboutData = [
   {
@@ -27,19 +36,11 @@ export const aboutData = [
       {
         text: "To bulid this website I used the following languages and editors:",
         title: 'Used Languages:',
-        icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <FaPython />,
-        ],
+        icons: ['FaHtml5', 'FaCss3', 'FaJs', 'FaReact', 'FaPython'],
       },
       {
         title: 'Used Editor:',
-        icons: [
-          <SiVisualstudiocode />,
-        ],
+        icons: [`SiVisualstudiocode`],
       }
     ],
   },
@@ -49,7 +50,7 @@ export const aboutData = [
       {
         text: "As I am a not very creative person, I used the following websites for inspiration:",
         title: 'This website was enspired by:',
-        stage: '2011 - 2012',
+        stage: 'https://www.poppr.be/en',
       },
       {
         title: 'Furthermore I the following website for images:',
@@ -198,8 +199,9 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className='flex gap-x-4'>
                     {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div className='text-2xl text-white'>{icon}</div>;
+                    {item.icons.map((iconName, index) => {
+                        const IconComponent = iconTypes[iconName];
+                      return <div key={index} className='text-2xl text-white'><IconComponent /></div>;
                     })}
                   </div>
                 </div>

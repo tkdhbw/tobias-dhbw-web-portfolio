@@ -310,7 +310,7 @@ $("#meinElement")
 `}
                 </code></pre>
 
-                <p class="text-lg leading-relaxed">In diesem Beispiel wird das ausgewählte Element zuerst rot eingefärbt, dann mit dem Text "Hallo Welt" gefüllt und schließlich die CSS-Klasse "besonders" hinzugefügt.</p>
+                <p class="text-lg leading-relaxed">In diesem Beispiel wird das ausgewählte Element zuerst rot eingefärbt, dann mit dem Text &quot;Hallo Welt&quot; gefüllt und schließlich die CSS-Klasse "besonders" hinzugefügt.</p>
 
                 <h2 class="text-2xl font-semibold mt-4">Filter</h2>
                 <p class="text-lg leading-relaxed">jQuery bietet verschiedene Filtermethoden, mit denen Sie eine Menge von ausgewählten Elementen weiter filtern können, um bestimmte Elemente auszuwählen. </p>
@@ -348,7 +348,7 @@ $("#meinElement")
                 </table>
 
                 <h2 class="text-2xl font-semibold mt-4">Automatische Schleifen</h2>
-                <p class="text-lg leading-relaxed">In jQuery können Sie eine Funktion auf alle ausgewählten Elemente in einer Auswahl anwenden, ohne eine explizite Schleife zu verwenden. Dies wird als "implizite Schleife" oder "jede Methode" bezeichnet</p>
+                <p class="text-lg leading-relaxed">In jQuery können Sie eine Funktion auf alle ausgewählten Elemente in einer Auswahl anwenden, ohne eine explizite Schleife zu verwenden. Dies wird als &quot;implizite Schleife&quot; oder &quot;jede Methode&quot; bezeichnet</p>
                 <pre><code className="language-javascript">
 {`
 $("p").each(function() {
@@ -396,7 +396,7 @@ var text = $("#meinElement").text();
 `}
                 </code></pre>
 
-                <h2 class="text-2xl font-semibold mt-4">Verwendung von "this" in jQuery</h2>
+                <h2 class="text-2xl font-semibold mt-4">Verwendung von &quot;this&quot; in jQuery</h2>
                 <p class="text-lg leading-relaxed">In jQuery ist this ein spezielles Schlüsselwort, das auf das aktuelle DOM-Element in einer Schleife oder in einem Event-Handler verweist. Die Bedeutung von this hängt vom Kontext ab, in dem es verwendet wird.</p>
 
                 <h3 class="text-xl font-semibold mt-4">Innerhalb einer Schleife (z.B. .each())</h3>
@@ -507,7 +507,7 @@ li:first-child {
                 </code></pre>
 
                 <h2 class="text-2xl font-semibold mt-4">Attributselektoren</h2>
-                <p class="text-lg leading-relaxed">Sie können Elemente basierend auf ihren Attributen auswählen. Zum Beispiel alle Links mit dem Attribut "href":</p>
+                <p class="text-lg leading-relaxed">Sie können Elemente basierend auf ihren Attributen auswählen. Zum Beispiel alle Links mit dem Attribut &quot;href&quot;:</p>
                 <pre><code className="language-css">
 {`
 a[href] {
@@ -527,7 +527,7 @@ p::first-letter {
                 </code></pre>
 
                 <h2 class="text-2xl font-semibold mt-4">Kombinierte Selektoren</h2>
-                <p class="text-lg leading-relaxed">ie können mehrere Selektoren kombinieren, um spezifischere Auswahlregeln zu erstellen. Zum Beispiel ein {`<p class="text-lg leading-relaxed">`}-Element mit der Klasse "besonders" innerhalb eines {`<div>`}:</p>
+                <p class="text-lg leading-relaxed">Die können mehrere Selektoren kombinieren, um spezifischere Auswahlregeln zu erstellen. Zum Beispiel ein {`<p class="text-lg leading-relaxed">`}-Element mit der Klasse &quot;besonders&quot; innerhalb eines {`<div>`}:</p>
                 <pre><code className="language-css">
 {`
 div p.besonders {
@@ -539,14 +539,14 @@ div p.besonders {
                 <p class="text-lg leading-relaxed">CSS-Selektoren bieten eine leistungsstarke Möglichkeit, das Erscheinungsbild von Webseiten zu steuern und bestimmte Teile der Webseite gezielt anzusprechen. Sie sind ein grundlegendes Konzept in der Webentwicklung und werden in Verbindung mit CSS-Regeln verwendet, um das Layout und die Darstellung von Webseiten anzupassen.</p>
 
                 <h1 class="text-3xl font-bold">Automatische Pull Quotes</h1>
-                <p class="text-lg leading-relaxed">"Automatische Pull Quotes" (auch als "Auto-Pull-Zitate" oder "Auto-Pull-Texte" bezeichnet) sind eine Technik in der Webentwicklung, bei der jQuery oder JavaScript verwendet wird, um Zitate oder Textausschnitte aus einem vorhandenen Textabschnitt auf einer Webseite zu extrahieren und sie auffällig darzustellen.</p>
+                <p class="text-lg leading-relaxed">&quot;Automatische Pull Quotes&quot; (auch als &quot;Auto-Pull-Zitate&quot; oder &quot;Auto-Pull-Texte&quot; bezeichnet) sind eine Technik in der Webentwicklung, bei der jQuery oder JavaScript verwendet wird, um Zitate oder Textausschnitte aus einem vorhandenen Textabschnitt auf einer Webseite zu extrahieren und sie auffällig darzustellen.</p>
 
                 <h2 class="text-2xl font-semibold mt-4">Umsetzung</h2>
                 <h3 class="text-xl font-semibold mt-4">Text extrahieren</h3>
                 <p class="text-lg leading-relaxed">Zuerst wird der Text eines Abschnitts oder Artikels mithilfe von jQuery oder JavaScript extrahiert. Dies kann durch Auswählen des Textinhalts aus einem HTML-Element erfolgen.</p>
 
                 <h3 class="text-xl font-semibold mt-4">Text analysieren:</h3>
-                <p class="text-lg leading-relaxed">Der extrahierte Text wird analysiert, um Sätze oder Abschnitte zu identifizieren, die als "pull-worthy" angesehen werden. Dies kann durch das Erkennen von Schlüsselwörtern, Zeichenfolgen oder Satzstrukturen geschehen.</p>
+                <p class="text-lg leading-relaxed">Der extrahierte Text wird analysiert, um Sätze oder Abschnitte zu identifizieren, die als &quot;pull-worthy&quot; angesehen werden. Dies kann durch das Erkennen von Schlüsselwörtern, Zeichenfolgen oder Satzstrukturen geschehen.</p>
 
                 <h3 class="text-xl font-semibold mt-4">Zitat erstellen</h3>
                 <p class="text-lg leading-relaxed">Sobald ein zitierfähiger Satz identifiziert ist, wird ein neues HTML-Element (z.B. {`<blockquote>`}) erstellt oder ein vorhandenes Element verwendet, um das Zitat darzustellen. Das Zitat wird in dieses Element eingefügt.</p>

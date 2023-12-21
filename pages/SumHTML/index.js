@@ -41,7 +41,7 @@ const Testimonials = () => {
                     <li><p>Webseiten bestehen aus verschiedenen Dateien wie HTML, CSS, JavaScript und Bildern. Diese Dateien werden auf einem Webserver gespeichert, einem spezialisierten Computer, der konzipiert ist, um Anfragen zu bearbeiten und darauf zu reagieren. Hosting bezeichnet den Prozess des Speicherns dieser Dateien auf einem Server, so dass sie über das Internet zugänglich sind.</p></li>
 
                     <li><h2 class="font-semibold mt-2">Domainnamen und DNS</h2></li>
-                    <li><p>Server werden über IP-Adressen identifiziert, welche numerisch sind und schwer zu merken. Deshalb verwenden wir Domainnamen (z.B. "google.com"). Das Domain Name System (DNS) konvertiert diese benutzerfreundlichen Namen in IP-Adressen, sodass Browser die richtigen Server erreichen können.</p></li>
+                    <li><p>Server werden über IP-Adressen identifiziert, welche numerisch sind und schwer zu merken. Deshalb verwenden wir Domainnamen (z.B. &quotgoogle.com&quot). Das Domain Name System (DNS) konvertiert diese benutzerfreundlichen Namen in IP-Adressen, sodass Browser die richtigen Server erreichen können.</p></li>
 
                     <li><h2 class="font-semibold mt-2">Anfrage und Antwort</h2></li>
                     <li><p>Wenn Sie eine Webseite besuchen, sendet Ihr Browser eine Anfrage an den entsprechenden Server. Diese Anfrage enthält die URL der Seite, die Sie besuchen möchten.</p></li>
@@ -65,7 +65,7 @@ const Testimonials = () => {
                 <p class="text-lg leading-relaxed">HTML, kurz für Hypertext Markup Language, ist die Standard-Markupsprache, die zum Erstellen von Webseiten verwendet wird. HTML-Elemente sind die Bausteine von Webseiten, und sie geben dem Webbrowser Anweisungen, wie Inhalte auf einer Webseite angezeigt werden sollen. Hier ist eine grundlegende Erklärung, was HTML ist und wie es verwendet wird:</p>
 
                 <h3 class="text-xl font-semibold mt-4">Grundkonzept von HTML</h3>
-                <p class="text-lg leading-relaxed">Struktur von Webseiten: HTML definiert die Struktur und den Inhalt einer Webseite durch sogenannte "Tags". Diese Tags kennzeichnen verschiedene Teile der Inhalte, wie Überschriften, Absätze, Links, Bilder, Listen und vieles mehr.</p>
+                <p class="text-lg leading-relaxed">Struktur von Webseiten: HTML definiert die Struktur und den Inhalt einer Webseite durch sogenannte &quotTags&quot. Diese Tags kennzeichnen verschiedene Teile der Inhalte, wie Überschriften, Absätze, Links, Bilder, Listen und vieles mehr.</p>
                 <p class="text-lg leading-relaxed">Tags und Elemente: Ein HTML-Element besteht typischerweise aus einem Start-Tag (z.B. {`<p>`} für einen Absatz), dem Inhalt (z.B. Text) und einem End-Tag (z.B. {`</p>`}). Einige Elemente benötigen kein End-Tag (z.B. das {`<img`}-Tag für Bilder).</p>
                 <p class="text-lg leading-relaxed">Verschachtelung von Elementen: HTML-Elemente können verschachtelt werden, was bedeutet, dass ein Element innerhalb eines anderen Elements platziert werden kann. Dies hilft, komplexe Layouts und Strukturen zu erstellen.</p>
 
@@ -318,7 +318,7 @@ a:hover {
                 <p class="text-lg leading-relaxed">Die Vererbung in HTML und CSS ist ein wichtiges Konzept, das bestimmt, wie Stileigenschaften von einem Element auf seine Nachkommen angewendet werden. Verständnis der Vererbung hilft dabei, effizienteres und konsistenteres Design für Webseiten zu erstellen.</p>
 
                 <h2 class="text-2xl font-semibold mt-4">Vererbung in HTML und CSS</h2>
-                <p class="text-lg leading-relaxed">rundprinzip: In CSS werden viele Stileigenschaften von einem Elternelement an seine Kind-Elemente "vererbt". Das bedeutet, dass, wenn Sie eine bestimmte Stileigenschaft (wie Schriftart, Farbe, usw.) für ein Elternelement festlegen, diese Eigenschaft standardmäßig auch auf alle Kind-Elemente innerhalb dieses Elternelements angewendet wird.</p>
+                <p class="text-lg leading-relaxed">In CSS werden viele Stileigenschaften von einem Elternelement an seine Kind-Elemente &quotvererbt&quot. Das bedeutet, dass, wenn Sie eine bestimmte Stileigenschaft (wie Schriftart, Farbe, usw.) für ein Elternelement festlegen, diese Eigenschaft standardmäßig auch auf alle Kind-Elemente innerhalb dieses Elternelements angewendet wird.</p>
                 <p class="text-lg leading-relaxed">Beispiel der Vererbung: Wenn Sie im {`<body>`}-Tag die Schriftart festlegen, wird diese Schriftart auf alle Textelemente innerhalb des {`<body>`} angewendet, es sei denn, sie wird von einem spezifischeren Stil überschrieben.</p>
                 <pre><code className="language-css">
                     {`

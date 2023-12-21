@@ -40,7 +40,7 @@ const Testimonials = () => {
                 <p class="text-lg leading-relaxed">Strings sind in JavaScript eine grundlegende Datentyp, die verwendet werden, um Text und Zeichenketten zu repräsentieren. In JavaScript können Strings auf zwei Arten erstellt werden: als primitive Zeichenkette oder als String-Objekt. Hier ist eine Erklärung beider Varianten.</p>
 
                 <h2 class="text-2xl font-semibold mt-4">Primitive Zeichenkette</h2>
-                <p class="text-lg leading-relaxed">Eine primitive Zeichenkette ist der einfachste und häufigste Weg, Strings in JavaScript zu erstellen. Sie können primitive Zeichenketten durch das Umgeben von Text mit einfachen Anführungszeichen (') oder doppelten Anführungszeichen (") erstellen.</p>
+                <p class="text-lg leading-relaxed">Eine primitive Zeichenkette ist der einfachste und häufigste Weg, Strings in JavaScript zu erstellen. Sie können primitive Zeichenketten durch das Umgeben von Text mit einfachen Anführungszeichen (&apos;) oder doppelten Anführungszeichen (&quot;) erstellen.</p>
                 <pre><code className="language-javascript">
                 {`
 const greeting = 'Hallo, Welt!'; // Verwendung von einfachen Anführungszeichen
@@ -84,7 +84,7 @@ const len = text.length; // Länge der Zeichenkette
                 `}
                 </code></pre>
 
-                <p class="text-lg leading-relaxed">Es ist wichtig zu beachten, dass JavaScript automatisch primitive Zeichenketten in String-Objekte umwandeln kann und umgekehrt. Dieser Prozess wird als "Implizite String-Umwandlung" bezeichnet.</p>
+                <p class="text-lg leading-relaxed">Es ist wichtig zu beachten, dass JavaScript automatisch primitive Zeichenketten in String-Objekte umwandeln kann und umgekehrt. Dieser Prozess wird als &quot;Implizite String-Umwandlung&quot; bezeichnet.</p>
                 <pre><code className="language-javascript">
                 {`
 const primitiveString = 'Hallo';

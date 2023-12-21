@@ -170,13 +170,13 @@ const Vertiefungsthema = () => {
                     Das Web-Scraping Programm
                   </h1>
                   <p class="text-lg leading-relaxed mb-4">
-                    Um Web-Scraping in Python zu demonstrieren, habe ich ein Programm geschrieben, welches die Tabelle der Webseite "https://spys.one/en/" mit den "Free Proxy" scraped und dann hier wieder einfügt. Hierfür habe ich die Bibliothek Beautiful Soup verwendet.
+                    Um Web-Scraping in Python zu demonstrieren, habe ich ein Programm geschrieben, welches die Tabelle der Webseite &quot;<a href="https://spys.one/en/">https://spys.one/en/</a>&quot; mit den &quot;Free Proxy&quot; scraped und dann hier wieder einfügt. Hierfür habe ich die Bibliothek Beautiful Soup verwendet.
                   </p>
                   <p class="text-lg leading-relaxed mb-4">
                     Dieser Prozess läuft alle 60 Sekunden, damit haben wir eine immer eine aktuelle Kopie der Tabelle.
                   </p>
                   <p class="text-lg leading-relaxed">
-                    Ein wichtiger Faktor ist es den Prozess nicht zu oft zu machen, da sonder der Server der Webseite "https://spys.one/en/" uns aufgrund einer DDOS attacke blacklsiten könnte.
+                    Ein wichtiger Faktor ist es den Prozess nicht zu oft zu machen, da sonder der Server der Webseite &quot;<a href="https://spys.one/en/">https://spys.one/en/</a>&quot; uns aufgrund einer DDOS attacke blacklsiten könnte.
                   </p>
                 </div>
               </div>
