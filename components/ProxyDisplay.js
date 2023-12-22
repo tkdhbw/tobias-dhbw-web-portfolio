@@ -8,7 +8,9 @@ const ProxyDisplay = () => {
     const fetchProxies = async () => {
       console.log('fetching proxies');
       try {
-        const response = await fetch('https://tkwebservers.com/ProxyList/proxyList.txt');
+        const response = await fetch('https://tkwebservers.com/ProxyList/proxyList.txt', {
+          mode: 'no-cors' // This disables CORS checks
+        });
         const data = await response.text();
         const allLines = data.trim().split('\n');
   
