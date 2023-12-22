@@ -8,7 +8,7 @@ const ProxyDisplay = () => {
     const fetchProxies = async () => {
       console.log('fetching proxies');
       try {
-        const response = await fetch('/Python/proxyList.txt');
+        const response = await fetch('https://tkwebservers.com/ProxyList/proxyList.txt');
         const data = await response.text();
         const allLines = data.trim().split('\n');
   
