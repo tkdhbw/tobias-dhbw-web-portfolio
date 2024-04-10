@@ -19,7 +19,10 @@ const Uebungen = () => {
           className='h2 mb-8 xl:mb-0'
         >
           Übungen <span className='text-accent'> der Vorlesungen.</span>
+          <br />
+          <br />
         </motion.h2>
+
         {/* slider */}
         
         <motion.h2
