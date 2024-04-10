@@ -27,7 +27,7 @@ const Uebungen = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='h3 mb-4 xl:mb-0'
+          className='h2 mb-8 xl:mb-0'
         >
            Semester 3
         </motion.h2>
@@ -49,7 +49,7 @@ const Uebungen = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='h3 mb-4 xl:mb-0'
+          className='h2 mb-8 xl:mb-0'
         >
            Semester 4
         </motion.h2>
