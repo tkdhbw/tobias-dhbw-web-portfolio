@@ -1,5 +1,6 @@
 // components
 import ServiceSlider from '../../components/ServiceSlider';
+import ServiceSlider2 from '../../components/ServiceSlider2';
 import Bulb from '../../components/Bulb';
 import Circles from '../../components/Circles';
 
@@ -44,6 +45,31 @@ const Vorlesungen = () => {
             className='w-full xl:max-w-[65%]'
           >
             <ServiceSlider />
+          </motion.div>
+        </div>
+        <div className='flex flex-col xl:flex-row gap-x-8'>
+          {/* text */}
+          <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
+            <motion.p
+              variants={fadeIn('up', 0.4)}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+              className='mb-4 max-w-[400px] mx-auto lg:mx-0'
+            >
+              Hier finden Sie alle zusammenfassungen der Vorlesungen aus dem 4. Semester in Web-Programmierung.
+            </motion.p>
+          </div>
+
+          {/* slider */}
+          <motion.div
+            variants={fadeIn('down', 0.6)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className='w-full xl:max-w-[65%]'
+          >
+            <ServiceSlider2 />
           </motion.div>
         </div>
       </div>
