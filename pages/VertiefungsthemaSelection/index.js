@@ -15,6 +15,11 @@ const Vertiefungsthema = () => {
         <h1 className='text-4xl font-bold mb-6'>Vertiefungsthema</h1>
       </motion.div>
 
+      <br />
+      <br />
+      <br />
+      <br />
+
       {/* Buttons with descriptions */}
       <div className='flex flex-col md:flex-row justify-center items-center gap-8'>
         {/* Vertiefungsthema 1 */}
