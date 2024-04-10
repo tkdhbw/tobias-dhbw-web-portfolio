@@ -21,6 +21,18 @@ const Uebungen = () => {
           Übungen <span className='text-accent'> der Vorlesungen.</span>
         </motion.h2>
         {/* slider */}
+        
+        <motion.h2
+          variants={fadeIn('up', 0.2)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          className='h3 mb-4 xl:mb-0'
+        >
+           Semester 3
+        </motion.h2>
+
+
         <motion.div
           variants={fadeIn('up', 0.4)}
           initial='hidden'
@@ -29,6 +41,18 @@ const Uebungen = () => {
         >
           <TestimonialSlider />
         </motion.div>
+
+
+
+        <motion.h2
+          variants={fadeIn('up', 0.2)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          className='h3 mb-4 xl:mb-0'
+        >
+           Semester 4
+        </motion.h2>
         <motion.div
           variants={fadeIn('up', 0.4)}
           initial='hidden'
