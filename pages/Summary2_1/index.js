@@ -165,21 +165,21 @@ const Testimonials = () => {
                 <h3 class="text-xl font-semibold mt-4">Ein serialisiertes Objekt in eine Datei schreiben</h3>
                 <ul>
                     <li>Einen FileOutputStream erzeugen
-                      <pre><code className="language-java">
+                      <pre><code className="language-javascript">
                     {`
 FileOutputStream fileStream = new FileOutputStream("MeinSpiel.ser");
                     `}
                       </code></pre>
                     </li><br/>
                     <li>Einen ObjectOutputStream erzeugen
-                      <pre><code className="language-java">
+                      <pre><code className="language-javascript">
                       {`
 ObjectOutputStream os = new ObjectOutputStream(fileStream);
                       `}
                         </code></pre>
                     </li><br/>
                     <li>Das Objekt schreiben
-                      <pre><code className="language-java">
+                      <pre><code className="language-javascript">
                       {`
 os.writeObject(figur1);
 os.writeObject(figur2);
@@ -195,6 +195,55 @@ os.close();
                         </code></pre>
                     </li><br/>
                 </ul>
+
+
+
+
+
+                <h3 class="text-xl font-semibold mt-4">Deserialisierung: Wiederherstellung eines Objekts</h3>
+                <p class="text-lg leading-relaxed">Die Kernidee der Objektserialisierung ist es, ein Objekt in einen Zustand zu versetzen, in dem es gespeichert und später, möglicherweise in einer anderen Instanz der Java Virtual Machine (JVM), in seinen ursprünglichen Zustand zurückversetzt werden kann. Die Deserialisierung funktioniert als Gegenstück zur Serialisierung und stellt das Objekt aus dem gespeicherten Zustand wieder her, was als umgekehrte Serialisierung betrachtet werden kann.</p>
+                <ul>
+                    <li>Einen File InputStream erzeugen
+                      <pre><code className="language-javascript">
+                    {`
+FileInputStream fileStream = new FileInputStream("MeinSpiel.ser");
+                    `}
+                      </code></pre>
+                    </li><br/>
+                    <li>Einen ObjectInputStream erzeugen
+                      <pre><code className="language-javascript">
+                      {`
+ObjectInputStream os = new ObjectInputStream(fileStream);
+                      `}
+                        </code></pre>
+                    </li><br/>
+                    <li>Das Objekt lesen
+                      <pre><code className="language-javascript">
+                      {`
+Object eins = os.readObject();
+Object zwei = os.readObject();
+Object drei = os.readObject();
+                      `}
+                        </code></pre>
+                    </li><br/>
+                    <li>DDie Objekte casten
+                      <pre><code className="language-javascript">
+                      {`
+Spielfigur elb = (Spielfigur) eins;
+Spielfigur troll = (Spielfigur) zwei;
+Spielfigur zauberer = (Spielfigur) drei;
+                      `}
+                        </code></pre>
+                    </li><br/>
+                    <li>Den Object InputStream schließen
+                      <pre><code className="language-javascript">
+                      {`
+os.close();
+                      `}
+                        </code></pre>
+                    </li><br/>
+                </ul>
+
 
             
             
