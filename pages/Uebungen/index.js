@@ -45,7 +45,8 @@ const Uebungen = () => {
           <TestimonialSlider />
         </motion.div>
 
-
+        <br />
+        <br />
 
         <motion.h2
           variants={fadeIn('up', 0.2)}

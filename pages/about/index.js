@@ -31,15 +31,15 @@ const iconTypes = {
 //  about data
 export const aboutData = [
   {
-    title: 'Website Code',
+    title: 'Website-Code',
     info: [
       {
-        text: "To bulid this website I used the following languages and editors:",
-        title: 'Used Languages:',
+        text: "Um diese Webseite zu erstellen, habe ich die folgenden Sprachen und Editoren verwendet:",
+        title: 'Verwendete Sprachen:',
         icons: ['FaHtml5', 'FaCss3', 'FaJs', 'FaReact', 'FaPython'],
       },
       {
-        title: 'Used Editor:',
+        title: 'Verwendeter Editor:',
         icons: [`SiVisualstudiocode`],
       }
     ],
@@ -48,17 +48,18 @@ export const aboutData = [
     title: 'Inspiration',
     info: [
       {
-        text: "As I am a not very creative person, I used the following websites for inspiration:",
-        title: 'This website was enspired by:',
+        text: "Da ich keine sehr kreative Person bin, habe ich die folgenden Webseiten zur Inspiration genutzt:",
+        title: 'Diese Webseite wurde inspiriert von:',
         stage: 'https://www.poppr.be/en',
       },
       {
-        title: 'Furthermore I the following website for images:',
+        title: 'Des Weiteren habe ich die folgende Webseite für Bilder genutzt:',
         stage: 'Unsplash.com',
       },
     ],
   },
 ];
+
 
 // components
 import Avatar from '../../components/Avatar';
@@ -97,7 +98,7 @@ const About = () => {
             exit='hidden'
             className='h2'
           >
-            Some information about this<span className='text-accent'> website</span> 
+            Einige Informationen über diese<span className='text-accent'> Website</span> 
           </motion.h2>
           <motion.p
             variants={fadeIn('right', 0.4)}
@@ -106,7 +107,7 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            In the tabs on the right you can find some information about this website. What tools were used to create the website and where I got my inspiration from.
+            In den Registerkarten auf der rechten Seite finden Sie einige Informationen über diese Website. Mit welchen Tools ich die Website erstellt habe und woher ich meine Inspiration bekam.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -123,7 +124,7 @@ const About = () => {
                   <CountUp start={0} end={5} duration={5} /> 
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Used Languages
+                  Verwendete Sprachen
                 </div>
               </div>
               {/* clients */}
@@ -132,7 +133,7 @@ const About = () => {
                   <CountUp start={0} end={4} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Scrapped attempts
+                  Verworfene Versuche
                 </div>
               </div>
               {/* awards */}
@@ -141,7 +142,7 @@ const About = () => {
                   <CountUp start={0} end={30} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Houres Spend
+                  Stundenaufwand
                 </div>
               </div>
             </div>

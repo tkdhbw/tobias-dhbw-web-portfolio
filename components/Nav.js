@@ -16,8 +16,7 @@ export const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'über diese webseite', path: '/about', icon: <HiServerStack /> },
   { name: 'vorlesungen', path: '/Vorlesungen', icon: <HiRectangleGroup /> },
-  { name: 'Vertiefungsthema', path: '/Vertiefungsthema', icon: <HiUser /> },
-  { name: 'Vertiefungsthema 2', path: '/Vertiefungsthema_2', icon: <HiUser /> },
+  { name: 'Vertiefungsthema', path: '/VertiefungsthemaSelection', icon: <HiUser /> },
   {
     name: 'Übungen',
     path: '/Uebungen',
