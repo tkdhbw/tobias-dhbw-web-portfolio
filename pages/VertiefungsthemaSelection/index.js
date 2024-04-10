@@ -15,11 +15,6 @@ const Vertiefungsthema = () => {
         <h1 className='text-4xl font-bold mb-6'>Vertiefungsthema</h1>
       </motion.div>
 
-      <br />
-      <br />
-      <br />
-      <br />
-
       {/* Buttons with descriptions */}
       <div className='flex flex-col md:flex-row justify-center items-center gap-8'>
         {/* Vertiefungsthema 1 */}
@@ -27,14 +22,14 @@ const Vertiefungsthema = () => {
           variants={fadeIn('up', 0.5)}
           initial='hidden'
           animate='show'
-          className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg p-6 flex flex-col items-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'
+          className='bg-[rgba(65,47,123,0.15)] h-auto w-full max-w-[300px] rounded-lg p-6 flex flex-col items-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 text-center'
         >
-          <Link href="/Vertiefungsthema" passHref>
-            <a className='text-lg font-medium text-accent'>
+          <Link href="/Vertiefungsthema">
+            <a className='text-xl font-medium text-accent'>
               Vertiefungsthema 1
             </a>
           </Link>
-          <p className='mt-2 text-center max-w-xs'>
+          <p className='mt-2'>
             Semester 3
           </p>
         </motion.div>
@@ -44,14 +39,14 @@ const Vertiefungsthema = () => {
           variants={fadeIn('up', 0.7)}
           initial='hidden'
           animate='show'
-          className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg p-6 flex flex-col items-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'
+          className='bg-[rgba(65,47,123,0.15)] h-auto w-full max-w-[300px] rounded-lg p-6 flex flex-col items-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300 text-center'
         >
-          <Link href="/Vertiefungsthema_2" passHref>
-            <a className='text-lg font-medium text-accent'>
+          <Link href="/Vertiefungsthema_2">
+            <a className='text-xl font-medium text-accent'>
               Vertiefungsthema 2
             </a>
           </Link>
-          <p className='mt-2 text-center max-w-xs'>
+          <p className='mt-2'>
             Semester 4
           </p>
         </motion.div>
