@@ -1,24 +1,17 @@
-name: Deploy
-on: push
+name: Send Slack notifications
+on: 
+  push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Await CF Pages and send Slack notification
-      id: cf-pages
-      uses: arddluma/cloudflare-pages-slack-notification@v4
+    - uses: actions/checkout@v2
+    - name: Send Slack deployment notifications
+      uses: arddluma/cloudflare-pages-slack-notification@v2.2
       with:
-        # Uncomment these two lines if you wish to use the Global API Key (Not recommended!)
-        # accountEmail: ${{ secrets.CF_ACCOUNT_EMAIL  }}
-        # apiKey: ${{ secrets.CF_API_KEY  }}
-
-        # Use an API token (Recommended!)
-        apiToken: ${{ secrets.CF_API_TOKEN }}
+        accountEmail: ${{ secrets.CF_ACCOUNT_EMAIL  }}
+        apiKey: ${{ secrets.CF_API_KEY  }}
         accountId: ${{ secrets.CF_ACC_ID  }}
-        # CloudFlare Pages project name
-        project: ${{ secrets.CF_PAGES_PROJECT  }}
-        # Create Slack Incoming webhook and add as variable https://hooks.slack.com/...
-        slackWebHook: ${{ secrets.SLACK_WEBHOOK  }}
-        # Add this if you want GitHub Deployments (see below)
+        project: ${{ secrets.CF_PROJECT  }}
         githubToken: ${{ secrets.GITHUB_TOKEN }}
+        slackWebHook: ${{ secrets.SLACK_WEBHOOK  }}
