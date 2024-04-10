@@ -1,5 +1,6 @@
 // components
 import TestimonialSlider from '../../components/TestimonialSlider';
+import TestimonialSlider2 from '../../components/TestimonialSlider2';
 
 // framer motion
 import { motion } from 'framer-motion';
@@ -27,6 +28,14 @@ const Uebungen = () => {
           exit='hidden'
         >
           <TestimonialSlider />
+        </motion.div>
+        <motion.div
+          variants={fadeIn('up', 0.4)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+        >
+          <TestimonialSlider2 />
         </motion.div>
       </div>
     </div>
