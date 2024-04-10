@@ -1,6 +1,7 @@
 // components
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import Link from 'next/link'; // Importing Link from next/link
 
 const Vertiefungsthema = () => {
   return (
@@ -24,9 +25,11 @@ const Vertiefungsthema = () => {
           animate='show'
           className='text-center'
         >
-          <a href="/Vertiefungsthema" className='text-lg font-medium bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-dark inline-block'>
-            Vertiefungsthema 1
-          </a>
+          <Link href="/Vertiefungsthema" passHref>
+            <a className='text-lg font-medium bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-dark inline-block'>
+              Vertiefungsthema 1
+            </a>
+          </Link>
           <p className='mt-2 max-w-xs'>
             Semester 3
           </p>
@@ -39,9 +42,11 @@ const Vertiefungsthema = () => {
           animate='show'
           className='text-center'
         >
-          <a href="/Vertiefungsthema_2" className='text-lg font-medium bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-dark inline-block'>
-            Vertiefungsthema 2
-          </a>
+          <Link href="/Vertiefungsthema_2" passHref>
+            <a className='text-lg font-medium bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-dark inline-block'>
+              Vertiefungsthema 2
+            </a>
+          </Link>
           <p className='mt-2 max-w-xs'>
             Semester 4
           </p>
