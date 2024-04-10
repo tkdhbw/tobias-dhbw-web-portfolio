@@ -2,12 +2,11 @@
 export const testimonialSlider2 = [
   {
     name: 'Übung 1',
-    category: 'Akkordeon',
+    category: 'Objekte Speichern',
     download_name: "Übung 1.zip",
-    link_download: "https://tkarsch.com/Uebungen/Download/Uebung1.html.zip",
-    link_external: "https://tkarsch.com/Uebungen/Uebung1.html",
+    link_download: "https://tkarsch.com/Uebungen/Download/Semester2/ObjekteSpeichern.zip",
     description:
-      'Schreiben Sie ein Programm, das mit Hilfe geschachtelter Schleifen ein *-Dreieck in HTML ausgibt. Die Benutzerin soll vorher die Anzahl der Zeilen eingeben können. Machen Sie die Ausgabe zusätzlich auf der Console.',
+      'Schreiben Sie ein Java Programm, welches Objekte in einer Datei speichert und wieder ausliest.',
   }
 ];
 
