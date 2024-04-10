@@ -1,7 +1,6 @@
-// components
+import Link from 'next/link'; // Importing Link from next/link
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
-import Link from 'next/link'; // Importing Link from next/link
 
 const Vertiefungsthema = () => {
   return (
@@ -23,14 +22,14 @@ const Vertiefungsthema = () => {
           variants={fadeIn('up', 0.5)}
           initial='hidden'
           animate='show'
-          className='text-center'
+          className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg p-6 flex flex-col items-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'
         >
           <Link href="/Vertiefungsthema" passHref>
-            <a className='text-lg font-medium bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-dark inline-block'>
+            <a className='text-lg font-medium text-accent'>
               Vertiefungsthema 1
             </a>
           </Link>
-          <p className='mt-2 max-w-xs'>
+          <p className='mt-2 text-center max-w-xs'>
             Semester 3
           </p>
         </motion.div>
@@ -40,14 +39,14 @@ const Vertiefungsthema = () => {
           variants={fadeIn('up', 0.7)}
           initial='hidden'
           animate='show'
-          className='text-center'
+          className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg p-6 flex flex-col items-center group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'
         >
           <Link href="/Vertiefungsthema_2" passHref>
-            <a className='text-lg font-medium bg-accent text-white py-2 px-4 rounded-lg hover:bg-accent-dark inline-block'>
+            <a className='text-lg font-medium text-accent'>
               Vertiefungsthema 2
             </a>
           </Link>
-          <p className='mt-2 max-w-xs'>
+          <p className='mt-2 text-center max-w-xs'>
             Semester 4
           </p>
         </motion.div>
