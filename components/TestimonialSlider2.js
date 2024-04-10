@@ -57,7 +57,7 @@ const TestimonialSlider2 = () => {
       modules={[Navigation, Pagination]}
       className='h-[400px]'
     >
-      {testimonialSlider.map((uebung, index) => {
+      {testimonialSlider2.map((uebung, index) => {
         return (
           <SwiperSlide key={index}>
 
