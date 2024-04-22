@@ -17,6 +17,15 @@ export const testimonialSlider2 = [
     link_download: "https://tkarsch.com/Uebungen/Download/Semester2/TextDateiSchreiben.zip",
     description:
       'Legen Sie sich eine Textdatei "name".txt an mit etwa 5-10 Zeilen Text. Schreiben Sie ein Java-Programm, welches diese Datei liest und eine Kopie der Datei in das selbe Verzeichnis schreibt. schreibt.',
+  },
+  {
+    name: 'Übung 3',
+    category: 'Tipp des Tages Server',
+    download_name: "Übung 2.zip",
+    link_external: "",
+    link_download: "https://tkarsch.com/Uebungen/Download/Semester2/TTS.zip",
+    description:
+      'Schreiben Sie ein Java-Programm, welches eine Server erstellt und eine Verbindung zu einem Client aufbaut. Der Server soll dem Client jeden Tag einen neuen Tipp senden. Die Tipps sollen in einer Textdatei gespeichert sein. Der Client soll den Tipp des Tages anzeigen.',
   }
 ];
 
