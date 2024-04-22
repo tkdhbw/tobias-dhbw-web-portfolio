@@ -25,7 +25,7 @@ export const testimonialSlider2 = [
     link_external: "",
     link_download: "https://tkarsch.com/Uebungen/Download/Semester2/TTS.zip",
     description:
-      'Schreiben Sie ein Java-Programm, welches eine Server erstellt und eine Verbindung zu einem Client aufbaut. Der Server soll dem Client jeden Tag einen neuen Tipp senden. Die Tipps sollen in einer Textdatei gespeichert sein. Der Client soll den Tipp des Tages anzeigen.',
+      'Schreiben Sie ein Java-Programm, welches eine Server erstellt und eine Verbindung zu einem Client aufbaut. Der Server soll dem Client mehrere Tipps auf einmal schicken..',
   }
 ];
 
