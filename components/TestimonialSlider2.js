@@ -8,6 +8,15 @@ export const testimonialSlider2 = [
     link_download: "https://tkarsch.com/Uebungen/Download/Semester2/ObjekteSpeichern.zip",
     description:
       'Schreiben Sie ein Java Programm, welches Objekte in einer Datei speichert und wieder ausliest.',
+  },
+  {
+    name: 'Übung 2',
+    category: 'Dateien Schreiben & Lesen',
+    download_name: "Übung 2.zip",
+    link_external: "",
+    link_download: "https://tkarsch.com/Uebungen/Download/Semester2/TextDateiSchreiben.zip",
+    description:
+      'Legen Sie sich eine Textdatei "name".txt an mit etwa 5-10 Zeilen Text. Schreiben Sie ein Java-Programm, welches diese Datei liest und eine Kopie der Datei in das selbe Verzeichnis schreibt. schreibt.',
   }
 ];
 
