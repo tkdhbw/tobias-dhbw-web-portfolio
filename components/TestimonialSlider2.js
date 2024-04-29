@@ -21,11 +21,20 @@ export const testimonialSlider2 = [
   {
     name: 'Übung 3',
     category: 'Tipp des Tages Server',
-    download_name: "Übung 2.zip",
+    download_name: "Übung 3.zip",
     link_external: "",
     link_download: "https://tkarsch.com/Uebungen/Download/Semester2/TTS.zip",
     description:
-      'Schreiben Sie ein Java-Programm, welches eine Server erstellt und eine Verbindung zu einem Client aufbaut. Der Server soll dem Client mehrere Tipps auf einmal schicken..',
+      'Schreiben Sie ein Java-Programm, welches eine Server erstellt und eine Verbindung zu einem Client aufbaut. Der Server soll dem Client mehrere Tipps auf einmal schicken.',
+  },
+  {
+    name: 'Übung 4',
+    category: 'Einfacher Chat Client',
+    download_name: "Übung 4.zip",
+    link_external: "",
+    link_download: "https://tkarsch.com/Uebungen/Download/Semester2/ChatClient.zip",
+    description:
+      'Schreiben Sie ein Java-Programm, welches einen Chat-Client erstellt. Der Client soll sich mit einem Server verbinden und Nachrichten senden und empfangen können.',
   }
 ];
 
