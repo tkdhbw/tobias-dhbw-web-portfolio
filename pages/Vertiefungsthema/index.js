@@ -39,7 +39,7 @@ const Vertiefungsthema = () => {
                 exit='hidden'
                 className='mb-4 max-w-[400px] mx-auto'
               >
-                Als Vertiefungsthema habe ich Web-Scraping gewählt.
+                Als Vertiefungsthema 1 habe ich Web-Scraping gewählt.
               </motion.p>
             </div>
           </div>
