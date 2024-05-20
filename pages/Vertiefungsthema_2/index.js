@@ -30,7 +30,7 @@ const Vertiefungsthema2 = () => {
                 exit='hidden'
                 className='h2 xl:mt-12 mx-auto'
               >
-                Vertiefungsthema<span className='text-accent'>2 .</span>
+                Vertiefungsthema <span className='text-accent'> 2 .</span>
               </motion.h2>
               <motion.p
                 variants={fadeIn('up', 0.4)}
@@ -64,9 +64,9 @@ const Vertiefungsthema2 = () => {
                     Mein Portfolio basiert auf einem statischen Export einer React-App. Daher ist es mir leider nicht möglich, einen solchen Prozess im Hintergrund durchzuführen. Dieser Prozess läuft daher auf einem separaten Server.
                     </p>
                     <br />
-                    <p className='text-lg  mb-8'>Der Aufbau meines Vertiefungsthemas gestaltet sich wie folgt:</p>
-                    <p className='text-lg  mb-8'>1. HTML-Seite für das Hochladen eines PDFs</p>
-                    <ul className='text-lg  mb-8'>
+                    <p className='text-lg mb-8'>Der Aufbau meines Vertiefungsthemas gestaltet sich wie folgt:</p>
+                    <p className='text-lg mb-8'>1. HTML-Seite für das Hochladen eines PDFs</p>
+                    <ul className='text-lg mb-8'>
                       <li>Die Seite enthält ein Formular, das sicherstellt, dass nur PDF-Dokumente hochgeladen werden können, indem es die Dateiendung überprüft.</li>
                       <li>Das Formular bietet dem Benutzer die Möglichkeit, die betroffenen Seiten auszuwählen und einen numerischen Wert für die Größe des Randes einzugeben. Dies ermöglicht ein hohes Maß an Individualisierung.</li>
                     </ul>
@@ -229,7 +229,7 @@ if __name__ == '__main__':
                       <li><b>Überprüfung der Dokumente: </b> Das Skript überprüft regelmäßig den öffentlichen Ordner.</li>
                       <li><b>Löschen alter Dateien:</b> Dokumente, die älter als eine bestimmte Zeit sind, werden automatisch gelöscht.</li>
                     </ul>
-                    <pre><code className="language-python">
+                    <pre><code className="language-javascript">
 {`
 import os
 import time
@@ -550,7 +550,8 @@ document.addEventListener('DOMContentLoaded', function () {
 `}
                     </code></pre>
 
-
+                    <br />
+                    <br />
                     <br />
 
                     <h2 className='text-2xl font-bold  mb-4'>Fazit</h2>
@@ -560,9 +561,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     <br />
 
-                    <h1 className='text-4xl font-bold  mb-8'>Die fertige Applikation</h1>
+                    <h1 className='text-4xl font-bold text-center mb-8'>Die fertige Applikation</h1>
                     <Image src="/preview_VT2.png" width={1200} height={200} alt='' />
-                    Center button
                     <div className='text-center'>
                       <a href='pdf.karstob.com' target='_blank' className='bg-red-500 text-white text-lg  py-4 px-8 rounded-lg mb-8 inline-block hover:bg-red-600 transition duration-300'>Besuchen Sie die fertige Applikation</a>
                     </div>
