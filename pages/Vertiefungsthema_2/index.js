@@ -19,57 +19,61 @@ const Vertiefungsthema2 = () => {
     <>
       <div className='bg-primary/30 py-36 flex flex-col items-center'>
         <Circles />
-        <div className='container mx-auto'>
-          <div className='flex flex-col items-center'>
+        <div className='py-36'> {/* Removed h-full here */}
+          <div className='container mx-auto'>
+            <div className='flex flex-col xl:flex-col gap-x-8'>
+              <div>
+                <div class="bg-transparent text-white max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+                  <div class="mb-6">
 
-            <h1 className='text-4xl font-bold text-center mb-8'>Vertiefungsthema: Web-Applikation</h1>
-            <h2 className='text-2xl font-bold text-center mb-4'>Hintergrund</h2>
-            <p className='text-lg text-center mb-8'>
-            Für mein Vertiefungsthema habe ich eine Web-Applikation entwickelt. Zunächst möchte ich den Hintergrund dazu erläutern: In den Vorlesungen mache ich mir gerne direkte Notizen auf die Skripte. Da diese jedoch oftmals sehr wenig Platz bieten, habe ich in der Vergangenheit ein Python-Programm erstellt, das jeder Seite eines PDF-Dokuments einen weißen Rand hinzufügt.
-Nun habe ich mir überlegt, dieses Tool auch anderen zur Verfügung zu stellen. Gleichzeitig erleichtert es mir selbst die Nutzung. Statt das Programm jedes Mal zu suchen und auszuführen – wobei es manchmal auch Probleme mit den PDF-Dateien gab – kann ich nun einfach das Dokument hochladen und herunterladen.
-Da ich bereits ein Skript habe, das einige Anforderungen erfüllt, werde ich dieses Skript für das Backend verwenden und es um weitere Funktionen erweitern, wie variable Seitenränder und die Möglichkeit für den Benutzer, die Größe des Randes individuell anzupassen.
-            </p>
+                    <h1 className='text-4xl font-bold text-center mb-8'>Vertiefungsthema: Web-Applikation</h1>
+                    <h2 className='text-2xl font-bold text-center mb-4'>Hintergrund</h2>
+                    <p className='text-lg text-center mb-8'>
+                    Für mein Vertiefungsthema habe ich eine Web-Applikation entwickelt. Zunächst möchte ich den Hintergrund dazu erläutern: In den Vorlesungen mache ich mir gerne direkte Notizen auf die Skripte. Da diese jedoch oftmals sehr wenig Platz bieten, habe ich in der Vergangenheit ein Python-Programm erstellt, das jeder Seite eines PDF-Dokuments einen weißen Rand hinzufügt.
+        Nun habe ich mir überlegt, dieses Tool auch anderen zur Verfügung zu stellen. Gleichzeitig erleichtert es mir selbst die Nutzung. Statt das Programm jedes Mal zu suchen und auszuführen – wobei es manchmal auch Probleme mit den PDF-Dateien gab – kann ich nun einfach das Dokument hochladen und herunterladen.
+        Da ich bereits ein Skript habe, das einige Anforderungen erfüllt, werde ich dieses Skript für das Backend verwenden und es um weitere Funktionen erweitern, wie variable Seitenränder und die Möglichkeit für den Benutzer, die Größe des Randes individuell anzupassen.
+                    </p>
 
-            <h3 className='text-2xl font-bold text-center mb-4'>Aufbau der Web-Applikation</h3>
-            <p className='text-lg text-center mb-8'>
-            Mein Portfolio basiert auf einem statischen Export einer React-App. Daher ist es mir leider nicht möglich, einen solchen Prozess im Hintergrund durchzuführen. Dieser Prozess läuft daher auf einem separaten Server.
-            </p>
-            <br />
-            <p className='text-lg text-center mb-8'>Der Aufbau meines Vertiefungsthemas gestaltet sich wie folgt:</p>
-            <p className='text-lg text-center mb-8'>1. HTML-Seite für das Hochladen eines PDFs</p>
-            <ul className='text-lg text-center mb-8'>
-              <li>Die Seite enthält ein Formular, das sicherstellt, dass nur PDF-Dokumente hochgeladen werden können, indem es die Dateiendung überprüft.</li>
-              <li>Das Formular bietet dem Benutzer die Möglichkeit, die betroffenen Seiten auszuwählen und einen numerischen Wert für die Größe des Randes einzugeben. Dies ermöglicht ein hohes Maß an Individualisierung.</li>
-            </ul>
+                    <h3 className='text-2xl font-bold text-center mb-4'>Aufbau der Web-Applikation</h3>
+                    <p className='text-lg text-center mb-8'>
+                    Mein Portfolio basiert auf einem statischen Export einer React-App. Daher ist es mir leider nicht möglich, einen solchen Prozess im Hintergrund durchzuführen. Dieser Prozess läuft daher auf einem separaten Server.
+                    </p>
+                    <br />
+                    <p className='text-lg text-center mb-8'>Der Aufbau meines Vertiefungsthemas gestaltet sich wie folgt:</p>
+                    <p className='text-lg text-center mb-8'>1. HTML-Seite für das Hochladen eines PDFs</p>
+                    <ul className='text-lg text-center mb-8'>
+                      <li>Die Seite enthält ein Formular, das sicherstellt, dass nur PDF-Dokumente hochgeladen werden können, indem es die Dateiendung überprüft.</li>
+                      <li>Das Formular bietet dem Benutzer die Möglichkeit, die betroffenen Seiten auszuwählen und einen numerischen Wert für die Größe des Randes einzugeben. Dies ermöglicht ein hohes Maß an Individualisierung.</li>
+                    </ul>
 
-            <p className='text-lg text-center mb-8'>2. Upload und Verarbeitung</p>
-            <ul className='text-lg text-center mb-8'>
-              <li>Nachdem der Benutzer sein Dokument konfiguriert und hochgeladen hat, wird das PDF-Dokument über eine API (Application Programming Interface) an den internen Server übergeben. Dieser Server (server.py) kümmert sich um die Bearbeitung und Speicherung des PDFs.</li>
-              <li>Während dieses Prozesses wird dem Benutzer ein Ladebalken angezeigt, um den Fortschritt zu verfolgen und zu zeigen, dass seine Anfrage bearbeitet wird.</li>
-            </ul>
+                    <p className='text-lg text-center mb-8'>2. Upload und Verarbeitung</p>
+                    <ul className='text-lg text-center mb-8'>
+                      <li>Nachdem der Benutzer sein Dokument konfiguriert und hochgeladen hat, wird das PDF-Dokument über eine API (Application Programming Interface) an den internen Server übergeben. Dieser Server (server.py) kümmert sich um die Bearbeitung und Speicherung des PDFs.</li>
+                      <li>Während dieses Prozesses wird dem Benutzer ein Ladebalken angezeigt, um den Fortschritt zu verfolgen und zu zeigen, dass seine Anfrage bearbeitet wird.</li>
+                    </ul>
 
-            <p className='text-lg text-center mb-8'>3. Speicherung und Download</p>
-            <ul className='text-lg text-center mb-8'>
-              <li>Nach erfolgreicher Bearbeitung des PDF-Dokuments wird dieses in einem öffentlichen Ordner gespeichert. Der Name des neuen PDF-Dokuments wird an die HTML-Seite zurückgegeben.</li>
-              <li>Der Pfad zum neuen PDF-Dokument wird im &quotHerunterladen&quot-Button als Link hinterlegt, sodass der Benutzer das Dokument einfach durch Drücken des Buttons herunterladen kann.</li>
-            </ul>
+                    <p className='text-lg text-center mb-8'>3. Speicherung und Download</p>
+                    <ul className='text-lg text-center mb-8'>
+                      <li>Nach erfolgreicher Bearbeitung des PDF-Dokuments wird dieses in einem öffentlichen Ordner gespeichert. Der Name des neuen PDF-Dokuments wird an die HTML-Seite zurückgegeben.</li>
+                      <li>Der Pfad zum neuen PDF-Dokument wird im &quotHerunterladen&quot-Button als Link hinterlegt, sodass der Benutzer das Dokument einfach durch Drücken des Buttons herunterladen kann.</li>
+                    </ul>
 
-            <h3 className='text-2xl font-bold text-center mb-4'>Bestandteile des Projekts</h3>
-            <p className='text-lg text-center mb-8'>Mein Vertiefungsthema besteht aus vier verschiedenen Programmen:</p>
-            <p className='text-lg text-center mb-8'>1. <b>server.py</b> – Bearbeitung der PDF-Dokumente</p>
-            <p className='text-lg text-center mb-8'>2. <b>housekeeping.py</b> – öscht alte Dokumente aus dem öffentlichen Ordner</p>
-            <p className='text-lg text-center mb-8'>3. <b>index.html</b> – Benutzeroberfläche für den User</p>
-            <p className='text-lg text-center mb-8'>4. <b>script.js</b> – Vorschau der PDF-Dokumente und Interaktion zwischen index.html und server.py</p>
+                    <h3 className='text-2xl font-bold text-center mb-4'>Bestandteile des Projekts</h3>
+                    <p className='text-lg text-center mb-8'>Mein Vertiefungsthema besteht aus vier verschiedenen Programmen:</p>
+                    <p className='text-lg text-center mb-8'>1. <b>server.py</b> – Bearbeitung der PDF-Dokumente</p>
+                    <p className='text-lg text-center mb-8'>2. <b>housekeeping.py</b> – öscht alte Dokumente aus dem öffentlichen Ordner</p>
+                    <p className='text-lg text-center mb-8'>3. <b>index.html</b> – Benutzeroberfläche für den User</p>
+                    <p className='text-lg text-center mb-8'>4. <b>script.js</b> – Vorschau der PDF-Dokumente und Interaktion zwischen index.html und server.py</p>
 
-            <h2 className='text-2xl font-bold text-center mb-4'>Detaillierte Beschreibung der Programme</h2>
-            <h4 className='text-xl font-bold text-center mb-4'>server.py</h4>
-            <p className='text-lg text-center mb-8'>Das Skript server.py ist für die Bearbeitung der PDF-Dokumente zuständig. Es empfängt das hochgeladene PDF, fügt den gewünschten Rand hinzu und speichert das bearbeitete PDF im öffentlichen Ordner. Hier sind die wesentlichen Funktionen des Skripts:</p>
-            <ul className='text-lg text-center mb-8'>
-              <li><b>Empfang des PDFs:</b> Das Skript empfängt das hochgeladene PDF über eine API.</li>
-              <li><b>Bearbeitung des PDFs:</b> Es fügt den vom Benutzer angegebenen Rand hinzu.</li>
-              <li><b>Speicherung des PDFs:</b> Das bearbeitete PDF wird im öffentlichen Ordner gespeichert und der Dateiname wird zurückgegeben.</li>
-            </ul>
-            <pre><code className="language-javascript">
+                    <h2 className='text-2xl font-bold text-center mb-4'>Detaillierte Beschreibung der Programme</h2>
+                    <h4 className='text-xl font-bold text-center mb-4'>server.py</h4>
+                    <p className='text-lg text-center mb-8'>Das Skript server.py ist für die Bearbeitung der PDF-Dokumente zuständig. Es empfängt das hochgeladene PDF, fügt den gewünschten Rand hinzu und speichert das bearbeitete PDF im öffentlichen Ordner. Hier sind die wesentlichen Funktionen des Skripts:</p>
+                    <ul className='text-lg text-center mb-8'>
+                      <li><b>Empfang des PDFs:</b> Das Skript empfängt das hochgeladene PDF über eine API.</li>
+                      <li><b>Bearbeitung des PDFs:</b> Es fügt den vom Benutzer angegebenen Rand hinzu.</li>
+                      <li><b>Speicherung des PDFs:</b> Das bearbeitete PDF wird im öffentlichen Ordner gespeichert und der Dateiname wird zurückgegeben.</li>
+                    </ul>
+                    <pre><code className="language-javascript">
 {`
 from flask import Flask, request, jsonify, session, redirect, url_for
 from werkzeug.utils import secure_filename
@@ -191,16 +195,16 @@ if __name__ == '__main__':
     app.run(debug=True, port=3000)
 
 `}
-            </code></pre>
+                    </code></pre>
 
 
-            <h4 className='text-xl font-bold text-center mb-4'>housekeeping.py</h4>
-            <p className='text-lg text-center mb-8'>Das Skript housekeeping.py ist für die Verwaltung der gespeicherten Dokumente verantwortlich. Es löscht alte Dokumente aus dem öffentlichen Ordner, um Speicherplatz freizugeben und die Übersichtlichkeit zu wahren. Die Hauptfunktionen umfassen:</p>
-            <ul className='text-lg text-center mb-8'>
-              <li><b>Überprüfung der Dokumente: </b> Das Skript überprüft regelmäßig den öffentlichen Ordner.</li>
-              <li><b>Löschen alter Dateien:</b> Dokumente, die älter als eine bestimmte Zeit sind, werden automatisch gelöscht.</li>
-            </ul>
-            <pre><code className="language-python">
+                    <h4 className='text-xl font-bold text-center mb-4'>housekeeping.py</h4>
+                    <p className='text-lg text-center mb-8'>Das Skript housekeeping.py ist für die Verwaltung der gespeicherten Dokumente verantwortlich. Es löscht alte Dokumente aus dem öffentlichen Ordner, um Speicherplatz freizugeben und die Übersichtlichkeit zu wahren. Die Hauptfunktionen umfassen:</p>
+                    <ul className='text-lg text-center mb-8'>
+                      <li><b>Überprüfung der Dokumente: </b> Das Skript überprüft regelmäßig den öffentlichen Ordner.</li>
+                      <li><b>Löschen alter Dateien:</b> Dokumente, die älter als eine bestimmte Zeit sind, werden automatisch gelöscht.</li>
+                    </ul>
+                    <pre><code className="language-python">
 {`
 import os
 import time
@@ -250,20 +254,20 @@ def run_periodically():
 if __name__ == "__main__":
     run_periodically()
 `}
-            </code></pre>
+                    </code></pre>
 
 
 
-            <h4 className='text-xl font-bold text-center mb-4'>index.html</h4>
-            <p className='text-lg text-center mb-8'>Die Datei index.html stellt die Benutzeroberfläche für die Web-Applikation bereit. Sie enthält ein Formular zum Hochladen von PDF-Dokumenten und Eingabefelder für die Konfiguration der Seitenränder. Zu den wichtigsten Elementen gehören:</p>
-            <ul className='text-lg text-center mb-8'>
-              <li><b>Formular für den PDF-Upload:</b> Ermöglicht das Hochladen von PDF-Dateien.</li>
-              <li><b>Eingabefelder für Seitenränder:</b> Benutzer können die Größe der Ränder oben, unten, links und rechts einstellen.</li>
-              <li><b>PDF-Vorschau:</b> Eine Vorschau des hochgeladenen PDFs wird angezeigt.</li>
-              <li><b>Ladebalken und Fortschrittsanzeige:</b> Zeigt den Fortschritt der Bearbeitung an.</li>
-              <li><b>Download-Button:</b> Ermöglicht das Herunterladen des bearbeiteten PDFs.</li>
-            </ul>
-            <pre><code className="language-html">
+                    <h4 className='text-xl font-bold text-center mb-4'>index.html</h4>
+                    <p className='text-lg text-center mb-8'>Die Datei index.html stellt die Benutzeroberfläche für die Web-Applikation bereit. Sie enthält ein Formular zum Hochladen von PDF-Dokumenten und Eingabefelder für die Konfiguration der Seitenränder. Zu den wichtigsten Elementen gehören:</p>
+                    <ul className='text-lg text-center mb-8'>
+                      <li><b>Formular für den PDF-Upload:</b> Ermöglicht das Hochladen von PDF-Dateien.</li>
+                      <li><b>Eingabefelder für Seitenränder:</b> Benutzer können die Größe der Ränder oben, unten, links und rechts einstellen.</li>
+                      <li><b>PDF-Vorschau:</b> Eine Vorschau des hochgeladenen PDFs wird angezeigt.</li>
+                      <li><b>Ladebalken und Fortschrittsanzeige:</b> Zeigt den Fortschritt der Bearbeitung an.</li>
+                      <li><b>Download-Button:</b> Ermöglicht das Herunterladen des bearbeiteten PDFs.</li>
+                    </ul>
+                    <pre><code className="language-html">
 {`
 <!DOCTYPE html>
 <html lang="de">
@@ -361,33 +365,184 @@ if __name__ == "__main__":
     <script src="script.js"></script>
 </body>
 </html>
+        `}
+                    </code></pre>
+
+
+                    <h4 className='text-xl font-bold text-center mb-4'>script.js</h4>
+                    <p className='text-lg text-center mb-8'>Das Skript script.js steuert die Interaktion zwischen der Benutzeroberfläche (index.html) und dem Backend (server.py). Es enthält Funktionen zur Vorschau des PDFs, zum Hochladen der Datei und zur Anzeige des Fortschritts. Wichtige Funktionen sind:</p>
+                    <ul className='text-lg text-center mb-8'>
+                      <li><b>PDF-Vorschau:</b> Zeigt eine Vorschau des hochgeladenen PDFs im Browser an.</li>
+                      <li><b>Upload-Funktion:</b> Überträgt das PDF an den Server zur Bearbeitung.</li>
+                      <li><b>Fortschrittsanzeige:</b> Aktualisiert den Ladebalken und die Fortschrittsanzeige während der Bearbeitung.</li>
+                      <li><b>Download-Funktion:</b>  Ermöglicht das Herunterladen des bearbeiteten PDFs.</li>
+                    </ul>
+                    <pre><code className="language-javascript">
+{`
+document.addEventListener('DOMContentLoaded', function () {
+  const uploadButton = document.getElementById('uploadBtn');
+  const fileInput = document.getElementById('pdfFile');
+  const progressBar = document.getElementById('progressBar');
+  const statusText = document.getElementById('statusText');
+  const pdfPreviewContainer = document.querySelector('.pdf-preview-container');
+  const pdfPreviewCanvas = document.getElementById('pdfPreview');
+  const resetBtn = document.getElementById('resetBtn');
+  const prevPageBtn = document.getElementById('prevPageBtn');
+  const nextPageBtn = document.getElementById('nextPageBtn');
+  const pageNumIndicator = document.getElementById('pageNumIndicator');
+  const topMarginInput = document.getElementById('topMargin');
+  const bottomMarginInput = document.getElementById('bottomMargin');
+  const leftMarginInput = document.getElementById('leftMargin');
+  const rightMarginInput = document.getElementById('rightMargin');
+  const topMarginCheckbox = document.getElementById('topCheckbox');
+  const bottomMarginCheckbox = document.getElementById('bottomCheckbox');
+  const leftMarginCheckbox = document.getElementById('leftCheckbox');
+  const rightMarginCheckbox = document.getElementById('rightCheckbox');
+  const downloadHtmlBtn = document.getElementById('downloadHtmlBtn');
+
+  let pdfDoc = null;
+  let pageNum = 1;
+  let numPages = 0;
+
+  function renderPage(pageNum) {
+      pdfDoc.getPage(pageNum).then(function(page) {
+          const scale = 1.5;
+          const viewport = page.getViewport({scale: scale});
+          const context = pdfPreviewCanvas.getContext('2d');
+          pdfPreviewCanvas.height = viewport.height;
+          pdfPreviewCanvas.width = viewport.width;
+          const renderContext = {
+              canvasContext: context,
+              viewport: viewport
+          };
+          page.render(renderContext);
+          pageNumIndicator.textContent = {"{pageNum} / {numPages}"};
+      });
+  }
+
+  function disableUploadButton() {
+      uploadButton.disabled = true;
+  }
+
+  function enableUploadButton() {
+      uploadButton.disabled = false;
+  }
+
+  uploadButton.addEventListener('click', function() {
+      disableUploadButton();
+
+      const file = fileInput.files[0];
+      const formData = new FormData();
+      formData.append('pdf_file', file);
+      formData.append('top_margin', topMarginInput.value);
+      formData.append('bottom_margin', bottomMarginInput.value);
+      formData.append('left_margin', leftMarginInput.value);
+      formData.append('right_margin', rightMarginInput.value);
+      formData.append('top_margin_enabled', topMarginCheckbox.checked);
+      formData.append('bottom_margin_enabled', bottomMarginCheckbox.checked);
+      formData.append('left_margin_enabled', leftMarginCheckbox.checked);
+      formData.append('right_margin_enabled', rightMarginCheckbox.checked);
+
+      if (!file) {
+          statusText.textContent = 'Bitte wählen Sie eine Datei aus. (Version 1.0)';
+          enableUploadButton();
+          return;
+      }
+
+      statusText.textContent = '';
+      progressBar.style.width = '0%';
+
+      fetch('/api/upload', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok: ' + response.statusText);
+          }
+          return response.json();
+      })
+      .then(data => {
+          progressBar.style.width = '100%';
+          statusText.textContent = 'Datei erfolgreich hochgeladen!';
+          if (data.download_url) {
+              downloadHtmlBtn.href = data.download_url;
+              console.log(data.download_url);
+              downloadHtmlBtn.classList.remove('hidden');
+          }
+          enableUploadButton();
+      })        
+      .catch(error => {
+          console.error('Error:', error);
+          statusText.textContent = 'Fehler: ' + error.message;
+          enableUploadButton();
+      });
+  });
+
+  resetBtn.addEventListener('click', function() {
+      fileInput.value = '';
+      statusText.textContent = '';
+      progressBar.style.width = '0%';
+      pdfPreviewContainer.classList.add('hidden');
+      while (document.body.lastElementChild !== resetBtn) {
+          document.body.removeChild(document.body.lastElementChild);
+      }
+  });
+
+  fileInput.addEventListener('change', function() {
+      const file = fileInput.files[0];
+      if (file) {
+          const fileReader = new FileReader();
+          fileReader.onload = function() {
+              const typedarray = new Uint8Array(this.result);
+              pdfjsLib.getDocument(typedarray).promise.then(function(pdf) {
+                  pdfDoc = pdf;
+                  numPages = pdf.numPages;
+                  renderPage(pageNum);
+                  pdfPreviewContainer.classList.remove('hidden');
+              });
+          };
+          fileReader.readAsArrayBuffer(file);
+      }
+  });
+
+  prevPageBtn.addEventListener('click', function() {
+      if (pageNum <= 1) {
+          return;
+      }
+      pageNum--;
+      renderPage(pageNum);
+  });
+
+  nextPageBtn.addEventListener('click', function() {
+      if (pageNum >= numPages) {
+          return;
+      }
+      pageNum++;
+      renderPage(pageNum);
+  });
+});
 `}
-            </code></pre>
+                    </code></pre>
 
 
-            <h4 className='text-xl font-bold text-center mb-4'>script.js</h4>
-            <p className='text-lg text-center mb-8'>Das Skript script.js steuert die Interaktion zwischen der Benutzeroberfläche (index.html) und dem Backend (server.py). Es enthält Funktionen zur Vorschau des PDFs, zum Hochladen der Datei und zur Anzeige des Fortschritts. Wichtige Funktionen sind:</p>
-            <ul className='text-lg text-center mb-8'>
-              <li><b>PDF-Vorschau:</b> Zeigt eine Vorschau des hochgeladenen PDFs im Browser an.</li>
-              <li><b>Upload-Funktion:</b> Überträgt das PDF an den Server zur Bearbeitung.</li>
-              <li><b>Fortschrittsanzeige:</b> Aktualisiert den Ladebalken und die Fortschrittsanzeige während der Bearbeitung.</li>
-              <li><b>Download-Funktion:</b>  Ermöglicht das Herunterladen des bearbeiteten PDFs.</li>
-            </ul>
+                    <br />
 
+                    <h2 className='text-2xl font-bold text-center mb-4'>Fazit</h2>
+                    <p className='text-lg text-center mb-8'>Durch diese Struktur ist die Web-Applikation benutzerfreundlich und effizient, sowohl für mich als auch für andere Benutzer, die von den zusätzlichen Funktionen profitieren können.</p>
+                    <p className='text-lg text-center mb-8'>Insgesamt ermöglicht die Web-Applikation den Benutzern, PDF-Dokumente mit individuellen Seitenrändern zu versehen und herunterzuladen. Die klare Benutzeroberfläche und die einfache Bedienung machen die Anwendung benutzerfreundlich und effizient. Durch die Kombination von Frontend und Backend-Technologien wird eine nahtlose Interaktion zwischen Benutzer und System gewährleistet.</p>
+                    <p className='text-lg text-center mb-8'>Die Entwicklung der Web-Applikation hat mir wertvolle Einblicke in die Gestaltung und Umsetzung von Softwarelösungen gegeben. Ich konnte meine Kenntnisse in den Bereichen Web-Entwicklung, API-Integration und Benutzeroberflächen verbessern und praktische Erfahrungen sammeln. Die Anwendung meines Vertiefungsthemas zeigt, wie Technologie eingesetzt werden kann, um Probleme zu lösen und den Alltag zu erleichtern.</p>
 
-            <br />
+                    <br />
 
-            <h2 className='text-2xl font-bold text-center mb-4'>Fazit</h2>
-            <p className='text-lg text-center mb-8'>Durch diese Struktur ist die Web-Applikation benutzerfreundlich und effizient, sowohl für mich als auch für andere Benutzer, die von den zusätzlichen Funktionen profitieren können.</p>
-            <p className='text-lg text-center mb-8'>Insgesamt ermöglicht die Web-Applikation den Benutzern, PDF-Dokumente mit individuellen Seitenrändern zu versehen und herunterzuladen. Die klare Benutzeroberfläche und die einfache Bedienung machen die Anwendung benutzerfreundlich und effizient. Durch die Kombination von Frontend und Backend-Technologien wird eine nahtlose Interaktion zwischen Benutzer und System gewährleistet.</p>
-            <p className='text-lg text-center mb-8'>Die Entwicklung der Web-Applikation hat mir wertvolle Einblicke in die Gestaltung und Umsetzung von Softwarelösungen gegeben. Ich konnte meine Kenntnisse in den Bereichen Web-Entwicklung, API-Integration und Benutzeroberflächen verbessern und praktische Erfahrungen sammeln. Die Anwendung meines Vertiefungsthemas zeigt, wie Technologie eingesetzt werden kann, um Probleme zu lösen und den Alltag zu erleichtern.</p>
-
-            <br />
-
-            <h1 className='text-4xl font-bold text-center mb-8'>Die fertige Applikation</h1>
-            <img src='/images/vertiefungsthema2.png' alt='Vertiefungsthema 2' className='w-full mb-8' />
-            <a href='pdf.karstob.com' target='_blank' className='text-lg text-center mb-8'>Besuchen Sie die fetige Applikation</a>
-
+                    <h1 className='text-4xl font-bold text-center mb-8'>Die fertige Applikation</h1>
+                    <Image src="/preview_VT2.png" width={1200} height={200} alt='' />
+                    <img src='/images/vertiefungsthema2.png' alt='Vertiefungsthema 2' className='w-full mb-8' />
+                    <a href='pdf.karstob.com' target='_blank' className='bg-red-500 text-white text-lg text-center py-4 px-8 rounded-lg mb-8 inline-block hover:bg-red-600 transition duration-300'>Besuchen Sie die fertige Applikation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
