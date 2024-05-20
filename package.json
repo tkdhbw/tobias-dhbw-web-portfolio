@@ -16,7 +16,7 @@
   "dependencies": {
     "@next/font": "^13.4.4",
     "framer-motion": "^10.12.16",
-    "next": "14.0.4",
+    "next": "^14.0.4",
     "prism": "^4.1.2",
     "prismjs": "^1.29.0",
     "react": "^18",
