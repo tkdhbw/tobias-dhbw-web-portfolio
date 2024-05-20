@@ -16,8 +16,7 @@ const Vertiefungsthema2 = () => {
   }, []);
 
   return (
-    <>
-      <div className='bg-primary/30 py-36 flex flex-col items-center'>
+    <div className='bg-primary/30 py-36 flex flex-col items-center'>
         <Circles />
         <div className='py-36'> {/* Removed h-full here */}
           <div className='container mx-auto'>
@@ -546,7 +545,6 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
