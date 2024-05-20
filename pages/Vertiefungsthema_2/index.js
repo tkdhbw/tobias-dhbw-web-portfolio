@@ -5,6 +5,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import Circles from '../../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import Image from 'next/image';
 
 const Vertiefungsthema2 = () => {
   const [uploadProgress, setUploadProgress] = useState(0);
