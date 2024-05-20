@@ -59,6 +59,7 @@ const Vertiefungsthema2 = () => {
         Da ich bereits ein Skript habe, das einige Anforderungen erfüllt, werde ich dieses Skript für das Backend verwenden und es um weitere Funktionen erweitern, wie variable Seitenränder und die Möglichkeit für den Benutzer, die Größe des Randes individuell anzupassen.
                     </p>
 
+                    <br /><br /><br />
                     <h3 className='text-2xl font-bold  mb-4'>Aufbau der Web-Applikation</h3>
                     <p className='text-lg  mb-8'>
                     Mein Portfolio basiert auf einem statischen Export einer React-App. Daher ist es mir leider nicht möglich, einen solchen Prozess im Hintergrund durchzuführen. Dieser Prozess läuft daher auf einem separaten Server.
@@ -82,7 +83,8 @@ const Vertiefungsthema2 = () => {
                       <li>Nach erfolgreicher Bearbeitung des PDF-Dokuments wird dieses in einem öffentlichen Ordner gespeichert. Der Name des neuen PDF-Dokuments wird an die HTML-Seite zurückgegeben.</li>
                       <li>Der Pfad zum neuen PDF-Dokument wird im &quotHerunterladen&quot-Button als Link hinterlegt, sodass der Benutzer das Dokument einfach durch Drücken des Buttons herunterladen kann.</li>
                     </ul>
-
+                    
+                    <br /><br /><br />
                     <h3 className='text-2xl font-bold  mb-4'>Bestandteile des Projekts</h3>
                     <p className='text-lg  mb-8'>Mein Vertiefungsthema besteht aus vier verschiedenen Programmen:</p>
                     <p className='text-lg  mb-8'>1. <b>server.py</b> – Bearbeitung der PDF-Dokumente</p>
@@ -90,6 +92,7 @@ const Vertiefungsthema2 = () => {
                     <p className='text-lg  mb-8'>3. <b>index.html</b> – Benutzeroberfläche für den User</p>
                     <p className='text-lg  mb-8'>4. <b>script.js</b> – Vorschau der PDF-Dokumente und Interaktion zwischen index.html und server.py</p>
 
+                    <br /><br /><br />
                     <h2 className='text-2xl font-bold  mb-4'>Detaillierte Beschreibung der Programme</h2>
                     <h4 className='text-xl font-bold  mb-4'>server.py</h4>
                     <p className='text-lg  mb-8'>Das Skript server.py ist für die Bearbeitung der PDF-Dokumente zuständig. Es empfängt das hochgeladene PDF, fügt den gewünschten Rand hinzu und speichert das bearbeitete PDF im öffentlichen Ordner. Hier sind die wesentlichen Funktionen des Skripts:</p>
@@ -222,7 +225,7 @@ if __name__ == '__main__':
 `}
                     </code></pre>
 
-
+                    <br /><br /><br />
                     <h4 className='text-xl font-bold  mb-4'>housekeeping.py</h4>
                     <p className='text-lg  mb-8'>Das Skript housekeeping.py ist für die Verwaltung der gespeicherten Dokumente verantwortlich. Es löscht alte Dokumente aus dem öffentlichen Ordner, um Speicherplatz freizugeben und die Übersichtlichkeit zu wahren. Die Hauptfunktionen umfassen:</p>
                     <ul className='text-lg  mb-8'>
@@ -281,8 +284,7 @@ if __name__ == "__main__":
 `}
                     </code></pre>
 
-
-
+                    <br /><br /><br />
                     <h4 className='text-xl font-bold  mb-4'>index.html</h4>
                     <p className='text-lg  mb-8'>Die Datei index.html stellt die Benutzeroberfläche für die Web-Applikation bereit. Sie enthält ein Formular zum Hochladen von PDF-Dokumenten und Eingabefelder für die Konfiguration der Seitenränder. Zu den wichtigsten Elementen gehören:</p>
                     <ul className='text-lg  mb-8'>
@@ -393,7 +395,7 @@ if __name__ == "__main__":
         `}
                     </code></pre>
 
-
+                    <br /><br /><br />
                     <h4 className='text-xl font-bold  mb-4'>script.js</h4>
                     <p className='text-lg  mb-8'>Das Skript script.js steuert die Interaktion zwischen der Benutzeroberfläche (index.html) und dem Backend (server.py). Es enthält Funktionen zur Vorschau des PDFs, zum Hochladen der Datei und zur Anzeige des Fortschritts. Wichtige Funktionen sind:</p>
                     <ul className='text-lg  mb-8'>
@@ -563,8 +565,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     <h1 className='text-4xl font-bold text-center mb-8'>Die fertige Applikation</h1>
                     <Image src="/preview_VT2.png" width={1200} height={200} alt='' />
+                    <br /><br /><br />
                     <div className='text-center'>
-                      <a href='https://pdf.karstob.com' target='_blank' className='bg-red-500 text-white text-lg  py-4 px-8 rounded-lg mb-8 inline-block hover:bg-red-600 transition duration-300'>Besuchen Sie die fertige Applikation pdf.karstob.com</a>
+                      <a href='https://pdf.karstob.com' target='_blank' className='bg-red-500 text-white text-lg  py-4 px-8 rounded-lg mb-8 inline-block hover:bg-red-600 transition duration-300'>Besuchen Sie die fertige Applikation</a>
+                      <br />
+                      <p className='text-lg'>URL: https://pdf.karstob.com</p>
                     </div>
                   </div>
                 </div>
