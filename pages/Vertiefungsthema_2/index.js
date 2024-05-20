@@ -564,7 +564,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <br />
 
                     <h1 className='text-4xl font-bold text-center mb-8'>Die fertige Applikation</h1>
-                    <a href='https://pdf.karstob.com' target='_blank'  transition duration-300'>
+                    <a href='https://pdf.karstob.com' target='_blank'  className='transition duration-300'>
                       <Image src="/preview_VT2.png" width={1200} height={200} alt='' />
                     </a>
                     <br /><br /><br />
