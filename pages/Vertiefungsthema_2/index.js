@@ -564,7 +564,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <h1 className='text-4xl font-bold text-center mb-8'>Die fertige Applikation</h1>
                     <Image src="/preview_VT2.png" width={1200} height={200} alt='' />
                     <div className='text-center'>
-                      <a href='pdf.karstob.com' target='_blank' className='bg-red-500 text-white text-lg  py-4 px-8 rounded-lg mb-8 inline-block hover:bg-red-600 transition duration-300'>Besuchen Sie die fertige Applikation</a>
+                      <a href='https://pdf.karstob.com' target='_blank' className='bg-red-500 text-white text-lg  py-4 px-8 rounded-lg mb-8 inline-block hover:bg-red-600 transition duration-300'>Besuchen Sie die fertige Applikation pdf.karstob.com</a>
                     </div>
                   </div>
                 </div>
