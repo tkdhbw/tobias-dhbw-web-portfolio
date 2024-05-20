@@ -51,7 +51,7 @@ Da ich bereits ein Skript habe, das einige Anforderungen erfüllt, werde ich die
             <p className='text-lg text-center mb-8'>3. Speicherung und Download</p>
             <ul className='text-lg text-center mb-8'>
               <li>Nach erfolgreicher Bearbeitung des PDF-Dokuments wird dieses in einem öffentlichen Ordner gespeichert. Der Name des neuen PDF-Dokuments wird an die HTML-Seite zurückgegeben.</li>
-              <li>Der Pfad zum neuen PDF-Dokument wird im "Herunterladen"-Button als Link hinterlegt, sodass der Benutzer das Dokument einfach durch Drücken des Buttons herunterladen kann.</li>
+              <li>Der Pfad zum neuen PDF-Dokument wird im &quotHerunterladen&quot-Button als Link hinterlegt, sodass der Benutzer das Dokument einfach durch Drücken des Buttons herunterladen kann.</li>
             </ul>
 
             <h3 className='text-2xl font-bold text-center mb-4'>Bestandteile des Projekts</h3>
