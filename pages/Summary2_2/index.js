@@ -188,7 +188,7 @@ public class TCPClient {
               Ein Port ist ein numerischer Bezeichner, der spezifische Prozesse oder Netzwerkdienste auf einem Host in einem Computernetzwerk identifiziert. Jeder Port ist mit einer IP-Adresse und dem Protokoll (TCP oder UDP) verbunden, um eine eindeutige Verbindung zu ermöglichen.
             </p>
             <ul className="list-disc ml-8">
-              <li><span className='text-accent'>Portnummern:</span> Sie reichen von 0 bis 65535, wobei Ports 0-1023 als "well-known ports" bekannt sind und für häufig verwendete Protokolle reserviert sind (z.B. HTTP auf Port 80, HTTPS auf Port 443).</li>
+              <li><span className='text-accent'>Portnummern:</span> Sie reichen von 0 bis 65535, wobei Ports 0-1023 als &quotwell-known ports&quot bekannt sind und für häufig verwendete Protokolle reserviert sind (z.B. HTTP auf Port 80, HTTPS auf Port 443).</li>
               <li><span className='text-accent'>Registrierte Ports:</span> Diese reichen von 1024 bis 49151 und werden für weniger gängige Anwendungen verwendet.</li>
               <li><span className='text-accent'>Dynamische und private Ports:</span> Diese reichen von 49152 bis 65535 und werden oft für temporäre Verbindungen oder private Anwendungen verwendet.</li>
             </ul>
