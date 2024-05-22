@@ -21,8 +21,8 @@ const Testimonials = () => {
           exit='hidden'
           className='h2 mb-8 xl:mb-0 text-center'
         >
-          Vorlesung <span className='text-accent'> 1</span> <br />
-          <span className='text-accent'>Netzwerkprogrammierung</span> über Sockets
+          Vorlesung <span className='text-accent'> 2</span> <br />
+          <span className='text-accent'>Netzwerkprogrammierung</span> über Sockets Teil 1
         </motion.h2>
         {/* content */}
         <motion.div

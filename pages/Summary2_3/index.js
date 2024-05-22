@@ -23,8 +23,8 @@ const ConcurrencyProblems = () => {
           exit='hidden'
           className='h2 mb-8 xl:mb-0 text-center'
         >
-          Vorlesung <span className='text-accent'> 5</span> <br />
-          <span className='text-accent'>Threads</span> und Nebenläufigkeitsprobleme
+          Vorlesung <span className='text-accent'> 3</span> <br />
+          <span className='text-accent'>Threads</span> und Nebenläufigkeitsprobleme 
         </motion.h2>
         {/* content */}
         <motion.div
