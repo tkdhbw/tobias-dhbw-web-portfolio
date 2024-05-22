@@ -21,8 +21,8 @@ const Testimonials = () => {
           exit='hidden'
           className='h2 mb-8 xl:mb-0 text-center'
         >
-          Vorlesung <span className='text-accent'> 1</span> <br />
-          <span className='text-accent'>Netzwerkkommunikation</span> und serverseitige Technologien
+          Vorlesung <span className='text-accent'> 4</span> <br />
+          <span className='text-accent'>PHP</span> und mySQL
 
         </motion.h2>
         {/* slider */}
