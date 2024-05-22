@@ -37,13 +37,13 @@ const Testimonials = () => {
             </p>
 
             <h2 className="text-2xl font-semibold mt-4">Arten von Sockets</h2>
-            <p className="text-lg leading-relaxed">1. Steam Sockets (TCP)</p>
+            <p className="text-lg leading-relaxed">Steam Sockets (TCP)</p>
             <ul className="list-disc ml-8">
               <li>Bieten eine zuverlässige, verbindungsorientierte Kommunikation.</li>
               <li>Daten werden in der richtigen Reihenfolge und ohne Duplikate übertragen.</li>
               <li><span className='text-accent'>Verwendung:</span> Web-Server, E-Mail, Dateiübertragungen.</li>
             </ul>
-            <p className="text-lg leading-relaxed">2. Datagram Sockets (UDP)</p>
+            <p className="text-lg leading-relaxed">Datagram Sockets (UDP)</p>
             <ul className="list-disc ml-8">
               <li>Bieten eine verbindungslose Kommunikation.</li>
               <li>Datenpakete werden ohne Garantie der Zustellung oder Reihenfolge gesendet.</li>
@@ -52,7 +52,7 @@ const Testimonials = () => {
             <p className="text-lg leading-relaxed">Java unterstützt auch Kommunikation über UDP Sockets durch die Klassen DatagramPacket und DatagramSocket.</p>
 
             <h2 className="text-2xl font-semibold mt-4">Grundlagen der Socket-Programmierung</h2>
-            <h3 className="text-xl font-semibold mt-2">1. Erstellen eines Sockets</h3>
+            <h3 className="text-xl font-semibold mt-2">Erstellen eines Sockets</h3>
             <pre className="bg-gray-800 p-4 rounded mb-4">
               <code className="language-java">
                 {`import java.net.*;
@@ -64,28 +64,28 @@ Socket tcpSocket = new Socket("localhost", 8080);
 DatagramSocket udpSocket = new DatagramSocket();`}
               </code>
             </pre>
-            <h3 className="text-xl font-semibold mt-2">2. Binden eines Sockets an eine Adresse und Port</h3>
+            <h3 className="text-xl font-semibold mt-2">Binden eines Sockets an eine Adresse und Port</h3>
             <pre className="bg-gray-800 p-4 rounded mb-4">
               <code className="language-java">
                 {`// Für ServerSocket in TCP
 ServerSocket serverSocket = new ServerSocket(8080);`}
               </code>
             </pre>
-            <h3 className="text-xl font-semibold mt-2">3. Hören auf Verbindungen (nur für TCP)</h3>
+            <h3 className="text-xl font-semibold mt-2">Hören auf Verbindungen (nur für TCP)</h3>
             <pre className="bg-gray-800 p-4 rounded mb-4">
               <code className="language-java">
                 {`// Server wartet auf Verbindungen
 Socket clientSocket = serverSocket.accept();`}
               </code>
             </pre>
-            <h3 className="text-xl font-semibold mt-2">4. Akzeptieren einer Verbindung (nur für TCP)</h3>
+            <h3 className="text-xl font-semibold mt-2">Akzeptieren einer Verbindung (nur für TCP)</h3>
             <pre className="bg-gray-800 p-4 rounded mb-4">
               <code className="language-java">
                 {`// Verbindung wird akzeptiert
 Socket clientSocket = serverSocket.accept();`}
               </code>
             </pre>
-            <h3 className="text-xl font-semibold mt-2">5. Senden und Empfangen von Daten</h3>
+            <h3 className="text-xl font-semibold mt-2">Senden und Empfangen von Daten</h3>
             <pre className="bg-gray-800 p-4 rounded mb-4">
               <code className="language-java">
                 {`// TCP
@@ -108,7 +108,7 @@ DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.lengt
 udpSocket.receive(receivePacket);`}
               </code>
             </pre>
-            <h3 className="text-xl font-semibold mt-2">6. Schließen des Sockets</h3>
+            <h3 className="text-xl font-semibold mt-2">Schließen des Sockets</h3>
             <pre className="bg-gray-800 p-4 rounded mb-4">
               <code className="language-java">
                 {`tcpSocket.close();
@@ -518,7 +518,7 @@ public class ChatClient {
             <p className="text-lg leading-relaxed">
               Es gibt fünf Philosophen, die ihr Leben damit verbringen, abwechselnd zu denken und zu essen. Jeder Philosoph benötigt zwei Gabeln, um zu essen. Zwischen jedem Paar von Philosophen liegt eine Gabel. Daher müssen sich die Philosophen die Gabeln teilen.
             </p>
-            <h3 className="text-xl font-semibold mt-2">3. Probleme und Lösungen</h3>
+            <h3 className="text-xl font-semibold mt-2">Probleme und Lösungen</h3>
             <h4 className="text-lg font-semibold mt-2">Deadlock</h4>
             <p className="text-lg leading-relaxed">
               Ein Deadlock tritt auf, wenn jeder Philosoph eine Gabel aufhebt und auf die zweite Gabel wartet. Da jede Gabel bereits von einem anderen Philosophen gehalten wird, warten alle Philosophen unendlich lange.
@@ -532,7 +532,7 @@ public class ChatClient {
               <li><span className='text-accent'>Arbitration:</span> Ein externer Schiedsrichter gibt die Erlaubnis zum Aufheben der Gabeln. Nur ein Philosoph kann die Gabeln gleichzeitig aufnehmen.</li>
               <li><span className='text-accent'>Benutzung von Ressourcenhierarchien:</span> Jeder Philosoph nimmt zuerst die Gabel mit der niedrigeren Nummer und dann die Gabel mit der höheren Nummer auf.</li>
             </ul>
-            <h3 className="text-xl font-semibold mt-2">4. Beispielimplementierung in Java</h3>
+            <h3 className="text-xl font-semibold mt-2">Beispielimplementierung in Java</h3>
             <pre>
               <code className="language-java">
 {`import java.util.concurrent.locks.Lock;
@@ -606,7 +606,7 @@ public class PhilosopherProblem {
 }`}
               </code>
             </pre>
-            <h3 className="text-xl font-semibold mt-2">5. Fazit</h3>
+            <h3 className="text-xl font-semibold mt-2">Fazit</h3>
             <p className="text-lg leading-relaxed">
               Das Philosophenproblem veranschaulicht die Herausforderungen der Synchronisation und der Vermeidung von Deadlocks in parallelen Systemen. Es zeigt, wie wichtig es ist, geeignete Synchronisationsmechanismen und Strategien zu entwickeln, um Ressourcenverklemmung und -verhungern zu verhindern.
             </p>
