@@ -40,13 +40,13 @@ export const serviceData = [
     icon: <RxCrop />,
     title: 'Vorlesung 3',
     description: 'Netzwerkprogrammierung und Threads Teil 2.',
-    link: "/Summary2_2",
+    link: "/Summary2_3",
   },
   {
     icon: <RxCrop />,
     title: 'Vorlesung 3',
     description: 'Netzwerkprogrammierung und Threads.',
-    link: "/Summary2_2",
+    link: "/Summary2_4",
   }
 ];
 
