@@ -40,7 +40,7 @@ const Testimonials = () => {
             </p>
             <h3 className="text-xl font-semibold mt-2">Geschichte von PHP</h3>
             <p className="text-lg leading-relaxed">
-              PHP wurde 1994 von Rasmus Lerdorf entwickelt. Ursprünglich stand PHP für "Personal Home Page", aber es wurde später in "PHP: Hypertext Preprocessor" umbenannt, um seine Hauptfunktion besser zu beschreiben. Seit seiner Einführung hat sich PHP stetig weiterentwickelt und ist zu einer der wichtigsten Technologien im Web geworden.
+              PHP wurde 1994 von Rasmus Lerdorf entwickelt. Ursprünglich stand PHP für &quotPersonal Home Page&quot, aber es wurde später in &quotPHP: Hypertext Preprocessor&quot umbenannt, um seine Hauptfunktion besser zu beschreiben. Seit seiner Einführung hat sich PHP stetig weiterentwickelt und ist zu einer der wichtigsten Technologien im Web geworden.
             </p>
             <h3 className="text-xl font-semibold mt-2">Einsatzbereiche von PHP</h3>
             <p className="text-lg leading-relaxed">
@@ -67,7 +67,7 @@ const Testimonials = () => {
             </ul>
             <h3 className="text-xl font-semibold mt-2">Einfache PHP-Syntax</h3>
             <p className="text-lg leading-relaxed">
-              Ein einfaches PHP-Skript, das "Hello, World!" ausgibt, sieht folgendermaßen aus:
+              Ein einfaches PHP-Skript, das &quotHello, World!&quot ausgibt, sieht folgendermaßen aus:
             </p>
             <pre>
               <code className="language-php">
