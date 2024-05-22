@@ -35,6 +35,15 @@ export const testimonialSlider2 = [
     link_download: "https://tkarsch.com/Uebungen/Download/Semester2/ChatClient.zip",
     description:
       'Schreiben Sie ein Java-Programm, welches einen Chat-Client erstellt. Der Client soll sich mit einem Server verbinden und Nachrichten senden und empfangen können.',
+  },
+  {
+    name: 'Übung 5',
+    category: 'PHP Meldung',
+    download_name: "Übung 5.zip",
+    link_external: "",
+    link_download: "https://tkarsch.com/Uebungen/Download/Semester2/PhpMeldung.zip",
+    description:
+      'Ein Programm, welches mithilfe eines PHP Skripts mit einer SQL Datenbank kommuniziert und die Eingegebenen Details des Forms in der Datenbank speichert.',
   }
 ];
 
