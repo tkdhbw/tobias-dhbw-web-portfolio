@@ -33,216 +33,598 @@ const Testimonials = () => {
           exit='hidden'
         >
             <div class="bg-transparent text-white max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8 space-y-6">
-                
-                <p class="text-lg leading-relaxed">In der Zukunft der Netzwerkkommunikation und serverseitigen Technologien erwarten uns bahnbrechende Entwicklungen, die die Art und Weise, wie wir Daten verarbeiten und teilen, neu definieren werden. Mit der Einführung von 5G-Netzwerken werden wir eine signifikante Beschleunigung der Geschwindigkeit und Verringerung der Latenz erleben, was neue Möglichkeiten für IoT und Echtzeitanwendungen eröffnet. Edge Computing wird die Datenverarbeitung näher an den Endnutzer bringen, was zu schnelleren und effizienteren Netzwerkdiensten führt. Serverlose Architekturen und die Integration von KI und maschinellem Lernen in serverseitige Prozesse werden die Entwicklung agiler und intelligenter Anwendungen vorantreiben. Gleichzeitig wird der Fokus auf Sicherheit und Datenschutz stärker denn je, während Nachhaltigkeitsinitiativen die ökologische Auswirkung der Technologiebranche zunehmend in den Vordergrund rücken. Diese Trends skizzieren eine aufregende Zukunft, in der Technologie weiterhin die Grenzen dessen verschiebt, was möglich ist.</p>
-
-                <h2 class="text-2xl font-semibold mt-4">Client-Server Modell</h2>
-                <p class="text-lg leading-relaxed">In der Welt der Computernetzwerke bezieht sich die Kommunikation und Verteilung von Programmen und Funktionalitäten zwischen zwei Rechnern oft auf das Client-Server-Modell. In diesem Modell interagieren zwei Arten von Computern: der Client und der Server. Jeder hat seine eigene Rolle und Funktion im Netzwerk.</p>
-                
-                <h3 class="text-xl font-semibold mt-4"><span className='text-accent'>Der Client</span></h3>
-                <p class="text-lg leading-relaxed">Der Client ist in der Regel der Computer, der einen Dienst oder Ressourcen anfordert. Dies kann ein Desktop-Computer, ein Laptop, ein Smartphone oder jedes andere Gerät mit Netzwerkzugang sein. Clients sind oft schwächer, langsamer oder kleiner im Vergleich zu Servern. Das bedeutet, sie haben möglicherweise weniger Rechenleistung, Speicher oder Speicherkapazität. Clients initiieren in der Regel die Kommunikation mit dem Server, indem sie Anfragen senden.</p>
-                
-                <h3 class="text-xl font-semibold mt-4"><span className='text-accent'>Der Server (Host)</span></h3>
-                <p class="text-lg leading-relaxed">Auf der anderen Seite steht der Server, ein leistungsstarker Computer, der Ressourcen oder Dienste zur Verfügung stellt. Server sind in der Regel mit leistungsstärkeren Prozessoren, mehr Speicher und größeren Speicherkapazitäten ausgestattet, um mehrere Anfragen gleichzeitig bedienen zu können. Sie sind größer, stärker und schneller im Vergleich zu den Clients, weil sie darauf ausgelegt sind, gleichzeitig mehrere Anfragen zu bearbeiten und auf diese schnell zu reagieren.</p>
-
-                <h3 class="text-xl font-semibold mt-4">Kommunikation und Verteilung von Funktionalitäten:</h3>
-                <ul>
-                    <li><span className='font-bold'>Anfrage-Antwort-Modell</span> In einem typischen Client-Server-Modell sendet der Client eine Anfrage an den Server, der daraufhin eine Antwort zurücksendet. Zum Beispiel könnte ein Webbrowser (Client) eine Anfrage an einen Webserver senden, um eine Webseite abzurufen. Der Server verarbeitet die Anfrage und sendet die entsprechenden Daten zurück an den Client.</li>
-                    <li><span className='font-bold'>Ressourcenteilung</span>Server können viele Arten von Ressourcen wie Dateien, Datenbanken, Netzwerkdienste und mehr anbieten. Clients greifen auf diese Ressourcen zu, um bestimmte Aufgaben zu erfüllen, ohne alle notwendigen Daten oder Anwendungen lokal speichern oder ausführen zu müssen.</li>
-                    <li><span className='font-bold'>Dezentralisierung</span>Durch die Verteilung von Funktionalitäten zwischen Clients und Servern können Netzwerke effizienter gestaltet werden. Clients müssen nicht übermäßig leistungsstark sein, da sie auf die Verarbeitungsleistung des Servers zugreifen können.</li>
-                    <li><span className='font-bold'>Skalierbarkeit</span>Ein leistungsstarker Server kann viele Clients bedienen, was die Skalierbarkeit des Systems erhöht. Wenn die Anzahl der Benutzer oder die Anforderungen an die Ressourcen wachsen, können Server hinzugefügt oder aufgerüstet werden, um den Bedarf zu decken.</li>
-                </ul>
-                <p class="text-lg leading-relaxed">Das Client-Server-Modell ist ein grundlegendes Konzept in der Computernetzwerkarchitektur und bildet die Basis für viele Arten von Netzwerkanwendungen und -diensten.</p>
-
-                <h2 class="text-2xl font-semibold mt-4">Ethernet zu Beginn: <span className='text-accent'>Historie</span></h2>
-                <p class="text-lg leading-relaxed">Ethernet ist eine grundlegende Technologie, die seit den frühen 1970er Jahren die Grundlage für lokale Netzwerke (LANs) bildet. Die Anfänge von Ethernet können auf das Forschungslabor von Xerox PARC zurückgeführt werden, wo es von Robert Metcalfe und seinem Team entwickelt wurde. Die ursprüngliche Konzeption von Ethernet basierte auf der Idee, dass mehrere Computer über ein einziges Koaxialkabel kommunizieren können, das als gemeinsames Übertragungsmedium dient.</p>
+            <h2 className="text-2xl font-semibold mt-4">Einführung in PHP</h2>
+            <h3 className="text-xl font-semibold mt-2">Was ist PHP?</h3>
+            <p className="text-lg leading-relaxed">
+              PHP (Hypertext Preprocessor) ist eine weit verbreitete Open-Source-Skriptsprache, die speziell für die Webentwicklung entwickelt wurde. Sie kann in HTML eingebettet werden und wird auf dem Server ausgeführt, wodurch dynamische Webseiten und Webanwendungen erstellt werden können.
+            </p>
+            <h3 className="text-xl font-semibold mt-2">Geschichte von PHP</h3>
+            <p className="text-lg leading-relaxed">
+              PHP wurde 1994 von Rasmus Lerdorf entwickelt. Ursprünglich stand PHP für "Personal Home Page", aber es wurde später in "PHP: Hypertext Preprocessor" umbenannt, um seine Hauptfunktion besser zu beschreiben. Seit seiner Einführung hat sich PHP stetig weiterentwickelt und ist zu einer der wichtigsten Technologien im Web geworden.
+            </p>
+            <h3 className="text-xl font-semibold mt-2">Einsatzbereiche von PHP</h3>
+            <p className="text-lg leading-relaxed">
+              PHP wird hauptsächlich für die serverseitige Webentwicklung verwendet. Hier sind einige typische Einsatzbereiche:
+            </p>
+            <ul className="list-disc ml-8">
+              <li>Erstellung dynamischer Webseiten</li>
+              <li>Formularverarbeitung</li>
+              <li>Interaktion mit Datenbanken</li>
+              <li>Session-Management</li>
+              <li>Erstellung von Webanwendungen</li>
+            </ul>
             
-                <h3 class="text-xl font-semibold mt-4">Koax Kabel</h3>
-                <p class="text-lg leading-relaxed">Das Koaxialkabel, das in den frühen Ethernet-Netzwerken verwendet wurde, spielte eine zentrale Rolle bei der Übertragung von Daten zwischen Computern. Dieses Kabel ist so konstruiert, dass es einen zentralen, leitenden Kern besitzt, der von einem isolierenden Dielektrikum umgeben ist. Über dem Dielektrikum befindet sich eine metallische Abschirmung, die wiederum von einer äußeren Schicht umhüllt wird. Diese Konstruktion ermöglicht eine robuste und störungsarme Signalübertragung.</p>
-                <p class="text-lg leading-relaxed">In den Anfängen von Ethernet wurde ein spezifisches Koaxialkabel, bekannt als Thicknet (10BASE5), eingesetzt. Dieses Kabel war relativ steif und schwer zu handhaben, bot aber die nötige Zuverlässigkeit für die damaligen Netzwerke. Später wurde ein dünneres und flexibleres Koaxialkabel, Thinnet (10BASE2), eingeführt, das einfacher zu installieren war.</p>
-                
-                <h3 class="text-xl font-semibold mt-4">Kollisionen</h3>
-                <p class="text-lg leading-relaxed">Im Kontext von Ethernet-Netzwerken, die auf Koaxialkabeln basierten, bezieht sich eine Kollision auf ein Ereignis, bei dem zwei Geräte gleichzeitig Daten über das gleiche Kabel senden. Da das Kabel ein gemeinsames Medium war, führten solche gleichzeitigen Übertragungen zu Dateninterferenzen. Das CSMA/CD-Protokoll (Carrier Sense Multiple Access with Collision Detection) wurde entwickelt, um dieses Problem zu bewältigen. Geräte prüfen, ob das Kabel frei ist, bevor sie senden, und warten im Falle einer Kollision eine zufällige Zeitspanne, bevor sie es erneut versuchen.</p>
-                
-                <h3 class="text-xl font-semibold mt-4">Entwicklung zur Kollisionsvermeidung</h3>
-                <ul>
-                    <li><span className='text-accent'>Von Koaxialkabeln zu Twisted-Pair- und Glasfaserkabeln</span><br/>Die Einführung von Twisted-Pair-Kabeln (wie 10BASE-T) und später Glasfaserkabeln bot dedizierte Verbindungen zwischen einzelnen Geräten und einem zentralen Netzwerkgerät (z.B. einem Switch), was Kollisionen auf dem Übertragungsmedium eliminieren konnte.</li><br/>
-                    <li><span className='text-accent'>Switches statt Hubs</span><br/>Die Verwendung von Netzwerkswitches anstelle von Hubs bedeutete, dass Datenpakete direkt an das Zielgerät gesendet werden konnten, anstatt wie bei einem Hub an alle Geräte. Dies reduzierte die Wahrscheinlichkeit von Kollisionen erheblich, da Switches dedizierte Pfade für die Kommunikation zwischen jedem Gerätepaar erstellen.</li><br/>
-                    <li><span className='text-accent'>Full-Duplex-Übertragung</span><br/>Moderne Ethernet-Netzwerke können im Full-Duplex-Modus betrieben werden, was bedeutet, dass Geräte gleichzeitig senden und empfangen können, ohne Kollisionen befürchten zu müssen. Dies wird durch die Verwendung von getrennten Kanälen für sendende und empfangende Daten ermöglicht, wie es bei der Verbindung von Computern zu Switches der Fall ist.</li><br/>
-                </ul>
-                <p class="text-lg leading-relaxed">Diese Entwicklungen haben dazu geführt, dass Koaxialkabel-basierte Ethernet-Netzwerke mit ihren inhärenten Kollisionsproblemen weitgehend durch effizientere, kollisionsfreie Netzwerkinfrastrukturen ersetzt wurden.</p>
+            <h3 className="text-xl font-semibold mt-2">Vorteile von PHP</h3>
+            <p className="text-lg leading-relaxed">
+              PHP bietet viele Vorteile, darunter:
+            </p>
+            <ul className="list-disc ml-8">
+              <li><span className='text-accent'>Einfach zu erlernen:</span> PHP hat eine flache Lernkurve, was es Anfängern leicht macht, einzusteigen.</li>
+              <li><span className='text-accent'>Open Source:</span> PHP ist kostenlos und wird von einer großen Community unterstützt.</li>
+              <li><span className='text-accent'>Plattformunabhängig:</span> PHP läuft auf fast allen Betriebssystemen, einschließlich Windows, Linux und Mac OS.</li>
+              <li><span className='text-accent'>Breite Datenbankunterstützung:</span> PHP unterstützt zahlreiche Datenbanken wie MySQL, PostgreSQL, SQLite und mehr.</li>
+              <li><span className='text-accent'>Große Community:</span> Die PHP-Community ist groß und aktiv, was bedeutet, dass es viele Ressourcen, Tutorials und Support gibt.</li>
+            </ul>
+            <h3 className="text-xl font-semibold mt-2">Einfache PHP-Syntax</h3>
+            <p className="text-lg leading-relaxed">
+              Ein einfaches PHP-Skript, das "Hello, World!" ausgibt, sieht folgendermaßen aus:
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+echo "Hello, World!";
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Einbetten von PHP in HTML</h3>
+            <p className="text-lg leading-relaxed">
+              PHP kann problemlos in HTML eingebettet werden. Hier ist ein Beispiel:
+            </p>
+            <pre>
+              <code className="language-php">
+{`<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP in HTML</title>
+</head>
+<body>
+    <h1><?php echo "Hello, World!"; ?></h1>
+</body>
+</html>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Fazit</h3>
+            <p className="text-lg leading-relaxed">
+              PHP ist eine leistungsstarke und flexible Sprache, die speziell für die Webentwicklung entwickelt wurde. Mit seiner einfachen Syntax und umfangreichen Funktionen ist es eine ausgezeichnete Wahl für Anfänger und erfahrene Entwickler gleichermaßen. PHP bleibt eine der wichtigsten Technologien für die Erstellung dynamischer und interaktiver Webinhalte.
+            </p>
 
-                <h2 class="text-2xl font-semibold mt-4">Das <span className='text-accent'>Kommunikationsmodell</span></h2>
-                <p class="text-lg leading-relaxed">Das  5-Tupel-Modell ist eine präzise Methode, um eine Netzwerkverbindung zu charakterisieren, speziell in Kontexten wie TCP/IP, wo es um die Verbindung zwischen einem Webserver und einem Client geht. Das 5-Tupel besteht aus:</p>
-                <ol>
-                    <li><span className='text-accent'>Protokoll</span><br/>Dies gibt das Kommunikationsprotokoll an, das für die Übertragung verwendet wird. In Ihrem Beispiel ist dies TCP (Transmission Control Protocol), das für die zuverlässige Übertragung von Datenpaketen im Internet sorgt. TCP ist ein verbindungsorientiertes Protokoll, das einen Handshake-Prozess verwendet, um eine sichere Verbindung zwischen Sender und Empfänger zu etablieren.</li><br/>
-                    <li><span className='text-accent'>Lokaler Host (IP-Nummer des lokalen Hosts)</span><br/>Dies ist die IP-Adresse des Geräts, von dem die Verbindung initiiert wird oder auf dem die Anfrage empfangen wird. In Ihrem Beispiel ist <span className='text-accent'>196.8.79.22</span> die IP-Adresse des lokalen Hosts, also beispielsweise des Webservers.</li><br/>
-                    <li><span className='text-accent'>Lokaler Prozess (Portnummer lokaler Host)</span><br/>Hier wird der spezifische Prozess auf dem lokalen Host identifiziert, in der Regel durch eine Portnummer. Im Beispiel ist <span className='text-accent'>1078</span> die Portnummer auf dem lokalen Host, die den spezifischen Prozess (z.B. eine bestimmte Instanz eines Webdienstes) kennzeichnet, mit dem kommuniziert wird.</li><br/>
-                    <li><span className='text-accent'>Fremder Host (IP-Nummer des fremden Hosts):</span><br/>Dies ist die IP-Adresse des Zielgeräts in der Kommunikation, also des Geräts, das die Daten anfordert oder an das die Daten gesendet werden. In diesem Fall ist <span className='text-accent'>132.49.2.3</span> die IP-Adresse des fremden Hosts.</li><br/>
-                    <li><span className='text-accent'>Fremder Prozess (Portnummer fremder Host):</span><br/>Ähnlich wie beim lokalen Prozess identifiziert dies den spezifischen Prozess auf dem Zielgerät, der über eine Portnummer (21 in als Beispiel) spezifiziert wird. Port 21 wird oft für FTP verwendet, aber in einem Webkontext könnte dies auch für HTTP (Port 80) oder HTTPS (Port 443) stehen, je nachdem, welcher Dienst angefordert wird.</li><br/>
-                </ol>
+            <h2 className="text-2xl font-semibold mt-4">PHP anhand eines Formulars</h2>
+            <h3 className="text-xl font-semibold mt-2">Einführung</h3>
+            <p className="text-lg leading-relaxed">
+              PHP ist besonders nützlich für die Verarbeitung von Formularen, die in HTML erstellt wurden. Ein Formular ermöglicht Benutzern die Eingabe von Daten, die dann vom Server verarbeitet werden können. Hier zeigen wir, wie man ein einfaches Formular erstellt und die Eingaben mit PHP verarbeitet.
+            </p>
+            <h3 className="text-xl font-semibold mt-2">HTML-Formular erstellen</h3>
+            <p className="text-lg leading-relaxed">
+              Zunächst erstellen wir ein einfaches HTML-Formular, das den Benutzer nach seinem Namen und seiner E-Mail-Adresse fragt.
+            </p>
+            <pre>
+              <code className="language-html">
+{`<!DOCTYPE html>
+<html>
+<head>
+    <title>Einfaches Formular</title>
+</head>
+<body>
+    <h1>Kontaktformular</h1>
+    <form action="process_form.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Absenden">
+    </form>
+</body>
+</html>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Formularverarbeitung mit PHP</h3>
+            <p className="text-lg leading-relaxed">
+              Nun erstellen wir die PHP-Datei <code>process_form.php</code>, um die eingegebenen Daten zu verarbeiten. Diese Datei empfängt die Daten aus dem Formular und gibt sie zurück an den Benutzer.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    echo "Vielen Dank, $name!<br>";
+    echo "Wir werden Ihnen eine Bestätigung an $email senden.";
+}
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Erklärung des PHP-Codes</h3>
+            <p className="text-lg leading-relaxed">
+              Der PHP-Code überprüft zuerst, ob das Formular mit der POST-Methode gesendet wurde. Anschließend werden die Eingabedaten des Benutzers sicher verarbeitet, indem spezielle HTML-Zeichen mit <code>htmlspecialchars()</code> konvertiert werden, um Sicherheitsrisiken wie Cross-Site Scripting (XSS) zu vermeiden. Schließlich werden die bereinigten Eingabedaten dem Benutzer angezeigt.
+            </p>
+            <h3 className="text-xl font-semibold mt-2">Fazit</h3>
+            <p className="text-lg leading-relaxed">
+              Mit PHP können Sie Benutzereingaben aus HTML-Formularen einfach verarbeiten und dynamische Inhalte generieren. Dieses Beispiel zeigt die Grundlagen der Formularverarbeitung, die Sie erweitern können, um komplexere Anwendungen zu erstellen.
+            </p>
+            <h2 className="text-2xl font-semibold mt-4">Fortgeschrittener Kurs in PHP</h2>
+            <h3 className="text-xl font-semibold mt-2"> Programmierung (OOP)</h3>
+            <p className="text-lg leading-relaxed">
+              Die objektorientierte Programmierung (OOP) ist ein Programmierparadigma, das auf der Verwendung von Objekten basiert. In PHP können Klassen und Objekte definiert werden, um wiederverwendbaren Code zu schreiben und die Wartbarkeit der Anwendung zu verbessern.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+class Car {
+    public $color;
+    public $model;
 
-                <h2 class="text-2xl font-semibold mt-4">Software-Architektur von<span className='text-accent'> dynamischen </span>Web-Seiten</h2>
-                <p class="text-lg leading-relaxed">Die Software-Architektur von dynamischen Webseiten umfasst sowohl clientseitige als auch serverseitige Komponenten, die interaktiv zusammenarbeiten, um eine reaktionsfähige und interaktive Benutzererfahrung zu ermöglichen. Im Gegensatz zu statischen Webseiten, die festen Inhalt liefern, können dynamische Webseiten ihren Inhalt in Echtzeit anpassen, basierend auf Interaktionen des Benutzers oder anderen Faktoren.</p>
-                
-                <h3 class="text-xl font-semibold mt-4">Serverseitige Architektur</h3>
-                <p class="text-lg leading-relaxed">Auf der Serverseite werden dynamische Webseiten oft mit Hilfe von Programmiersprachen wie PHP, Python, Ruby oder JavaScript (Node.js) entwickelt. Diese serverseitigen Skripte interagieren mit Datenbanken, Dateisystemen und anderen Ressourcen, um Inhalte zu generieren, die an den Client gesendet werden.</p>
-                <ul>
-                    <li><span className='text-accent'>Datenverarbeitung</span><br/>Serverseitige Skripte verarbeiten Anfragen vom Client, führen Geschäftslogik aus, interagieren mit Datenbanken und erzeugen die erforderlichen Daten.</li><br/>
-                    <li><span className='text-accent'>Dynamische Inhaltserstellung</span><br/>Anstatt eine fixe HTML-Seite zu senden, generieren serverseitige Skripte dynamisch HTML, CSS und JavaScript basierend auf der aktuellen Anfrage, Benutzerinteraktionen oder anderen Parametern.</li><br/>
-                    <li><span className='text-accent'>Datenbankinteraktion</span><br/>Dynamische Webseiten interagieren häufig mit Datenbanken, um Inhalte zu speichern und abzurufen. Dies ermöglicht eine personalisierte Benutzererfahrung und die Fähigkeit, große Mengen von Daten effektiv zu verwalten.</li><br/>
-                </ul>
+    public function __construct($color, $model) {
+        $this->color = $color;
+        $this->model = $model;
+    }
 
-                <h3 class="text-xl font-semibold mt-4">Clientseitige Architektur</h3>
-                <p class="text-lg leading-relaxed">Auf der Clientseite wird das dynamische Verhalten durch JavaScript, zusammen mit HTML und CSS, ermöglicht. Moderne Webanwendungen nutzen oft JavaScript-Frameworks oder -Bibliotheken wie React, Angular oder Vue.js, um interaktive Benutzeroberflächen zu erstellen.</p>
-                <ul>
-                    <li><span className='text-accent'>Dynamische Interaktion</span>JavaScript ermöglicht es, auf Benutzerinteraktionen zu reagieren, ohne notwendigerweise mit dem Server kommunizieren zu müssen. Dies umfasst Aktionen wie das Erweitern eines Dropdown-Menüs oder das Überprüfen von Formulareingaben.</li>
-                    <li><span className='text-accent'>Asynchrone Anfragen</span>Mit AJAX (Asynchronous JavaScript and XML) können Webseiten asynchron Daten mit dem Server austauschen und Teile der Seite aktualisieren, ohne die Seite neu laden zu müssen.</li>
-                    <li><span className='text-accent'>Clientseitige Manipulation des DOM</span>avaScript kann das Document Object Model (DOM) manipulieren, was die Modifikation von Elementen und Inhalten auf einer Seite in Echtzeit ermöglicht.</li>
-                </ul>
+    public function message() {
+        return "My car is a " . $this->color . " " . $this->model . ".";
+    }
+}
 
-                <h3 class="text-xl font-semibold mt-4">Zusammenspiel von Client und Server</h3>
-                <p class="text-lg leading-relaxed">In einer dynamischen Webseite interagieren die clientseitigen und serverseitigen Komponenten miteinander, um eine reaktive Benutzererfahrung zu ermöglichen:</p>
-                <ul>
-                    <li>Der Benutzer interagiert mit der Webseite im Browser (Clientseite).</li>
-                    <li>JavaScript fängt diese Interaktionen ab und kann entweder direkt auf der Clientseite reagieren oder eine Anfrage an den Server senden.</li>
-                    <li>Der Server verarbeitet die Anfrage (z.B. Datenabfrage, Geschäftslogik) und sendet eine Antwort zurück.</li>
-                    <li>Die Antwort wird clientseitig verarbeitet, oft durch Aktualisieren des DOM, um neue oder veränderte Inhalte anzuzeigen, ohne die Seite vollständig neu zu laden.</li>
-                </ul>
-                <p class="text-lg leading-relaxed">Durch diese Kombination von Technologien können dynamische Webseiten komplexe und interaktive Benutzererlebnisse bieten, die weit über die Möglichkeiten statischer Seiten hinausgehen.</p>
+$myCar = new Car("black", "Volvo");
+echo $myCar->message();
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Datenbankverbindung mit PDO</h3>
+            <p className="text-lg leading-relaxed">
+              PHP Data Objects (PDO) ist eine Datenbankabstraktionsschicht, die eine einheitliche Schnittstelle für die Verbindung zu verschiedenen Datenbanken bietet. PDO unterstützt verschiedene Datenbanken wie MySQL, PostgreSQL, SQLite und viele andere.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+$dsn = 'mysql:host=localhost;dbname=testdb';
+$username = 'root';
+$password = '';
 
-                <h2 class="text-2xl font-semibold mt-4">Einführung in clientseitige Technologien</h2>
-                <p class="text-lg leading-relaxed">Diese Technologien laufen direkt im Browser des Benutzers ab und sind entscheidend für die Interaktivität und Benutzererfahrung auf Webseiten.</p>
-                <ul>
-                    <li><span className='font-bold'>JavaScript & Frameworks</span>Wird für interaktive Elemente auf der Clientseite verwendet.</li><br/>
-                    <li><span className='font-bold'>Java Applets</span>Früher genutzt zur Erweiterung der Browserfunktionalität, heute jedoch wegen Sicherheitsbedenken und veralteter Technik kaum noch verwendet.</li><br/>
-                    <li><span className='font-bold'>Native Apps</span>Entwicklung spezifisch für iOS (Swift) und Android (Java).</li><br/>
-                    <li><span className='font-bold'>Hybride/Web-Apps</span>Serverseitig programmierte Anwendungen, die auf das Endgerät native Code oder JavaScript für den Browser ausliefern.</li><br/>
-                </ul>
+try {
+    $pdo = new PDO($dsn, $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Verbindung erfolgreich!";
+} catch (PDOException $e) {
+    echo "Verbindung fehlgeschlagen: " . $e->getMessage();
+}
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Prepared Statements</h3>
+            <p className="text-lg leading-relaxed">
+              Prepared Statements sind eine effiziente und sichere Möglichkeit, SQL-Abfragen in PHP auszuführen. Sie schützen vor SQL-Injection-Angriffen und verbessern die Leistung durch wiederverwendbare Abfragen.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+$sql = "SELECT * FROM users WHERE email = :email";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['email' => 'test@example.com']);
+$user = $stmt->fetch();
 
-                <h2 class="text-2xl font-semibold mt-4">Überblick über serverseitige Technologien</h2>
-                <p class="text-lg leading-relaxed">Serverseitige Technologien sind für die Datenverarbeitung, Logik und das Backend-Management von Webanwendungen verantwortlich.</p>
-                <ul>
-                    <li><span className='font-bold'>CGI (Common Gateway Interface)</span>Einmal weit verbreitet, jetzt wegen Performance- und Sicherheitsproblemen veraltet.</li><br/>
-                    <li><span className='font-bold'>PHP</span>Eine populäre Scriptsprache für serverseitige Entwicklung, unterstützt durch umfangreiche Funktionen und einfache Erlernbarkeit. Verbesserungen in der Performance wurden durch JIT-Kompilierung erreicht.</li><br/>
-                    <li><span className='font-bold'>Java Servlets & JSP</span>Java-Technologien zur Erzeugung dynamischer Webinhalte, wobei Servlets die Basis für JSP bilden.</li><br/>
-                    <li><span className='font-bold'>Node.js</span>Eine Plattform, die JavaScript auf dem Server ausführt, unterstützt durch ein umfangreiches Paketökosystem (npm).</li><br/>
-                </ul>
+if ($user) {
+    echo "Benutzer gefunden: " . $user['name'];
+} else {
+    echo "Benutzer nicht gefunden.";
+}
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Fehlerbehandlung</h3>
+            <p className="text-lg leading-relaxed">
+              Fehlerbehandlung ist ein wichtiger Aspekt der Softwareentwicklung. PHP bietet mehrere Mechanismen zur Fehlerbehandlung, einschließlich der Verwendung von try-catch-Blöcken und benutzerdefinierten Fehler-Handlern.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+function customError($errno, $errstr) {
+    echo "Fehler: [$errno] $errstr";
+}
 
-                <h2 class="text-2xl font-semibold mt-4">Spezielle Entwicklungen und Trends</h2>
-                <p class="text-lg leading-relaxed">Dieser Abschnitt beleuchtet die Verschiebung von veralteten Technologien zu modernen Ansätzen in der Webentwicklung.</p>
-                <ul>
-                    <li><span className='text-accent'>Veraltete Technologien: </span>Die Abkehr von älteren Technologien wie Java Applets und CGI zugunsten modernerer Lösungen.</li>
-                    <li><span className='text-accent'>Moderne Praktiken: </span>Einsatz von Node.js für serverseitiges JavaScript und die Nutzung von PHP für dynamische Webseitenerzeugung und Datenbankinteraktionen.</li>
-                </ul>
+set_error_handler("customError");
 
-                <h2 class="text-2xl font-semibold mt-4">Streams, Serialisierung und und Datei Datei E/A</h2>
+echo($test); // Verursacht einen Fehler, da $test nicht definiert ist
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Sessions und Cookies</h3>
+            <p className="text-lg leading-relaxed">
+              Sessions und Cookies werden verwendet, um Benutzerdaten über verschiedene Seiten hinweg zu speichern. Sessions speichern Daten auf dem Server, während Cookies Daten im Browser des Benutzers speichern.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+// Session starten
+session_start();
+$_SESSION['username'] = 'JohnDoe';
 
-                <h3 class="text-xl font-semibold mt-4">Speicherung von Zuständen</h3>
-                <p class="text-lg leading-relaxed">Objekte in der Programmierung können sowohl einen Zustand als auch ein Verhalten haben. Während das Verhalten in der Klasse definiert ist, ist der Zustand individuell für jedes Objekt. Die Speicherung dieses Zustands ist wesentlich, um beispielsweise den Fortschritt in einem Spiel oder die Daten in einer Anwendung, die Diagramme erzeugt, zu erhalten. Es werden zwei Methoden zur Speicherung von Objektzuständen vorgestellt: eine manuelle Methode, bei der der Entwickler den Zustand jedes Objekts einzeln erfasst und speichert, und eine objektorientierte Methode, die die Serialisierung von Objekten nutzt, um ihren Zustand effizient zu speichern und wiederherzustellen. Die Wahl der Methode kann abhängen von der Notwendigkeit, die gespeicherten Daten mit Nicht-Java-Programmen zu teilen, was die manuelle Methode erfordern könnte.</p>
+// Cookie setzen
+setcookie('user', 'JohnDoe', time() + (86400 * 30), "/"); // 86400 = 1 Tag
 
-                <h3 class="text-xl font-semibold mt-4">Objektzustände und Persistenz in Java</h3>
-                <p class="text-lg leading-relaxed">In Java kann der Zustand eines Objekts für verschiedene Zwecke wie Datensicherung, Netzwerkübertragung oder einfach zur späteren Verwendung gespeichert werden. Dies ist besonders nützlich in Anwendungen, bei denen der Zustand eines Objekts über einen gewissen Zeitraum hinweg konsistent bleiben muss, wie bei Online-Spielen, E-Commerce-Transaktionen oder jeder Art von Anwendung, die eine Sitzungsverwaltung erfordert.</p>
-                <p class="text-lg leading-relaxed"><span className='font-bold'>Beispiel für die Spielfigurenspeicherung: </span>Betrachten Sie ein Rollenspiel, bei dem die Attribute einer Spielfigur wie Gesundheit, Mana und Inventar gespeichert werden müssen. Wenn der Spieler das Spiel verlässt und später zurückkehrt, erwartet er, dass seine Spielfigur in demselben Zustand ist, in dem er sie verlassen hat.</p>
+// Zugriff auf Session und Cookie
+echo "Session-Username: " . $_SESSION['username'];
+echo "Cookie-Username: " . $_COOKIE['user'];
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">API-Erstellung</h3>
+            <p className="text-lg leading-relaxed">
+              Mit PHP können RESTful APIs erstellt werden, um Anwendungen zu ermöglichen, miteinander zu kommunizieren. Hier ist ein einfaches Beispiel, wie eine API erstellt wird, die JSON-Daten zurückgibt.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+header("Content-Type: application/json; charset=UTF-8");
 
-                <h4 class="text-xl font-semibold mt-4">Tiefgreifender Blick auf Serialisierung und Deserialisierung</h4>
-                <p class="text-lg leading-relaxed">Serialisierung in Java ist ein Mechanismus, bei dem ein Objekt in eine Bytefolge umgewandelt wird, die dann leicht in Dateien gespeichert oder über Netzwerke übertragen werden kann. Deserialisierung ist der umgekehrte Prozess, bei dem aus der Bytefolge wieder ein Objekt rekonstruiert wird.</p>
-                <p class="text-lg leading-relaxed"><span className='text-accent'>Details zur Serialisierbarkeit: </span>Ein Objekt muss das Serializable-Interface implementieren, um serialisierbar zu sein. Es ist wichtig zu beachten, dass nicht alle Objekte serialisiert werden können, insbesondere solche, die eine direkte oder indirekte Verbindung zu Systemressourcen haben.</p>
-                <p class="text-lg leading-relaxed"><span className='font-bold'>Erweitertes Beispiel zur Serialisierung: </span>Nehmen Sie an, Sie entwickeln eine Client-Server-Anwendung, in der der Client den Zustand eines Benutzerobjekts an den Server senden muss. Die Serialisierung ermöglicht es dem Client, das Benutzerobjekt in einen Byte-Stream umzuwandeln, über das Netzwerk zu senden und vom Server wieder in ein Objekt zu deserialisieren.</p>
+$data = [
+    "status" => "success",
+    "message" => "API funktioniert!"
+];
 
-                <h4 class="text-xl font-semibold mt-4">Umfassende Betrachtung von Streams in Java</h4>
-                <p class="text-lg leading-relaxed">Streams in Java sind eine zentrale Abstraktion für Ein- und Ausgabeoperationen. Sie ermöglichen es Programmen, auf eine abstrahierte Weise mit Datenquellen oder -zielen zu interagieren, sei es eine Datei, ein Netzwerksocket oder sogar der Speicher.</p>
-                <p class="text-lg leading-relaxed"><span className='font-bold'>Beispiel für Stream-Verkettung: </span>Beim Lesen von Daten aus einer Datei und deren Umwandlung in Großbuchstaben bevor die Ausgabe auf der Konsole erfolgt, können Streams verkettet werden, um den FileInputStream mit einem InputStreamReader und einem BufferedReader zu kombinieren, wodurch die Effizienz der I/O-Operationen erhöht wird.</p>
+echo json_encode($data);
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Fortgeschrittene Themen</h3>
+            <p className="text-lg leading-relaxed">
+              Weitere fortgeschrittene Themen in PHP umfassen das Arbeiten mit Composer für die Paketverwaltung, die Verwendung von Namespaces zur Strukturierung des Codes und die Implementierung von Design Patterns für saubere und wartbare Softwarearchitekturen.
+            </p>
+            <h3 className="text-xl font-semibold mt-2">Fazit</h3>
+            <p className="text-lg leading-relaxed">
+              PHP ist eine vielseitige und leistungsstarke Sprache, die für viele fortgeschrittene Webentwicklungsaufgaben geeignet ist. Mit den hier vorgestellten Techniken können Entwickler robuste und sichere Webanwendungen erstellen.
+            </p>
 
-                <h4 class="text-xl font-semibold mt-4">Datei-Ein- und Ausgabe in der Praxis</h4>
-                <p class="text-lg leading-relaxed">Java bietet eine robuste API für Datei-E/A, mit der Entwickler Daten lesen und schreiben können. Dies ist essentiell für die Persistenz von Daten, insbesondere in verteilten Systemen.</p>
-                <p class="text-lg leading-relaxed"><span className='font-bold'>Beispiel zur Dateiverarbeitung: </span>Ein Programm könnte konzipiert sein, um Log-Daten zu verarbeiten. Hierfür liest es kontinuierlich eine Datei, verarbeitet jede Zeile, um bestimmte Informationen zu extrahieren, und schreibt die Ergebnisse in eine andere Datei.</p>
+            <h2 className="text-2xl font-semibold mt-4">Verknüpfung von PHP und SQL-Datenbanken</h2>
+            <h3 className="text-xl font-semibold mt-2">Einführung</h3>
+            <p className="text-lg leading-relaxed">
+              PHP ist eine weit verbreitete serverseitige Skriptsprache, die oft verwendet wird, um dynamische Webseiten zu erstellen. Eine der häufigsten Aufgaben in PHP ist die Interaktion mit einer SQL-Datenbank, wie MySQL. Diese Verknüpfung ermöglicht es, Daten aus einer Datenbank zu lesen, zu schreiben, zu aktualisieren und zu löschen.
+            </p>
+            <h3 className="text-xl font-semibold mt-2">Verbindung zu einer MySQL-Datenbank herstellen</h3>
+            <p className="text-lg leading-relaxed">
+              Um eine Verbindung zu einer MySQL-Datenbank herzustellen, können wir die <code>mysqli</code>-Erweiterung oder PDO (PHP Data Objects) verwenden. Hier zeigen wir beide Methoden.
+            </p>
+            <h4 className="text-lg font-semibold mt-2">Verbindung mit <code>mysqli</code></h4>
+            <pre>
+              <code className="language-php">
+{`<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "database";
 
-                <h4 class="text-xl font-semibold mt-4">Erweiterte Beispiele und Anwendungsfälle</h4>
-                <p class="text-lg leading-relaxed"><span className='text-accent'>Serialisierung in verteilten Systemen: </span>In einem verteilten Banksystem könnte ein Objekt, das eine Transaktion darstellt, zwischen verschiedenen Servern übertragen werden müssen. Die Serialisierung ermöglicht es, das Transaktionsobjekt in einen Byte-Stream umzuwandeln, über das Netzwerk zu senden und auf dem Zielserver wieder in ein Objekt zu deserialisieren.</p>
-                <p class="text-lg leading-relaxed"><span className='text-accent'>Stream-Manipulation für Datenverarbeitung: </span>Ein Programm, das große Datenmengen verarbeitet, wie beispielsweise ein ETL-Prozess (Extract, Transform, Load), nutzt Streams, um Daten aus einer Quelle zu extrahieren, zu transformieren und in ein neues Format oder Ziel zu laden.</p>
+// Verbindung erstellen
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-                <h3 class="text-xl font-semibold mt-4">Ein serialisiertes Objekt in eine Datei schreiben</h3>
-                <ul>
-                    <li>Einen FileOutputStream erzeugen
-                      <pre><code className="language-javascript">
-                    {`
-FileOutputStream fileStream = new FileOutputStream("MeinSpiel.ser");
-                    `}
-                      </code></pre>
-                    </li><br/>
-                    <li>Einen ObjectOutputStream erzeugen
-                      <pre><code className="language-javascript">
-                      {`
-ObjectOutputStream os = new ObjectOutputStream(fileStream);
-                      `}
-                        </code></pre>
-                    </li><br/>
-                    <li>Das Objekt schreiben
-                      <pre><code className="language-javascript">
-                      {`
-os.writeObject(figur1);
-os.writeObject(figur2);
-os.writeObject(figur3);
-                      `}
-                        </code></pre>
-                    </li><br/>
-                    <li>Den ObjectOutputStream schließen
-                      <pre><code className="language-javascript">
-                      {`
-os.close();
-                      `}
-                        </code></pre>
-                    </li><br/>
-                </ul>
+// Verbindung überprüfen
+if ($conn->connect_error) {
+    die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+}
+echo "Verbindung erfolgreich";
+?>`}
+              </code>
+            </pre>
+            <h4 className="text-lg font-semibold mt-2">Verbindung mit PDO</h4>
+            <pre>
+              <code className="language-php">
+{`<?php
+$dsn = 'mysql:host=localhost;dbname=database';
+$username = 'username';
+$password = 'password';
 
+try {
+    $pdo = new PDO($dsn, $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Verbindung erfolgreich";
+} catch (PDOException $e) {
+    echo "Verbindung fehlgeschlagen: " . $e->getMessage();
+}
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Datenbankabfragen durchführen</h3>
+            <p className="text-lg leading-relaxed">
+              Nachdem die Verbindung hergestellt ist, können wir Datenbankabfragen durchführen. Hier sind Beispiele für das Abrufen, Einfügen, Aktualisieren und Löschen von Daten mit <code>mysqli</code> und PDO.
+            </p>
+            <h4 className="text-lg font-semibold mt-2">Daten abrufen</h4>
+            <h5 className="text-md font-semibold mt-1">Mit <code>mysqli</code></h5>
+            <pre>
+              <code className="language-php">
+{`<?php
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($sql);
 
+if ($result->num_rows > 0) {
+    // Ausgabe der Daten jeder Zeile
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    }
+} else {
+    echo "0 Ergebnisse";
+}
+$conn->close();
+?>`}
+              </code>
+            </pre>
+            <h5 className="text-md font-semibold mt-1">Mit PDO</h5>
+            <pre>
+              <code className="language-php">
+{`<?php
+$sql = 'SELECT id, firstname, lastname FROM MyGuests';
+$stmt = $pdo->query($sql);
 
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    echo "id: " . $row['id'] . " - Name: " . $row['firstname'] . " " . $row['lastname'] . "<br>";
+}
+?>`}
+              </code>
+            </pre>
+            <h4 className="text-lg font-semibold mt-2">Daten einfügen</h4>
+            <h5 className="text-md font-semibold mt-1">Mit <code>mysqli</code></h5>
+            <pre>
+              <code className="language-php">
+{`<?php
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@example.com')";
 
+if ($conn->query($sql) === TRUE) {
+    echo "Neuer Datensatz erfolgreich erstellt";
+} else {
+    echo "Fehler: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+?>`}
+              </code>
+            </pre>
+            <h5 className="text-md font-semibold mt-1">Mit PDO</h5>
+            <pre>
+              <code className="language-php">
+{`<?php
+$sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES (:firstname, :lastname, :email)";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['firstname' => 'John', 'lastname' => 'Doe', 'email' => 'john@example.com']);
+echo "Neuer Datensatz erfolgreich erstellt";
+?>`}
+              </code>
+            </pre>
+            <h4 className="text-lg font-semibold mt-2">Daten aktualisieren</h4>
+            <h5 className="text-md font-semibold mt-1">Mit <code>mysqli</code></h5>
+            <pre>
+              <code className="language-php">
+{`<?php
+$sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
 
-                <h3 class="text-xl font-semibold mt-4">Deserialisierung: Wiederherstellung eines Objekts</h3>
-                <p class="text-lg leading-relaxed">Die Kernidee der Objektserialisierung ist es, ein Objekt in einen Zustand zu versetzen, in dem es gespeichert und später, möglicherweise in einer anderen Instanz der Java Virtual Machine (JVM), in seinen ursprünglichen Zustand zurückversetzt werden kann. Die Deserialisierung funktioniert als Gegenstück zur Serialisierung und stellt das Objekt aus dem gespeicherten Zustand wieder her, was als umgekehrte Serialisierung betrachtet werden kann.</p>
-                <ul>
-                    <li>Einen File InputStream erzeugen
-                      <pre><code className="language-javascript">
-                    {`
-FileInputStream fileStream = new FileInputStream("MeinSpiel.ser");
-                    `}
-                      </code></pre>
-                    </li><br/>
-                    <li>Einen ObjectInputStream erzeugen
-                      <pre><code className="language-javascript">
-                      {`
-ObjectInputStream os = new ObjectInputStream(fileStream);
-                      `}
-                        </code></pre>
-                    </li><br/>
-                    <li>Das Objekt lesen
-                      <pre><code className="language-javascript">
-                      {`
-Object eins = os.readObject();
-Object zwei = os.readObject();
-Object drei = os.readObject();
-                      `}
-                        </code></pre>
-                    </li><br/>
-                    <li>DDie Objekte casten
-                      <pre><code className="language-javascript">
-                      {`
-Spielfigur elb = (Spielfigur) eins;
-Spielfigur troll = (Spielfigur) zwei;
-Spielfigur zauberer = (Spielfigur) drei;
-                      `}
-                        </code></pre>
-                    </li><br/>
-                    <li>Den Object InputStream schließen
-                      <pre><code className="language-javascript">
-                      {`
-os.close();
-                      `}
-                        </code></pre>
-                    </li><br/>
-                </ul>
+if ($conn->query($sql) === TRUE) {
+    echo "Datensatz erfolgreich aktualisiert";
+} else {
+    echo "Fehler beim Aktualisieren des Datensatzes: " . $conn->error;
+}
+$conn->close();
+?>`}
+              </code>
+            </pre>
+            <h5 className="text-md font-semibold mt-1">Mit PDO</h5>
+            <pre>
+              <code className="language-php">
+{`<?php
+$sql = "UPDATE MyGuests SET lastname = :lastname WHERE id = :id";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['lastname' => 'Doe', 'id' => 2]);
+echo "Datensatz erfolgreich aktualisiert";
+?>`}
+              </code>
+            </pre>
+            <h4 className="text-lg font-semibold mt-2">Daten löschen</h4>
+            <h5 className="text-md font-semibold mt-1">Mit <code>mysqli</code></h5>
+            <pre>
+              <code className="language-php">
+{`<?php
+$sql = "DELETE FROM MyGuests WHERE id=3";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Datensatz erfolgreich gelöscht";
+} else {
+    echo "Fehler beim Löschen des Datensatzes: " . $conn->error;
+}
+$conn->close();
+?>`}
+              </code>
+            </pre>
+            <h5 className="text-md font-semibold mt-1">Mit PDO</h5>
+            <pre>
+              <code className="language-php">
+{`<?php
+$sql = "DELETE FROM MyGuests WHERE id = :id";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['id' => 3]);
+echo "Datensatz erfolgreich gelöscht";
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Zusammenfassung</h3>
+            <p className="text-lg leading-relaxed">
+              Die Verknüpfung von PHP und SQL-Datenbanken ermöglicht es Entwicklern, leistungsstarke und dynamische Webanwendungen zu erstellen. Mit PHP können Sie auf einfache Weise Datenbankverbindungen herstellen, Datenbankabfragen durchführen und Daten sicher und effizient verarbeiten.
+            </p>
+            
+            <h2 className="text-2xl font-semibold mt-4">PHP und SQL Datenbankintegration</h2>
+            <h3 className="text-xl font-semibold mt-2">Einführung</h3>
+            <p className="text-lg leading-relaxed">
+              PHP ist eine weit verbreitete serverseitige Skriptsprache, die oft verwendet wird, um dynamische Webseiten zu erstellen. Eine der häufigsten Aufgaben in PHP ist die Interaktion mit einer SQL-Datenbank, wie MySQL. Diese Verknüpfung ermöglicht es, Daten aus einer Datenbank zu lesen, zu schreiben, zu aktualisieren und zu löschen.
+            </p>
+            <h3 className="text-xl font-semibold mt-2">Verbindung zu einer MySQL-Datenbank herstellen</h3>
+            <p className="text-lg leading-relaxed">
+              Um eine Verbindung zu einer MySQL-Datenbank herzustellen, können wir die <code>mysqli</code>-Erweiterung oder PDO (PHP Data Objects) verwenden. Hier zeigen wir beide Methoden.
+            </p>
+            <h4 className="text-lg font-semibold mt-2">Verbindung mit <code>mysqli</code></h4>
+            <pre>
+              <code className="language-php">
+{`<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "database";
+
+// Verbindung erstellen
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verbindung überprüfen
+if ($conn->connect_error) {
+    die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+}
+echo "Verbindung erfolgreich";
+?>`}
+              </code>
+            </pre>
+            <h4 className="text-lg font-semibold mt-2">Verbindung mit PDO</h4>
+            <pre>
+              <code className="language-php">
+{`<?php
+$dsn = 'mysql:host=localhost;dbname=database';
+$username = 'username';
+$password = 'password';
+
+try {
+    $pdo = new PDO($dsn, $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Verbindung erfolgreich";
+} catch (PDOException $e) {
+    echo "Verbindung fehlgeschlagen: " . $e->getMessage();
+}
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">HTML-Formular erstellen</h3>
+            <p className="text-lg leading-relaxed">
+              Zunächst erstellen wir ein einfaches HTML-Formular, das den Benutzer nach seinem Namen und seiner E-Mail-Adresse fragt. Die Daten werden dann mithilfe von PHP in die Datenbank geschrieben.
+            </p>
+            <pre>
+              <code className="language-html">
+{`<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP und MySQL Beispiel</title>
+</head>
+<body>
+    <h2>Daten eingeben</h2>
+    <form action="insert.php" method="post">
+        <label for="firstname">Vorname:</label><br>
+        <input type="text" id="firstname" name="firstname"><br>
+        <label for="lastname">Nachname:</label><br>
+        <input type="text" id="lastname" name="lastname"><br>
+        <input type="submit" value="Absenden">
+    </form>
+    <h2>Daten anzeigen</h2>
+    <div id="data-output">
+        <?php include 'fetch.php'; ?>
+    </div>
+</body>
+</html>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">PHP-Skript für die Datenbankverbindung</h3>
+            <p className="text-lg leading-relaxed">
+              Erstelle eine Datei namens <code>db_connection.php</code>, die den Code zur Verbindung mit der Datenbank enthält.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "database";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+}
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">PHP-Skript zum Einfügen von Daten</h3>
+            <p className="text-lg leading-relaxed">
+              Erstelle eine Datei namens <code>insert.php</code>, die die Daten aus dem Formular entgegennimmt und in die Datenbank einfügt.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+include 'db_connection.php';
+
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+
+$sql = "INSERT INTO MyGuests (firstname, lastname) VALUES ('$firstname', '$lastname')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Neuer Datensatz erfolgreich erstellt";
+} else {
+    echo "Fehler: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+
+<a href="index.html">Zurück zur Startseite</a>
+`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">PHP-Skript zum Abrufen und Anzeigen von Daten</h3>
+            <p className="text-lg leading-relaxed">
+              Erstelle eine Datei namens <code>fetch.php</code>, die die Daten aus der Datenbank abruft und anzeigt.
+            </p>
+            <pre>
+              <code className="language-php">
+{`<?php
+include 'db_connection.php';
+
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<ul>";
+    while($row = $result->fetch_assoc()) {
+        echo "<li>ID: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "</li>";
+    }
+    echo "</ul>";
+} else {
+    echo "0 Ergebnisse";
+}
+
+$conn->close();
+?>`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Datenbankstruktur</h3>
+            <p className="text-lg leading-relaxed">
+              Stelle sicher, dass du eine Datenbank und eine Tabelle erstellt hast, die mit dem obigen Code kompatibel ist. Hier ist ein Beispiel-SQL-Befehl, um die Tabelle zu erstellen:
+            </p>
+            <pre>
+              <code className="language-sql">
+{`CREATE DATABASE database;
+USE database;
+
+CREATE TABLE MyGuests (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);`}
+              </code>
+            </pre>
+            <h3 className="text-xl font-semibold mt-2">Zusammenfassung</h3>
+            <p className="text-lg leading-relaxed">
+              Diese Anleitung zeigt, wie du eine HTML-Webseite mit einem Formular erstellst, das Daten in eine SQL-Datenbank einfügt und wieder ausgibt. Der Prozess umfasst die Erstellung einer Verbindung zur Datenbank, das Einfügen von Daten über ein PHP-Skript und das Abrufen und Anzeigen dieser Daten.
+            </p>
             </div>
         </motion.div>
       </div>
