@@ -222,11 +222,11 @@ public class TCPClient {
               Das Verständnis von Ports und Sockets ist entscheidend für die Entwicklung von Netzwerkapplikationen, da sie die Mechanismen bereitstellen, durch die Computer im Netzwerk miteinander kommunizieren können. In der Praxis werden Sockets häufig in vielen Anwendungen verwendet, von einfachen Chat-Programmen bis hin zu komplexen verteilten Systemen.
             </p>
             <h2 className="text-2xl font-semibold mt-4">Theorie zur Programmierung eines einfachen Chat-Clients in Java</h2>
-            <h3 className="text-xl font-semibold mt-2">1. Einführung</h3>
+            <h3 className="text-xl font-semibold mt-2">Einführung</h3>
             <p className="text-lg leading-relaxed">
               Ein Chat-Client in Java nutzt Sockets zur Kommunikation mit einem Server. Der Server fungiert als Vermittler und leitet Nachrichten zwischen verschiedenen Clients weiter. Die Kommunikation erfolgt über das TCP-Protokoll, da es zuverlässige, verbindungsorientierte Datenübertragungen ermöglicht.
             </p>
-            <h3 className="text-xl font-semibold mt-2">2. Grundlagen</h3>
+            <h3 className="text-xl font-semibold mt-2">Grundlagen</h3>
             <h4 className="text-lg font-semibold mt-2">Sockets:</h4>
             <p className="text-lg leading-relaxed">
               Ein Socket ist eine Kombination aus einer IP-Adresse und einer Portnummer. Es dient als Endpunkt für die Netzwerkkommunikation. Es gibt zwei Hauptarten von Sockets:
@@ -239,13 +239,13 @@ public class TCPClient {
             <p className="text-lg leading-relaxed">
               Ports sind numerische Bezeichner, die spezifische Netzwerkdienste auf einem Host identifizieren. Jeder Dienst (z.B. HTTP, FTP) hat einen Standardport (z.B. HTTP nutzt Port 80).
             </p>
-            <h3 className="text-xl font-semibold mt-2">3. Komponenten eines Chat-Clients</h3>
+            <h3 className="text-xl font-semibold mt-2">Komponenten eines Chat-Clients</h3>
             <ul className="list-disc ml-8">
               <li><span className='text-accent'>Client-Socket:</span> Wird verwendet, um eine Verbindung zu einem Server-Socket herzustellen. In Java wird ein `Socket` Objekt verwendet.</li>
               <li><span className='text-accent'>Server-Socket:</span> Lauscht auf einem bestimmten Port auf Verbindungsanfragen von Clients. In Java wird ein `ServerSocket` Objekt verwendet.</li>
               <li><span className='text-accent'>Input/Output Streams:</span> Zum Senden und Empfangen von Nachrichten über die Socket-Verbindung. `InputStream` und `OutputStream` Klassen in Java ermöglichen den Datentransfer.</li>
             </ul>
-            <h3 className="text-xl font-semibold mt-2">4. Schritt-für-Schritt Anleitung</h3>
+            <h3 className="text-xl font-semibold mt-2">Schritt-für-Schritt Anleitung</h3>
             <h4 className="text-lg font-semibold mt-2">Server-Programm:</h4>
             <pre>
               <code className="language-java">
@@ -391,16 +391,16 @@ public class ChatClient {
 }`}
               </code>
             </pre>
-            <h3 className="text-xl font-semibold mt-2">5. Fazit</h3>
+            <h3 className="text-xl font-semibold mt-2">Zusammenfassung</h3>
             <p className="text-lg leading-relaxed">
               Die Programmierung eines einfachen Chat-Clients in Java verdeutlicht, wie Sockets zur Netzwerkkommunikation genutzt werden können. Ein Server-Socket lauscht auf Verbindungen und verwaltet mehrere Client-Verbindungen mittels Threads. Ein Client-Socket stellt die Verbindung zum Server her und ermöglicht das Senden und Empfangen von Nachrichten. Diese Grundlagen sind essenziell für die Entwicklung komplexerer Netzwerkapplikationen.
             </p>
             <h2 className="text-2xl font-semibold mt-4">Threads in Java</h2>
-            <h3 className="text-xl font-semibold mt-2">1. Einführung</h3>
+            <h3 className="text-xl font-semibold mt-2">Einführung</h3>
             <p className="text-lg leading-relaxed">
               Ein Thread ist der kleinste Ausführungseinheit in einem Programm. In Java kann ein Programm mehrere Threads gleichzeitig ausführen, wodurch parallele und nebenläufige Programmierung ermöglicht wird. Dies ist besonders nützlich für Aufgaben wie die gleichzeitige Bearbeitung mehrerer Netzwerkverbindungen oder die Verbesserung der Anwendungsleistung durch parallele Verarbeitung.
             </p>
-            <h3 className="text-xl font-semibold mt-2">2. Grundlagen</h3>
+            <h3 className="text-xl font-semibold mt-2">Grundlagen</h3>
             <h4 className="text-lg font-semibold mt-2">Erstellen von Threads:</h4>
             <p className="text-lg leading-relaxed">
               In Java können Threads auf zwei Arten erstellt werden:
@@ -421,7 +421,7 @@ public class ChatClient {
               <li><span className='text-accent'>Timed Waiting:</span> Der Thread wartet für eine bestimmte Zeitspanne.</li>
               <li><span className='text-accent'>Terminated:</span> Der Thread hat seine Ausführung beendet.</li>
             </ul>
-            <h3 className="text-xl font-semibold mt-2">3. Beispiel: Implementierung von Threads</h3>
+            <h3 className="text-xl font-semibold mt-2">Beispiel: Implementierung von Threads</h3>
             <h4 className="text-lg font-semibold mt-2">Implementierung des Runnable Interface:</h4>
             <pre>
               <code className="language-java">
@@ -462,7 +462,7 @@ public class ChatClient {
 }`}
               </code>
             </pre>
-            <h3 className="text-xl font-semibold mt-2">4. Synchronisation von Threads</h3>
+            <h3 className="text-xl font-semibold mt-2">Synchronisation von Threads</h3>
             <p className="text-lg leading-relaxed">
               Bei der Arbeit mit mehreren Threads können Synchronisationsprobleme auftreten, wenn mehrere Threads gleichzeitig auf dieselbe Ressource zugreifen. In Java wird dies durch die Verwendung des <span className='text-accent'>synchronized</span> Schlüsselworts gelöst.
             </p>
@@ -505,25 +505,25 @@ public class ChatClient {
 }`}
               </code>
             </pre>
-            <h3 className="text-xl font-semibold mt-2">5. Fazit</h3>
+            <h3 className="text-xl font-semibold mt-2">Fazit</h3>
             <p className="text-lg leading-relaxed">
               Threads in Java ermöglichen parallele und nebenläufige Programmierung, was die Leistung und Effizienz von Anwendungen verbessern kann. Die Implementierung von Threads kann entweder durch das Implementieren des <span className='text-accent'>Runnable</span> Interface oder durch das Erben von der <span className='text-accent'>Thread</span> Klasse erfolgen. Synchronisation ist wichtig, um Datenkonsistenz bei gleichzeitigen Zugriffen zu gewährleisten.
             </p>
             <h2 className="text-2xl font-semibold mt-4">Das Philosophenproblem</h2>
-            <h3 className="text-xl font-semibold mt-2">1. Einführung</h3>
+            <h3 className="text-xl font-semibold mt-2">Einführung</h3>
             <p className="text-lg leading-relaxed">
               Das Philosophenproblem ist ein klassisches Synchronisationsproblem in der Informatik, das ursprünglich von Edsger Dijkstra formuliert wurde. Es beschreibt eine Situation, in der fünf Philosophen abwechselnd denken und essen. Sie sitzen um einen runden Tisch, und zwischen jedem Paar von Philosophen befindet sich eine Gabel. Ein Philosoph muss beide Gabeln nehmen, um zu essen. Das Problem stellt sicher, dass keine zwei Philosophen gleichzeitig dieselbe Gabel benutzen können, um Deadlocks und Ressourcenverklemmung zu vermeiden.
             </p>
-            <h3 className="text-xl font-semibold mt-2">2. Das Szenario</h3>
+            <h3 className="text-xl font-semibold mt-2">Das Szenario</h3>
             <p className="text-lg leading-relaxed">
               Es gibt fünf Philosophen, die ihr Leben damit verbringen, abwechselnd zu denken und zu essen. Jeder Philosoph benötigt zwei Gabeln, um zu essen. Zwischen jedem Paar von Philosophen liegt eine Gabel. Daher müssen sich die Philosophen die Gabeln teilen.
             </p>
             <h3 className="text-xl font-semibold mt-2">3. Probleme und Lösungen</h3>
-            <h4 className="text-lg font-semibold mt-2">a) Deadlock</h4>
+            <h4 className="text-lg font-semibold mt-2">Deadlock</h4>
             <p className="text-lg leading-relaxed">
               Ein Deadlock tritt auf, wenn jeder Philosoph eine Gabel aufhebt und auf die zweite Gabel wartet. Da jede Gabel bereits von einem anderen Philosophen gehalten wird, warten alle Philosophen unendlich lange.
             </p>
-            <h4 className="text-lg font-semibold mt-2">b) Lösungen</h4>
+            <h4 className="text-lg font-semibold mt-2">Lösungen</h4>
             <p className="text-lg leading-relaxed">
               Es gibt verschiedene Ansätze zur Lösung des Philosophenproblems:
             </p>
