@@ -29,6 +29,12 @@ export const serviceData = [
     title: 'Vorlesung 1',
     description: 'Netzwerkkommunikation und serverseitige Technologien.',
     link: "/Summary2_1",
+  },
+  {
+    icon: <RxCrop />,
+    title: 'Vorlesung 2',
+    description: 'Netzwerkprogrammierung und Threads.',
+    link: "/Summary2_2",
   }
 ];
 
