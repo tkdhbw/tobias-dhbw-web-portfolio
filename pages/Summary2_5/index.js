@@ -48,20 +48,20 @@ const Testimonials = () => {
                 <code>
 {`<!DOCTYPE html>
 <html lang="de">
-<head>
-<meta charset="UTF-8">
-<title>Registrierung</title>
-</head>
-<body>
-<h2>Registrierung</h2>
-<form action="anmelden.php" method="post">
-<label for="username">Benutzername:</label>
-<input type="text" id="username" name="username" required><br>
-<label for="password">Passwort:</label>
-<input type="password" id="password" name="password" required><br>
-<input type="submit" value="Registrieren">
-</form>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Registrierung</title>
+  </head>
+  <body>
+    <h2>Registrierung</h2>
+    <form action="anmelden.php" method="post">
+      <label for="username">Benutzername:</label>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Passwort:</label>
+      <input type="password" id="password" name="password" required><br>
+      <input type="submit" value="Registrieren">
+    </form>
+  </body>
 </html>`}
                 </code>
               </pre>
@@ -77,7 +77,7 @@ const Testimonials = () => {
 $conn = new mysqli('localhost', 'benutzer', 'passwort', 'datenbank');
 
 if ($conn->connect_error) {
-die('Verbindung fehlgeschlagen: ' . $conn->connect_error);
+  die('Verbindung fehlgeschlagen: ' . $conn->connect_error);
 }
 
 // Benutzereingaben abrufen und sichern
@@ -87,9 +87,9 @@ $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 // Benutzerdaten in die Datenbank einfügen
 $sql = "INSERT INTO benutzer (username, password) VALUES ('$username', '$password')";
 if ($conn->query($sql) === TRUE) {
-echo "Registrierung erfolgreich!";
+  echo "Registrierung erfolgreich!";
 } else {
-echo "Fehler: " . $sql . "<br>" . $conn->error;
+  echo "Fehler: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
@@ -105,20 +105,20 @@ $conn->close();
                 <code>
 {`<!DOCTYPE html>
 <html lang="de">
-<head>
-<meta charset="UTF-8">
-<title>Login</title>
-</head>
-<body>
-<h2>Login</h2>
-<form action="login.php" method="post">
-<label for="username">Benutzername:</label>
-<input type="text" id="username" name="username" required><br>
-<label for="password">Passwort:</label>
-<input type="password" id="password" name="password" required><br>
-<input type="submit" value="Einloggen">
-</form>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+  </head>
+  <body>
+    <h2>Login</h2>
+      <form action="login.php" method="post">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Passwort:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Einloggen">
+    </form>
+  </body>
 </html>`}
                 </code>
               </pre>
@@ -134,7 +134,7 @@ $conn->close();
 $conn = new mysqli('localhost', 'benutzer', 'passwort', 'datenbank');
 
 if ($conn->connect_error) {
-die('Verbindung fehlgeschlagen: ' . $conn->connect_error);
+  die('Verbindung fehlgeschlagen: ' . $conn->connect_error);
 }
 
 // Benutzereingaben abrufen und sichern
@@ -146,17 +146,17 @@ $sql = "SELECT password FROM benutzer WHERE username = '$username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-$row = $result->fetch_assoc();
+  $row = $result->fetch_assoc();
 if (password_verify($password, $row['password'])) {
-echo "Login erfolgreich!";
+  echo "Login erfolgreich!";
 // Sitzung starten und Benutzerdaten speichern
 session_start();
-$_SESSION['username'] = $username;
+  $_SESSION['username'] = $username;
 } else {
-echo "Falsches Passwort.";
+  echo "Falsches Passwort.";
 }
 } else {
-echo "Benutzername nicht gefunden.";
+  echo "Benutzername nicht gefunden.";
 }
 
 $conn->close();
@@ -396,6 +396,257 @@ header('Location: anmeldung.php');
           <h3 className='text-2xl font-semibold mt-4'>Fazit</h3>
           <p className='text-lg leading-relaxed'>
             Die Verwaltung von Sitzungen über Sessions ist eine sichere und effektive Methode, um Benutzerdaten über mehrere Seitenaufrufe hinweg zu speichern und zu verwalten. Durch den richtigen Einsatz von Sitzungen und Sicherheitsmaßnahmen können Entwickler robuste und benutzerfreundliche Webanwendungen erstellen.
+          </p>
+
+          <motion.h2
+          variants={fadeIn('up', 0.2)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          className='h2 mb-8 xl:mb-0 text-center'
+        >
+          Identifikation von Sitzungen über <span className='text-accent'>Sessions</span>
+        </motion.h2>
+          <p className='text-lg leading-relaxed'>
+            In der Webentwicklung ist die Verwaltung von Sitzungen (Sessions) eine entscheidende Aufgabe, um Benutzerdaten über mehrere Seitenaufrufe hinweg zu speichern. Sitzungen ermöglichen es, Informationen wie Benutzeranmeldungen, Warenkörbe oder Benutzerpräferenzen sicher und effizient zu speichern. Eine gängige Methode zur Identifikation und Verwaltung von Sitzungen ist die Verwendung von Session-IDs, die serverseitig gespeichert werden.
+          </p>
+          <h3 className='text-2xl font-semibold mt-4'>Ablauf einer Sitzung</h3>
+          <ul className='list-disc ml-8 text-lg leading-relaxed'>
+            <li><strong>Sitzungserstellung:</strong> Beim ersten Zugriff eines Benutzers auf eine Webanwendung wird eine neue Sitzung erstellt. Der Server generiert eine eindeutige Sitzungs-ID (Session ID), die den Benutzer während seiner gesamten Sitzung eindeutig identifiziert.</li>
+            <li><strong>Speicherung der Sitzungs-ID:</strong> Die Sitzungs-ID wird in einem Cookie auf dem Client-Rechner gespeichert und bei jeder weiteren Anfrage an den Server zurückgesendet.</li>
+            <li><strong>Verwaltung der Sitzung:</strong> Der Server verwendet die Sitzungs-ID, um auf die entsprechenden Sitzungsdaten zuzugreifen und diese zu verwalten. Diese Daten werden typischerweise in einer serverseitigen Datenbank oder in Dateisystemen gespeichert.</li>
+            <li><strong>Beendigung der Sitzung:</strong> Eine Sitzung kann durch Benutzeraktionen (wie das Abmelden) oder durch Inaktivität (Session-Timeout) beendet werden. Nach der Beendigung der Sitzung werden die zugehörigen Daten gelöscht.</li>
+          </ul>
+          <h3 className='text-2xl font-semibold mt-4'>Vorteile der Sitzungsverwaltung</h3>
+          <ul className='list-disc ml-8 text-lg leading-relaxed'>
+            <li><strong>Sicherheit:</strong> Da die eigentlichen Sitzungsdaten serverseitig gespeichert werden, sind sie weniger anfällig für Manipulationen durch den Client.</li>
+            <li><strong>Datenintegrität:</strong> Die Verwendung von Sitzungen stellt sicher, dass die Daten zwischen verschiedenen Seitenaufrufen konsistent bleiben.</li>
+            <li><strong>Einfache Implementierung:</strong> Viele Webframeworks bieten eingebaute Unterstützung für Sitzungen, was die Implementierung erleichtert.</li>
+          </ul>
+          <h3 className='text-2xl font-semibold mt-4'>Sitzungen in PHP</h3>
+          <p className='text-lg leading-relaxed'>
+            PHP bietet eine einfache und effiziente Möglichkeit zur Verwaltung von Sitzungen. Hier sind die grundlegenden Schritte:
+          </p>
+          <h4 className='text-xl font-semibold mt-4'>Sitzung starten:</h4>
+          <pre>
+            <code className='language-php'>
+              {`<?php
+session_start();
+?>`}
+            </code>
+          </pre>
+          <h4 className='text-xl font-semibold mt-4'>Speichern von Daten in der Sitzung:</h4>
+          <pre>
+            <code className='language-php'>
+              {`<?php
+// Starte die Session
+session_start();
+
+// Speichere Benutzerdaten
+$_SESSION['username'] = 'JohnDoe';
+$_SESSION['email'] = 'johndoe@example.com';
+?>`}
+            </code>
+          </pre>
+          <h4 className='text-xl font-semibold mt-4'>Zugriff auf Sitzungsdaten:</h4>
+          <pre>
+            <code className='language-php'>
+              {`<?php
+session_start();
+
+if (isset($_SESSION['username'])) {
+    echo "Willkommen, " . $_SESSION['username'];
+} else {
+    echo "Bitte melden Sie sich an.";
+}
+?>`}
+            </code>
+          </pre>
+          <h4 className='text-xl font-semibold mt-4'>Beenden der Sitzung:</h4>
+          <pre>
+            <code className='language-php'>
+              {`<?php
+session_start();
+
+// Alle Session-Variablen löschen
+$_SESSION = array();
+
+// Session-Cookie löschen
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
+}
+
+// Session zerstören
+session_destroy();
+
+echo "Sie wurden abgemeldet.";
+?>`}
+            </code>
+          </pre>
+          <h3 className='text-2xl font-semibold mt-4'>Sicherheitsaspekte</h3>
+          <ul className='list-disc ml-8 text-lg leading-relaxed'>
+            <li><strong>Sitzungs-Timeout:</strong> Durch das Festlegen eines Sitzungs-Timeouts kann verhindert werden, dass Sitzungen über einen längeren Zeitraum hinweg aktiv bleiben, was die Sicherheit erhöht.</li>
+            <li><strong>Regenerierung der Sitzungs-ID:</strong> Durch regelmäßiges Regenerieren der Sitzungs-ID kann das Risiko von Session-Fixation-Angriffen minimiert werden.
+              <pre>
+                <code className='language-php'>
+                  {`<?php
+session_start();
+session_regenerate_id(true);
+?>`}
+                </code>
+              </pre>
+            </li>
+          </ul>
+          <h3 className='text-2xl font-semibold mt-4'>Beispiel: Benutzeranmeldung mit Sitzungen</h3>
+          <p className='text-lg leading-relaxed'>
+            Hier ist ein einfaches Beispiel für die Implementierung einer Benutzeranmeldung mit Sitzungen in PHP:
+          </p>
+          <h4 className='text-xl font-semibold mt-4'>Anmeldung.php</h4>
+          <pre>
+            <code className='language-php'>
+              {`<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Dummy-Überprüfung der Anmeldedaten
+    if ($username == 'admin' && $password == 'password') {
+        $_SESSION['username'] = $username;
+        header('Location: willkommen.php');
+    } else {
+        echo "Ungültige Anmeldedaten";
+    }
+}
+?>
+
+<!-- HTML-Formular für die Anmeldung -->
+<form method="post" action="anmeldung.php">
+    Benutzername: <input type="text" name="username"><br>
+    Passwort: <input type="password" name="password"><br>
+    <input type="submit" value="Anmelden">
+</form>`}
+            </code>
+          </pre>
+          <h4 className='text-xl font-semibold mt-4'>Willkommen.php</h4>
+          <pre>
+            <code className='language-php'>
+              {`<?php
+session_start();
+
+if (isset($_SESSION['username'])) {
+    echo "Willkommen, " . $_SESSION['username'];
+} else {
+    echo "Bitte melden Sie sich an.";
+}
+?>`}
+            </code>
+          </pre>
+          <h4 className='text-xl font-semibold mt-4'>Logout.php</h4>
+          <pre>
+            <code className='language-php'>
+              {`<?php
+session_start();
+session_destroy();
+header('Location: anmeldung.php');
+?>`}
+            </code>
+          </pre>
+          <h3 className='text-2xl font-semibold mt-4'>Fazit</h3>
+          <p className='text-lg leading-relaxed'>
+            Die Verwaltung von Sitzungen über Sessions ist eine sichere und effektive Methode, um Benutzerdaten über mehrere Seitenaufrufe hinweg zu speichern und zu verwalten. Durch den richtigen Einsatz von Sitzungen und Sicherheitsmaßnahmen können Entwickler robuste und benutzerfreundliche Webanwendungen erstellen.
+          </p>
+
+
+          <motion.h2
+          variants={fadeIn('up', 0.2)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          className='h2 mb-8 xl:mb-0 text-center'
+        >
+          Passwörter und <span className='text-accent'>Passwortsicherheit</span>
+        </motion.h2>
+          <p className='text-lg leading-relaxed'>
+            Passwörter sind ein wesentlicher Bestandteil der Sicherheitsmechanismen, die den Zugang zu sensiblen Informationen und Systemen schützen. Ihre Sicherheit ist von größter Bedeutung, um unbefugten Zugriff zu verhindern. In diesem Abschnitt werden wir die Grundlagen der Passwortsicherheit, Hashes und Salted Hashes erläutern.
+          </p>
+
+          <h3 className='text-2xl font-semibold mt-4'>Passwörter</h3>
+          <p className='text-lg leading-relaxed'>
+            Ein Passwort ist eine geheime Zeichenfolge, die verwendet wird, um einen Benutzer zu authentifizieren und Zugang zu einem System oder Dienst zu gewähren. Ein sicheres Passwort sollte lang genug sein und eine Mischung aus Buchstaben, Zahlen und Sonderzeichen enthalten, um die Sicherheit zu erhöhen.
+          </p>
+
+          <h3 className='text-2xl font-semibold mt-4'>Passwortsicherheit</h3>
+          <p className='text-lg leading-relaxed'>
+            Passwortsicherheit bezieht sich auf Maßnahmen, die getroffen werden, um Passwörter vor Diebstahl und Missbrauch zu schützen. Zu den bewährten Methoden gehören:
+          </p>
+          <ul className='list-disc ml-8 text-lg leading-relaxed'>
+            <li><strong>Länge und Komplexität:</strong> Verwenden Sie lange Passwörter (mindestens 12 Zeichen) mit einer Kombination aus Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen.</li>
+            <li><strong>Vermeidung von Wiederverwendung:</strong> Vermeiden Sie die Wiederverwendung von Passwörtern über verschiedene Konten hinweg.</li>
+            <li><strong>Regelmäßige Aktualisierung:</strong> Ändern Sie Passwörter regelmäßig, um die Sicherheit zu erhöhen.</li>
+          </ul>
+
+          <h3 className='text-2xl font-semibold mt-4'>Hashes</h3>
+          <p className='text-lg leading-relaxed'>
+            Ein Hash ist eine Einweg-Verschlüsselung, die eine Zeichenfolge in eine feste Länge und scheinbar zufällige Zeichenfolge umwandelt. Hashes sind nützlich, um Passwörter sicher in Datenbanken zu speichern, da der Originalwert nicht aus dem Hash wiederhergestellt werden kann.
+          </p>
+          <p className='text-lg leading-relaxed'>
+            Ein Beispiel für das Hashing eines Passworts in PHP:
+          </p>
+          <pre>
+            <code className='language-php'>
+              {`<?php
+$password = 'meinSicheresPasswort';
+$hash = password_hash($password, PASSWORD_BCRYPT);
+echo $hash;
+?>`}
+            </code>
+          </pre>
+
+          <h3 className='text-2xl font-semibold mt-4'>Salted Hashes</h3>
+          <p className='text-lg leading-relaxed'>
+            Ein Salt ist eine zufällige Zeichenfolge, die zu einem Passwort hinzugefügt wird, bevor es gehasht wird. Dies erhöht die Sicherheit, indem es verhindert, dass gleiche Passwörter zu gleichen Hashes führen. Salts schützen auch vor sogenannten Rainbow-Table-Angriffen, bei denen vorgehashte Passwörter verwendet werden, um Hashes schnell nachzuschlagen.
+          </p>
+          <p className='text-lg leading-relaxed'>
+            PHP's <code>password_hash</code> Funktion verwendet automatisch einen Salt, wenn es ein Passwort hasht:
+          </p>
+          <pre>
+            <code className='language-php'>
+              {`<?php
+// Generiere einen Salt und hashe das Passwort
+$password = 'meinSicheresPasswort';
+$hash = password_hash($password, PASSWORD_BCRYPT);
+echo $hash;
+
+// Überprüfe das Passwort
+if (password_verify($password, $hash)) {
+    echo "Passwort ist gültig!";
+} else {
+    echo "Ungültiges Passwort.";
+}
+?>`}
+            </code>
+          </pre>
+
+          <h3 className='text-2xl font-semibold mt-4'>Best Practices</h3>
+          <p className='text-lg leading-relaxed'>
+            Hier sind einige bewährte Methoden zur Sicherung von Passwörtern in Webanwendungen:
+          </p>
+          <ul className='list-disc ml-8 text-lg leading-relaxed'>
+            <li><strong>Verwenden Sie starke Hashing-Algorithmen:</strong> Algorithmen wie bcrypt, scrypt oder Argon2 sind speziell für das sichere Hashing von Passwörtern entwickelt worden.</li>
+            <li><strong>Implementieren Sie Zwei-Faktor-Authentifizierung (2FA):</strong> Zusätzliche Sicherheitsschicht durch die Verwendung eines zweiten Authentifizierungsfaktors neben dem Passwort.</li>
+            <li><strong>Begrenzen Sie die Anzahl der Anmeldeversuche:</strong> Verhindern Sie Brute-Force-Angriffe, indem Sie die Anzahl der möglichen Anmeldeversuche begrenzen und Benutzer nach einer bestimmten Anzahl von Fehlversuchen sperren.</li>
+            <li><strong>Überwachen und Protokollieren Sie Anmeldeversuche:</strong> Überwachen Sie Anmeldeaktivitäten, um verdächtige Anmeldeversuche frühzeitig zu erkennen.</li>
+          </ul>
+
+          <h3 className='text-2xl font-semibold mt-4'>Fazit</h3>
+          <p className='text-lg leading-relaxed'>
+            Die Sicherung von Passwörtern ist ein entscheidender Aspekt der Websicherheit. Durch den Einsatz starker Passwörter, Hashing-Techniken und Salting sowie der Implementierung bewährter Sicherheitspraktiken können Entwickler sicherstellen, dass Benutzerdaten gut geschützt sind.
           </p>
           </div>
         </motion.div>
