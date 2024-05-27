@@ -44,7 +44,16 @@ export const testimonialSlider2 = [
     link_download: "https://tkarsch.com/Uebungen/Download/Semester2/PhpMeldung.zip",
     description:
       'Ein Programm, welches mithilfe eines PHP Skripts mit einer SQL Datenbank kommuniziert und die Eingegebenen Details des Forms in der Datenbank speichert.',
-  }
+  },
+  {
+    name: 'Übung 6',
+    category: 'PHO Login & MySQL',
+    download_name: "Übung 3.zip",
+    link_download: "https://tkarsch.com/Uebungen/Download/Semester2/phpLogin.zip",
+    link_external: "https://mr202a.com",
+    description:
+      'PHP Webanwendung mit Login und einer SQL Datenbank für die Speicherung der Benutzerdaten.',
+  },
 ];
 
 // import swiper react components
