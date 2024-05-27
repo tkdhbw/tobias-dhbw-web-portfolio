@@ -47,7 +47,7 @@ export const testimonialSlider2 = [
   },
   {
     name: 'Übung 6',
-    category: 'PHO Login & MySQL',
+    category: 'PHP Login & MySQL',
     download_name: "Übung 3.zip",
     link_download: "https://tkarsch.com/Uebungen/Download/Semester2/PhpLogin.zip",
     link_external: "https://mr202a.com",
