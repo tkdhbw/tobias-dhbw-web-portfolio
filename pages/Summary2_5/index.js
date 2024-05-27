@@ -648,6 +648,26 @@ if (password_verify($password, $hash)) {
           <p className='text-lg leading-relaxed'>
             Die Sicherung von Passwörtern ist ein entscheidender Aspekt der Websicherheit. Durch den Einsatz starker Passwörter, Hashing-Techniken und Salting sowie der Implementierung bewährter Sicherheitspraktiken können Entwickler sicherstellen, dass Benutzerdaten gut geschützt sind.
           </p>
+
+          <br />
+          <br />
+          <br />
+
+
+          <motion.div
+            variants={fadeIn('up', 0.3, 0.1)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className='text-center'
+          >
+            <div className='text-center'>
+              <a href='https://mr202a.com' target='_blank' className='bg-red-500 text-white text-lg  py-4 px-8 rounded-lg mb-8 inline-block hover:bg-red-600 transition duration-300'>Hier finden Sie die zugehörige PHP Anwendung mit der Anmeldefunktionalitäten.</a>
+              <br />
+              <p className='text-lg'>URL: https://mr202a.com</p>
+            </div>
+            </motion.div>
+          
           </div>
         </motion.div>
       </div>
