@@ -330,10 +330,36 @@ if __name__ == "__main__":
             margin-top: 1.5rem;
             display: none;
         }
+
+        .hidden {
+            display: none;
+        }
+
+        .centered-button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .bottom-margin {
+            margin-bottom: 600px;
+        }
+
+        .margin-table {
+            width: 100%;
+        }
+
+        .margin-table td {
+            padding: 8px;
+        }
+
+        .margin-table input[type="number"] {
+            width: 100%;
+        }
     </style>
 </head>
 <body class="bg-gray-900 flex items-center justify-center h-screen">
-    <div class="container bg-black opacity-80 text-white p-8 rounded-lg shadow-lg">
+    <div id="mainContainer" class="container bg-black opacity-80 text-white p-8 rounded-lg shadow-lg">
+
         <i class="fas fa-times text-xl text-gray-400 reset-icon" id="resetBtn"></i>
 
         <h1 class="text-2xl font-bold mb-4 text-red-600">PDF-Dokument hochladen</h1>
@@ -346,30 +372,49 @@ if __name__ == "__main__":
 
         <div class="mt-8 border border-white p-4">
             <h2 class="text-xl font-bold mb-4 text-red-600">Seiten mit zusätzlichem Rand</h2>
-            <div class="input-group flex items-center mb-4">
-                <label for="topMargin" class="mr-2">Oben:</label>
-                <input type="number" id="topMargin" class="w-16 text-sm text-gray-900 bg-gray-300 rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent p-2.5" value="200">
-                <input type="checkbox" id="topCheckbox" class="ml-2">
-                <label for="topCheckbox" class="ml-1">Zusätzlichen Rand hinzufügen</label>
-            </div>
-            <div class="input-group flex items-center mb-4">
-                <label for="leftMargin" class="mr-2">Links:</label>
-                <input type="number" id="leftMargin" class="w-16 text-sm text-gray-900 bg-gray-300 rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent p-2.5" value="200">
-                <input type="checkbox" id="leftCheckbox" class="ml-2">
-                <label for="leftCheckbox" class="ml-1">Zusätzlichen Rand hinzufügen</label>
-            </div>
-            <div class="input-group flex items-center mb-4">
-                <label for="rightMargin" class="mr-2">Rechts:</label>
-                <input type="number" id="rightMargin" class="w-16 text-sm text-gray-900 bg-gray-300 rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent p-2.5" value="200">
-                <input type="checkbox" id="rightCheckbox" class="ml-2">
-                <label for="rightCheckbox" class="ml-1">Zusätzlichen Rand hinzufügen</label>
-            </div>
-            <div class="input-group flex items-center mb-4">
-                <label for="bottomMargin" class="mr-2">Unten:</label>
-                <input type="number" id="bottomMargin" class="w-16 text-sm text-gray-900 bg-gray-300 rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent p-2.5" value="200">
-                <input type="checkbox" id="bottomCheckbox" class="ml-2">
-                <label for="bottomCheckbox" class="ml-1">Zusätzlichen Rand hinzufügen</label>
-            </div>
+            <table class="margin-table">
+                <tr>
+                    <td><label for="topMargin">Oben:</label></td>
+                    <td><input type="number" id="topMargin" class="text-sm text-gray-900 bg-gray-300 rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent p-2.5" value="200"></td>
+                    <td>
+                        <input type="checkbox" id="topCheckbox">
+                        <label for="topCheckbox" class="ml-1">Zusätzlichen Rand hinzufügen</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="leftMargin">Links:</label></td>
+                    <td><input type="number" id="leftMargin" class="text-sm text-gray-900 bg-gray-300 rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent p-2.5" value="200"></td>
+                    <td>
+                        <input type="checkbox" id="leftCheckbox">
+                        <label for="leftCheckbox" class="ml-1">Zusätzlichen Rand hinzufügen</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="rightMargin">Rechts:</label></td>
+                    <td><input type="number" id="rightMargin" class="text-sm text-gray-900 bg-gray-300 rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent p-2.5" value="200"></td>
+                    <td>
+                        <input type="checkbox" id="rightCheckbox">
+                        <label for="rightCheckbox" class="ml-1">Zusätzlichen Rand hinzufügen</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="bottomMargin">Unten:</label></td>
+                    <td><input type="number" id="bottomMargin" class="text-sm text-gray-900 bg-gray-300 rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent p-2.5" value="200"></td>
+                    <td>
+                        <input type="checkbox" id="bottomCheckbox">
+                        <label for="bottomCheckbox" class="ml-1">Zusätzlichen Rand hinzufügen</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="selectAllCheckbox" class="mr-2">
+                        <label for="selectAllCheckbox">Alle Seiten auswählen</label>
+                    </td>
+                    <td>
+                        <input type="number" id="allMargin" class="text-sm text-gray-900 bg-gray-300 rounded-lg border border-gray-300 cursor-pointer focus:outline-none focus:border-transparent p-2.5 hidden" value="200">
+                    </td>
+                </tr>
+            </table>
         </div>
 
         <button id="uploadBtn" class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mt-8">
@@ -381,15 +426,28 @@ if __name__ == "__main__":
         </div>
 
         <div class="mt-4">
-            <div id="progressBar" class="w-0 bg-green-500 h-2 rounded-full"></div>
-            <p id="statusText" class=" mt-2"></p>
+            <div class="bg-gray-300 w-full rounded-full h-2">
+                <div id="progressBar" class="bg-green-500 h-2 rounded-full hidden"></div>
+            </div>
+            <p id="statusText" class="text-center mt-2"></p>
         </div>
 
-        <a id="downloadHtmlBtn" class="hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer w-full mt-8" download>Download Modified PDF</a>
-
+        <div class="mt-4 centered-button-container">
+            <a id="downloadHtmlBtn" class="hidden bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-8" download>Download Modified PDF</a>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.getElementById('selectAllCheckbox').addEventListener('change', function() {
+            const allMarginInput = document.getElementById('allMargin');
+            if (this.checked) {
+                allMarginInput.classList.remove('hidden');
+            } else {
+                allMarginInput.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
         `}
@@ -407,147 +465,225 @@ if __name__ == "__main__":
                     <pre><code className="language-javascript">
 {`
 document.addEventListener('DOMContentLoaded', function () {
-  const uploadButton = document.getElementById('uploadBtn');
-  const fileInput = document.getElementById('pdfFile');
-  const progressBar = document.getElementById('progressBar');
-  const statusText = document.getElementById('statusText');
-  const pdfPreviewContainer = document.querySelector('.pdf-preview-container');
-  const pdfPreviewCanvas = document.getElementById('pdfPreview');
-  const resetBtn = document.getElementById('resetBtn');
-  const prevPageBtn = document.getElementById('prevPageBtn');
-  const nextPageBtn = document.getElementById('nextPageBtn');
-  const pageNumIndicator = document.getElementById('pageNumIndicator');
-  const topMarginInput = document.getElementById('topMargin');
-  const bottomMarginInput = document.getElementById('bottomMargin');
-  const leftMarginInput = document.getElementById('leftMargin');
-  const rightMarginInput = document.getElementById('rightMargin');
-  const topMarginCheckbox = document.getElementById('topCheckbox');
-  const bottomMarginCheckbox = document.getElementById('bottomCheckbox');
-  const leftMarginCheckbox = document.getElementById('leftCheckbox');
-  const rightMarginCheckbox = document.getElementById('rightCheckbox');
-  const downloadHtmlBtn = document.getElementById('downloadHtmlBtn');
+    const uploadButton = document.getElementById('uploadBtn');
+    const fileInput = document.getElementById('pdfFile');
+    const progressBar = document.getElementById('progressBar');
+    const statusText = document.getElementById('statusText');
+    const pdfPreviewContainer = document.querySelector('.pdf-preview-container');
+    const pdfPreviewCanvas = document.getElementById('pdfPreview');
+    const resetBtn = document.getElementById('resetBtn');
+    const topMarginInput = document.getElementById('topMargin');
+    const bottomMarginInput = document.getElementById('bottomMargin');
+    const leftMarginInput = document.getElementById('leftMargin');
+    const rightMarginInput = document.getElementById('rightMargin');
+    const topMarginCheckbox = document.getElementById('topCheckbox');
+    const bottomMarginCheckbox = document.getElementById('bottomCheckbox');
+    const leftMarginCheckbox = document.getElementById('leftCheckbox');
+    const rightMarginCheckbox = document.getElementById('rightCheckbox');
+    const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+    const allMarginInput = document.getElementById('allMargin');
+    const downloadHtmlBtn = document.getElementById('downloadHtmlBtn');
+    const processingBanner = document.getElementById('processingBanner');
+    const mainContainer = document.getElementById('mainContainer');
 
-  let pdfDoc = null;
-  let pageNum = 1;
-  let numPages = 0;
+    let pdfDoc = null;
+    let pageNum = 1;
+    let numPages = 0;
+    let progressInterval;
 
-  function renderPage(pageNum) {
-      pdfDoc.getPage(pageNum).then(function(page) {
-          const scale = 1.5;
-          const viewport = page.getViewport({scale: scale});
-          const context = pdfPreviewCanvas.getContext('2d');
-          pdfPreviewCanvas.height = viewport.height;
-          pdfPreviewCanvas.width = viewport.width;
-          const renderContext = {
-              canvasContext: context,
-              viewport: viewport
-          };
-          page.render(renderContext);
-          pageNumIndicator.textContent = {"{pageNum} / {numPages}"};
-      });
-  }
+    function renderPage(pageNum) {
+        pdfDoc.getPage(pageNum).then(function(page) {
+            const scale = 1.5;
+            const viewport = page.getViewport({scale: scale});
+            const context = pdfPreviewCanvas.getContext('2d');
+            pdfPreviewCanvas.height = viewport.height;
+            pdfPreviewCanvas.width = viewport.width;
+            const renderContext = {
+                canvasContext: context,
+                viewport: viewport
+            };
+            page.render(renderContext);
+        });
+    }
 
-  function disableUploadButton() {
-      uploadButton.disabled = true;
-  }
+    function disableUploadButton() {
+        uploadButton.disabled = true;
+    }
 
-  function enableUploadButton() {
-      uploadButton.disabled = false;
-  }
+    function enableUploadButton() {
+        uploadButton.disabled = false;
+    }
 
-  uploadButton.addEventListener('click', function() {
-      disableUploadButton();
+    function showProcessingBanner() {
+        processingBanner.style.display = 'block';
+    }
 
-      const file = fileInput.files[0];
-      const formData = new FormData();
-      formData.append('pdf_file', file);
-      formData.append('top_margin', topMarginInput.value);
-      formData.append('bottom_margin', bottomMarginInput.value);
-      formData.append('left_margin', leftMarginInput.value);
-      formData.append('right_margin', rightMarginInput.value);
-      formData.append('top_margin_enabled', topMarginCheckbox.checked);
-      formData.append('bottom_margin_enabled', bottomMarginCheckbox.checked);
-      formData.append('left_margin_enabled', leftMarginCheckbox.checked);
-      formData.append('right_margin_enabled', rightMarginCheckbox.checked);
+    function hideProcessingBanner() {
+        processingBanner.style.display = 'none';
+    }
 
-      if (!file) {
-          statusText.textContent = 'Bitte wählen Sie eine Datei aus. (Version 1.0)';
-          enableUploadButton();
-          return;
-      }
+    function showProgressBar() {
+        progressBar.classList.remove('hidden');
+    }
 
-      statusText.textContent = '';
-      progressBar.style.width = '0%';
+    function hideProgressBar() {
+        progressBar.classList.add('hidden');
+    }
 
-      fetch('/api/upload', {
-          method: 'POST',
-          body: formData
-      })
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok: ' + response.statusText);
-          }
-          return response.json();
-      })
-      .then(data => {
-          progressBar.style.width = '100%';
-          statusText.textContent = 'Datei erfolgreich hochgeladen!';
-          if (data.download_url) {
-              downloadHtmlBtn.href = data.download_url;
-              console.log(data.download_url);
-              downloadHtmlBtn.classList.remove('hidden');
-          }
-          enableUploadButton();
-      })        
-      .catch(error => {
-          console.error('Error:', error);
-          statusText.textContent = 'Fehler: ' + error.message;
-          enableUploadButton();
-      });
-  });
+    function resetProgressBar() {
+        progressBar.style.width = '0%';
+        hideProgressBar();
+    }
 
-  resetBtn.addEventListener('click', function() {
-      fileInput.value = '';
-      statusText.textContent = '';
-      progressBar.style.width = '0%';
-      pdfPreviewContainer.classList.add('hidden');
-      while (document.body.lastElementChild !== resetBtn) {
-          document.body.removeChild(document.body.lastElementChild);
-      }
-  });
+    function startContinuousProgressBar() {
+        let progress = 0;
+        showProgressBar();
+        progressInterval = setInterval(() => {
+            progress += 1;
+            if (progress > 100) {
+                progress = 0;
+            }
+            progressBar.style.width = progress + '%';
+        }, 100);
+    }
 
-  fileInput.addEventListener('change', function() {
-      const file = fileInput.files[0];
-      if (file) {
-          const fileReader = new FileReader();
-          fileReader.onload = function() {
-              const typedarray = new Uint8Array(this.result);
-              pdfjsLib.getDocument(typedarray).promise.then(function(pdf) {
-                  pdfDoc = pdf;
-                  numPages = pdf.numPages;
-                  renderPage(pageNum);
-                  pdfPreviewContainer.classList.remove('hidden');
-              });
-          };
-          fileReader.readAsArrayBuffer(file);
-      }
-  });
+    function stopContinuousProgressBar() {
+        clearInterval(progressInterval);
+        progressBar.style.width = '100%';
+    }
 
-  prevPageBtn.addEventListener('click', function() {
-      if (pageNum <= 1) {
-          return;
-      }
-      pageNum--;
-      renderPage(pageNum);
-  });
+    function getMargins() {
+        if (selectAllCheckbox.checked) {
+            const allMargin = allMarginInput.value;
+            return {
+                top: allMargin,
+                bottom: allMargin,
+                left: allMargin,
+                right: allMargin,
+                topEnabled: true,
+                bottomEnabled: true,
+                leftEnabled: true,
+                rightEnabled: true
+            };
+        } else {
+            return {
+                top: topMarginInput.value,
+                bottom: bottomMarginInput.value,
+                left: leftMarginInput.value,
+                right: rightMarginInput.value,
+                topEnabled: topMarginCheckbox.checked,
+                bottomEnabled: bottomMarginCheckbox.checked,
+                leftEnabled: leftMarginCheckbox.checked,
+                rightEnabled: rightMarginCheckbox.checked
+            };
+        }
+    }
 
-  nextPageBtn.addEventListener('click', function() {
-      if (pageNum >= numPages) {
-          return;
-      }
-      pageNum++;
-      renderPage(pageNum);
-  });
+    function resetUI() {
+        statusText.textContent = '';
+        resetProgressBar();
+        downloadHtmlBtn.classList.add('hidden');
+        mainContainer.classList.remove('bottom-margin');
+    }
+
+    function scrollToDownloadButton() {
+        downloadHtmlBtn.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    uploadButton.addEventListener('click', function() {
+        disableUploadButton();
+        showProcessingBanner();
+        resetProgressBar();
+
+        const file = fileInput.files[0];
+        const formData = new FormData();
+        formData.append('pdf_file', file);
+
+        const margins = getMargins();
+        formData.append('top_margin', margins.top);
+        formData.append('bottom_margin', margins.bottom);
+        formData.append('left_margin', margins.left);
+        formData.append('right_margin', margins.right);
+        formData.append('top_margin_enabled', margins.topEnabled);
+        formData.append('bottom_margin_enabled', margins.bottomEnabled);
+        formData.append('left_margin_enabled', margins.leftEnabled);
+        formData.append('right_margin_enabled', margins.rightEnabled);
+
+        if (!file) {
+            statusText.textContent = 'Bitte wählen Sie eine Datei aus. (Version 1.0)';
+            enableUploadButton();
+            hideProcessingBanner();
+            return;
+        }
+
+        statusText.textContent = '';
+
+        startContinuousProgressBar();
+
+        fetch('/api/upload', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            stopContinuousProgressBar();
+            statusText.textContent = 'Datei erfolgreich hochgeladen!';
+            if (data.download_url) {
+                downloadHtmlBtn.href = data.download_url;
+                downloadHtmlBtn.classList.remove('hidden');
+                mainContainer.classList.add('bottom-margin'); // Add margin when button is shown
+                scrollToDownloadButton();
+            }
+            enableUploadButton();
+            hideProcessingBanner();
+        })
+        .catch(error => {
+            stopContinuousProgressBar();
+            statusText.textContent = "Fehler: $ {error.message}";
+            enableUploadButton();
+            hideProcessingBanner();
+        });
+    });
+
+    resetBtn.addEventListener('click', function() {
+        fileInput.value = '';
+        statusText.textContent = '';
+        resetProgressBar();
+        pdfPreviewContainer.classList.add('hidden');
+        downloadHtmlBtn.classList.add('hidden');
+        mainContainer.classList.remove('bottom-margin');
+    });
+
+    fileInput.addEventListener('change', function() {
+        const file = fileInput.files[0];
+        if (file) {
+            resetUI();
+            const fileReader = new FileReader();
+            fileReader.onload = function() {
+                const typedarray = new Uint8Array(this.result);
+                pdfjsLib.getDocument(typedarray).promise.then(function(pdf) {
+                    pdfDoc = pdf;
+                    numPages = pdf.numPages;
+                    renderPage(pageNum);
+                    pdfPreviewContainer.classList.remove('hidden');
+                });
+            };
+            fileReader.readAsArrayBuffer(file);
+        }
+    });
+
+    selectAllCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            allMarginInput.classList.remove('hidden');
+        } else {
+            allMarginInput.classList.add('hidden');
+        }
+    });
 });
 `}
                     </code></pre>
