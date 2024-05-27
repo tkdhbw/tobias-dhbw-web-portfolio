@@ -47,6 +47,12 @@ export const serviceData = [
     title: 'Vorlesung 4',
     description: 'Netzwerkprogrammierung und Threads.',
     link: "/Summary2_4",
+  },
+  {
+    icon: <RxCrop />,
+    title: 'Vorlesung 5',
+    description: 'PHP: Personalisierte Webanwendungen',
+    link: "/Summary2_5",
   }
 ];
 
