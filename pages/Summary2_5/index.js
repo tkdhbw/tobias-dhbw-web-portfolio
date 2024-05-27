@@ -613,7 +613,7 @@ echo $hash;
             Ein Salt ist eine zufällige Zeichenfolge, die zu einem Passwort hinzugefügt wird, bevor es gehasht wird. Dies erhöht die Sicherheit, indem es verhindert, dass gleiche Passwörter zu gleichen Hashes führen. Salts schützen auch vor sogenannten Rainbow-Table-Angriffen, bei denen vorgehashte Passwörter verwendet werden, um Hashes schnell nachzuschlagen.
           </p>
           <p className='text-lg leading-relaxed'>
-            PHP's <code>password_hash</code> Funktion verwendet automatisch einen Salt, wenn es ein Passwort hasht:
+            PHP&apos;s <code>password_hash</code> Funktion verwendet automatisch einen Salt, wenn es ein Passwort hasht:
           </p>
           <pre>
             <code className='language-php'>
