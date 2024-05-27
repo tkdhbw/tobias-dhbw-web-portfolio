@@ -35,146 +35,135 @@ const Testimonials = () => {
           <div class="bg-transparent text-white max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8 space-y-6">
             <h1 className='text-4xl font-bold text-center text-accent mb-8'>Login & Anmeldung mit PHP: Personalisierte Webanwendungen</h1>
 
-            <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
               <h2 className='text-2xl font-semibold mb-4'>Einführung</h2>
               <p className='text-lg leading-relaxed'>
                 Die Login- und Anmeldefunktionalitäten sind zentrale Elemente personalisierter Webanwendungen. Sie ermöglichen es Benutzern, sich zu identifizieren und auf personalisierte Inhalte und Dienste zuzugreifen. Im Folgenden wird erklärt, wie diese Funktionen mithilfe von PHP implementiert werden können.
               </p>
-            </div>
 
-            <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
               <h2 className='text-2xl font-semibold mb-4'>Anmeldeformular</h2>
               <p className='text-lg leading-relaxed'>
                 Ein Anmeldeformular ist der erste Schritt, um neue Benutzer zu registrieren. Es sammelt grundlegende Informationen wie Benutzername und Passwort. Ein Beispielcode für ein einfaches Anmeldeformular in PHP könnte wie folgt aussehen:
               </p>
               <pre className='bg-gray-800 text-white p-4 rounded'>
                 <code>
-                  {`<!DOCTYPE html>
-            <html lang="de">
-            <head>
-            <meta charset="UTF-8">
-            <title>Registrierung</title>
-            </head>
-            <body>
-            <h2>Registrierung</h2>
-            <form action="anmelden.php" method="post">
-            <label for="username">Benutzername:</label>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Passwort:</label>
-            <input type="password" id="password" name="password" required><br>
-            <input type="submit" value="Registrieren">
-            </form>
-            </body>
-            </html>`}
+{`<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Registrierung</title>
+</head>
+<body>
+<h2>Registrierung</h2>
+<form action="anmelden.php" method="post">
+<label for="username">Benutzername:</label>
+<input type="text" id="username" name="username" required><br>
+<label for="password">Passwort:</label>
+<input type="password" id="password" name="password" required><br>
+<input type="submit" value="Registrieren">
+</form>
+</body>
+</html>`}
                 </code>
               </pre>
-            </div>
 
-            <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
               <h2 className='text-2xl font-semibold mb-4'>Verarbeiten der Anmeldung</h2>
               <p className='text-lg leading-relaxed'>
                 Das Anmeldeskript speichert die Benutzerdaten sicher in einer Datenbank. Hier ist ein einfaches Beispiel, wie dies in PHP umgesetzt werden kann:
               </p>
               <pre className='bg-gray-800 text-white p-4 rounded'>
                 <code>
-                  {`<?php
-            // Verbindung zur Datenbank herstellen
-            $conn = new mysqli('localhost', 'benutzer', 'passwort', 'datenbank');
+{`<?php
+// Verbindung zur Datenbank herstellen
+$conn = new mysqli('localhost', 'benutzer', 'passwort', 'datenbank');
 
-            if ($conn->connect_error) {
-            die('Verbindung fehlgeschlagen: ' . $conn->connect_error);
-            }
+if ($conn->connect_error) {
+die('Verbindung fehlgeschlagen: ' . $conn->connect_error);
+}
 
-            // Benutzereingaben abrufen und sichern
-            $username = $conn->real_escape_string($_POST['username']);
-            $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+// Benutzereingaben abrufen und sichern
+$username = $conn->real_escape_string($_POST['username']);
+$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-            // Benutzerdaten in die Datenbank einfügen
-            $sql = "INSERT INTO benutzer (username, password) VALUES ('$username', '$password')";
-            if ($conn->query($sql) === TRUE) {
-            echo "Registrierung erfolgreich!";
-            } else {
-            echo "Fehler: " . $sql . "<br>" . $conn->error;
-            }
+// Benutzerdaten in die Datenbank einfügen
+$sql = "INSERT INTO benutzer (username, password) VALUES ('$username', '$password')";
+if ($conn->query($sql) === TRUE) {
+echo "Registrierung erfolgreich!";
+} else {
+echo "Fehler: " . $sql . "<br>" . $conn->error;
+}
 
-            $conn->close();
-            ?>`}
+$conn->close();
+?>`}
                 </code>
               </pre>
-            </div>
 
-            <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
               <h2 className='text-2xl font-semibold mb-4'>Login-Formular</h2>
               <p className='text-lg leading-relaxed'>
                 Ein Login-Formular ermöglicht registrierten Benutzern den Zugang zu geschützten Bereichen der Website. Ein Beispiel hierfür:
               </p>
               <pre className='bg-gray-800 text-white p-4 rounded'>
                 <code>
-                  {`<!DOCTYPE html>
-            <html lang="de">
-            <head>
-            <meta charset="UTF-8">
-            <title>Login</title>
-            </head>
-            <body>
-            <h2>Login</h2>
-            <form action="login.php" method="post">
-            <label for="username">Benutzername:</label>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Passwort:</label>
-            <input type="password" id="password" name="password" required><br>
-            <input type="submit" value="Einloggen">
-            </form>
-            </body>
-            </html>`}
+{`<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<form action="login.php" method="post">
+<label for="username">Benutzername:</label>
+<input type="text" id="username" name="username" required><br>
+<label for="password">Passwort:</label>
+<input type="password" id="password" name="password" required><br>
+<input type="submit" value="Einloggen">
+</form>
+</body>
+</html>`}
                 </code>
               </pre>
-            </div>
 
-            <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
               <h2 className='text-2xl font-semibold mb-4'>Verarbeiten des Logins</h2>
               <p className='text-lg leading-relaxed'>
                 Das Loginskript überprüft die Anmeldedaten und authentifiziert den Benutzer. Hier ein Beispiel:
               </p>
               <pre className='bg-gray-800 text-white p-4 rounded'>
                 <code>
-                  {`<?php
-            // Verbindung zur Datenbank herstellen
-            $conn = new mysqli('localhost', 'benutzer', 'passwort', 'datenbank');
+{`<?php
+// Verbindung zur Datenbank herstellen
+$conn = new mysqli('localhost', 'benutzer', 'passwort', 'datenbank');
 
-            if ($conn->connect_error) {
-            die('Verbindung fehlgeschlagen: ' . $conn->connect_error);
-            }
+if ($conn->connect_error) {
+die('Verbindung fehlgeschlagen: ' . $conn->connect_error);
+}
 
-            // Benutzereingaben abrufen und sichern
-            $username = $conn->real_escape_string($_POST['username']);
-            $password = $_POST['password'];
+// Benutzereingaben abrufen und sichern
+$username = $conn->real_escape_string($_POST['username']);
+$password = $_POST['password'];
 
-            // Benutzerdaten aus der Datenbank abrufen
-            $sql = "SELECT password FROM benutzer WHERE username = '$username'";
-            $result = $conn->query($sql);
+// Benutzerdaten aus der Datenbank abrufen
+$sql = "SELECT password FROM benutzer WHERE username = '$username'";
+$result = $conn->query($sql);
 
-            if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            if (password_verify($password, $row['password'])) {
-            echo "Login erfolgreich!";
-            // Sitzung starten und Benutzerdaten speichern
-            session_start();
-            $_SESSION['username'] = $username;
-            } else {
-            echo "Falsches Passwort.";
-            }
-            } else {
-            echo "Benutzername nicht gefunden.";
-            }
+if ($result->num_rows > 0) {
+$row = $result->fetch_assoc();
+if (password_verify($password, $row['password'])) {
+echo "Login erfolgreich!";
+// Sitzung starten und Benutzerdaten speichern
+session_start();
+$_SESSION['username'] = $username;
+} else {
+echo "Falsches Passwort.";
+}
+} else {
+echo "Benutzername nicht gefunden.";
+}
 
-            $conn->close();
-            ?>`}
+$conn->close();
+?>`}
                 </code>
               </pre>
-            </div>
 
-            <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
               <h2 className='text-2xl font-semibold mb-4'>Zusammenfassung</h2>
               <p className='text-lg leading-relaxed'>
                 Mit diesen grundlegenden Schritten können Sie eine einfache und sichere Login- und Anmeldefunktion für Ihre PHP-basierten Webanwendungen erstellen. Diese Funktionen sind unerlässlich, um personalisierte Inhalte und Dienste anzubieten, die den Benutzern eine individuelle und maßgeschneiderte Erfahrung bieten.
@@ -184,16 +173,12 @@ const Testimonials = () => {
           <p className='text-lg leading-relaxed'>
             Sitzungsverwaltung ist ein zentraler Bestandteil der Webprogrammierung, um Benutzerdaten über mehrere Anfragen hinweg zu speichern. Sitzungen ermöglichen es, den Zustand eines Benutzers zu verfolgen und personalisierte Erlebnisse zu bieten. In Webanwendungen werden Sitzungen häufig verwendet, um Benutzerauthentifizierung, Warenkörbe und Benutzereinstellungen zu verwalten.
           </p>
-        </div>
 
-        <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
           <h2 className='text-2xl font-semibold mb-4'>Rolle von Cookies in der Sitzungsverwaltung</h2>
           <p className='text-lg leading-relaxed'>
             Cookies spielen eine entscheidende Rolle in der Sitzungsverwaltung, da sie eine Möglichkeit bieten, Sitzungs-IDs auf dem Client zu speichern. Die Sitzungs-ID wird bei jeder Anfrage an den Server zurückgesendet, wodurch der Server den Benutzer identifizieren und die zugehörigen Sitzungsdaten abrufen kann.
           </p>
-        </div>
 
-        <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
           <h2 className='text-2xl font-semibold mb-4'>Ablauf der Sitzungsidentifikation mit Cookies</h2>
           <p className='text-lg leading-relaxed'>
             Der Ablauf der Sitzungsidentifikation mit Cookies kann in mehrere Schritte unterteilt werden:
@@ -215,9 +200,7 @@ const Testimonials = () => {
               <strong>Sitzungsbeendigung:</strong> Die Sitzung kann durch den Benutzer (z.B. durch Abmelden) oder automatisch nach einer bestimmten Inaktivitätsdauer beendet werden.
             </li>
           </ol>
-        </div>
 
-        <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
           <h2 className='text-2xl font-semibold mb-4'>Unterschied zwischen Sitzungs-Cookies und dauerhaften Cookies</h2>
           <p className='text-lg leading-relaxed'>
             Es gibt zwei Haupttypen von Cookies, die für die Sitzungsverwaltung verwendet werden:
@@ -230,9 +213,7 @@ const Testimonials = () => {
               <strong>Dauerhafte Cookies:</strong> Diese Cookies bleiben auch nach dem Schließen des Browsers bestehen und haben ein Ablaufdatum. Sie werden für längerfristige Daten verwendet, wie z.B. Benutzereinstellungen oder Anmeldeinformationen, die zwischen Sitzungen beibehalten werden sollen.
             </li>
           </ul>
-        </div>
 
-        <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
           <h2 className='text-2xl font-semibold mb-4'>Sicherheitsaspekte bei der Verwendung von Sitzungs-Cookies</h2>
           <p className='text-lg leading-relaxed'>
             Die Verwendung von Sitzungs-Cookies bringt einige Sicherheitsrisiken mit sich, die berücksichtigt werden müssen:
@@ -248,9 +229,7 @@ const Testimonials = () => {
               <strong>Cross-Site Request Forgery (CSRF):</strong> Bei CSRF-Angriffen wird ein Benutzer dazu gebracht, eine ungewollte Aktion auf einer Webseite auszuführen, bei der er angemeldet ist. Um dies zu verhindern, sollten Anti-CSRF-Token verwendet werden.
             </li>
           </ul>
-        </div>
 
-        <div className='bg-white shadow-md rounded-lg p-8 mb-8'>
           <h2 className='text-2xl font-semibold mb-4'>Best Practices für den sicheren Einsatz von Sitzungs-Cookies</h2>
           <p className='text-lg leading-relaxed'>
             Um die Sicherheit bei der Verwendung von Sitzungs-Cookies zu erhöhen, sollten folgende Best Practices beachtet werden:
@@ -418,9 +397,6 @@ header('Location: anmeldung.php');
           <p className='text-lg leading-relaxed'>
             Die Verwaltung von Sitzungen über Sessions ist eine sichere und effektive Methode, um Benutzerdaten über mehrere Seitenaufrufe hinweg zu speichern und zu verwalten. Durch den richtigen Einsatz von Sitzungen und Sicherheitsmaßnahmen können Entwickler robuste und benutzerfreundliche Webanwendungen erstellen.
           </p>
-
-            </div>
-
           </div>
         </motion.div>
       </div>
